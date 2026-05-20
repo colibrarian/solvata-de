@@ -257,9 +257,73 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:5rem 5vw 3re
 .ck-decline{background:none;border:1px solid rgba(244,240,234,.18);color:var(--wd);padding:8px 14px;font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .ck-decline:hover{border-color:var(--wd);color:var(--w);}
 @media(max-width:520px){.cookie-banner{flex-direction:column;align-items:flex-start;}.cookie-actions{width:100%;}.ck-accept,.ck-decline{flex:1;text-align:center;}}
+
+/* ── AUTH POPUP ─────────────────────────────────────────────── */
+.auth-overlay{
+  position:fixed;inset:0;z-index:9999;
+  background:rgba(8,8,8,0.97);
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.auth-box{
+  width:100%;max-width:380px;padding:3rem 2.5rem;
+  border:1px solid var(--gb);
+  background:var(--blk2);
+  text-align:center;
+}
+.auth-logo{
+  width:48px;height:48px;object-fit:contain;opacity:.85;
+  margin:0 auto 1.5rem;display:block;
+}
+.auth-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:400;letter-spacing:.08em;
+  color:var(--w);margin-bottom:.4rem;
+}
+.auth-sub{
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--wd);margin-bottom:2rem;font-family:'Jost',sans-serif;
+}
+.auth-field{
+  width:100%;background:var(--blk3);
+  border:1px solid var(--gb);border-radius:0;
+  padding:12px 16px;margin-bottom:.75rem;
+  font-family:'Jost',sans-serif;font-size:.9rem;font-weight:300;
+  color:var(--w);outline:none;transition:border-color .3s;
+  -webkit-appearance:none;appearance:none;
+}
+.auth-field::placeholder{color:rgba(244,240,234,.3);}
+.auth-field:focus{border-color:var(--g);}
+.auth-btn{
+  width:100%;background:var(--g);color:var(--blk);
+  border:none;padding:13px;margin-top:.5rem;
+  font-family:'Jost',sans-serif;font-size:.75rem;
+  font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+  cursor:pointer;transition:background .3s;
+}
+.auth-btn:hover{background:var(--gl);}
+.auth-error{
+  font-size:.75rem;color:#c0392b;margin-top:.75rem;
+  min-height:1.2em;font-family:'Jost',sans-serif;
+  letter-spacing:.04em;opacity:0;transition:opacity .3s;
+}
+.auth-error.show{opacity:1;}
 </style>
 </head>
 <body>
+
+<div class="auth-overlay" id="auth-overlay">
+  <div class="auth-box">
+    <img class="auth-logo" src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" alt="Solvata">
+    <div class="auth-brand">Solvata Beauty Club</div>
+    <div class="auth-sub">Berlin · Preview</div>
+    <input class="auth-field" id="auth-name" type="text" placeholder="Name" autocomplete="off" autocorrect="off" spellcheck="false">
+    <input class="auth-field" id="auth-pass" type="password" placeholder="Passwort" autocomplete="off">
+    <button class="auth-btn" onclick="authCheck()">Eintreten</button>
+    <div class="auth-error" id="auth-error">Name oder Passwort falsch</div>
+  </div>
+</div>
+
 
 <nav>
   <a href="#" class="nav-brand">
@@ -704,6 +768,41 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:5rem 5vw 3re
 </div>
 
 <script>
+
+// ── AUTH ─────────────────────────────────────────────────────
+(function(){
+  var s=sessionStorage.getItem('solvata_auth');
+  if(s==='ok'){var o=document.getElementById('auth-overlay');if(o)o.style.display='none';}
+})();
+function authCheck(){
+  var name=document.getElementById('auth-name').value.trim();
+  var pass=document.getElementById('auth-pass').value.trim();
+  var err=document.getElementById('auth-error');
+  if(name==='Diana'&&pass==='451826'){
+    sessionStorage.setItem('solvata_auth','ok');
+    var o=document.getElementById('auth-overlay');
+    o.style.opacity='0';
+    o.style.transition='opacity .4s ease';
+    setTimeout(function(){o.style.display='none';},420);
+  } else {
+    err.classList.add('show');
+    document.getElementById('auth-name').style.borderColor='#c0392b';
+    document.getElementById('auth-pass').style.borderColor='#c0392b';
+    setTimeout(function(){
+      err.classList.remove('show');
+      document.getElementById('auth-name').style.borderColor='';
+      document.getElementById('auth-pass').style.borderColor='';
+    },2500);
+  }
+}
+// Enter key support
+document.addEventListener('DOMContentLoaded',function(){
+  ['auth-name','auth-pass'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter')authCheck();});
+  });
+});
+
 var T=JSON.parse('{"de": {"nav_name": "Solvata Beauty Club", "nav_about": "Über uns", "nav_equip": "Treatments", "nav_nails": "Nägel", "nav_prices": "Preise", "nav_contact": "Kontakt", "nav_book": "Termin buchen", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Schönheit", "hero_title_2": "neu definiert.", "hero_sub": "Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.", "hero_photo_ph": "Hero-Foto — wird eingefügt", "btn_book": "Termin buchen", "btn_services": "Unsere Treatments", "scroll_label": "Scroll", "statement_quote": "„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note.“", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Premium-Geräte", "stat_individual": "Individuell", "mission_label": "Über uns", "mission_title_1": "Unser", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.", "mission_quote": "Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.", "badge_1": "Zertifiziert", "badge_2": "Premium-Geräte", "badge_3": "Individuelle Beratung", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon-Foto", "equip_label": "Treatments", "equip_title_1": "Unsere", "equip_title_2": "Technologien", "equip_sub": "Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.", "endymed_mn_desc": "Erneuert die Haut von innen — aktiviert die Bildung von neuem Kollagen und Elastin. Die Haut wird dichter, glatter und jünger, ohne Operation. Der Effekt wächst über 2–3 Monate.", "endymed_e1": "Lifting &amp; Straffung", "endymed_e2": "Narben", "endymed_e3": "Post-Akne", "endymed_e4": "Pigmentierung", "endymed_mn_extra": "Rehabilitation: 3–7 Tage · 2–3 Behandlungen · Effekt bis zu 2 Jahre", "endymed_fsr_desc": "Sanftes Hautresurfacing und RF-Lifting gleichzeitig — die Haut wird strahlender, ebenmäßiger und dichter.", "fsr_e1": "Pigmentierung", "fsr_e2": "Poren", "fsr_e3": "Akne-Narben", "fsr_e6": "Glow", "fsr_extra": "Sofortiges Ergebnis · Kurze Rehabilitationszeit · Keine Nebenwirkungen", "endyeye_desc": "Nicht-operative Alternative zur Blepharoplastik. Drei Endymed-Technologien in einem Protokoll straffen die Lidhaut, reduzieren Schwellungen und glätten Krähenfüße.", "endyeye_e1": "Lid-Lifting", "endyeye_e2": "Augenringe", "endyeye_e3": "Krähenfüße", "endyeye_e4": "Hautdichte", "endyeye_extra": "RF-Lifting · RF-Microneedling · Fraktionale Erneuerung", "endo_desc": "Kompressionsmikrovibrations-Technologie, entwickelt mit einem Phlebologen. Verbessert Durchblutung, reduziert Ödeme und Cellulite, stärkt die Hautstruktur.", "endo_e1": "Ödem-Reduktion", "endo_e2": "Lymphdrainage", "endo_e4": "Cellulite", "endo_f4": "Gesichtsoval", "endo_course": "Ohne Ausfallzeit · Ergebnis nach 1. Behandlung · Kurs: 6–12 Sitzungen", "geneo_desc": "3-in-1 Behandlung: reinigt, versorgt die Haut mit Sauerstoff und stimuliert die Kollagenbildung. Sichtbares Ergebnis bereits nach der ersten Anwendung.", "geneo_e1": "OxyGeneo Sauerstoff", "geneo_e2": "RF-Lifting", "geneo_e4": "Glow-Effekt", "geneo_e5": "Pigmentierung", "geneo_extra": "Kapseln: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Klassisches RF-Lifting — sanft, ohne Hautschäden. Stimuliert Kollagen, sichtbare Straffung ab der ersten Behandlung.", "tripollar_e1": "Hautstraffung", "tripollar_e2": "Falten", "tripollar_e3": "Gesichtsoval", "tripollar_e5": "Hauttonus", "tripollar_extra": "Effekt nach 1. Behandlung · Langanhaltend · Für regelmäßige Pflege", "laser_tag": "Dauerhafte Haarentfernung", "laser_desc": "Moderner Diodenlaser für dauerhafte Haarentfernung. Mit Kühlsystem — angenehm und sicher für alle Hauttypen.", "laser_e1": "Dauerhafte Epilation", "laser_e3": "Alle Hauttypen", "laser_e4": "Minimaler Schmerz", "laser_extra": "Kurs: 6–12 Sitzungen · Für Gesicht und Körper", "nails_label": "Nageldesign", "nails_title_1": "Nägel", "nails_title_2": "&amp; Pflege", "nails_sub": "Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.", "nails_cat_mani": "Maniküre", "nails_cat_pedi": "Pediküre", "nails_cat_art": "Nail Art", "nail_classic": "Klassische Maniküre", "nail_gel": "Gel-Lack Maniküre", "nail_gel_ext": "Gelverlängerung", "nail_removal": "Gel-Abnahme", "nail_pedi": "Klassische Pediküre", "nail_pedi_gel": "Pediküre + Gel-Lack", "nail_art_simple": "Einfaches Design (je Nagel)", "nail_art_complex": "Komplexes Design", "on_request": "auf Anfrage", "nails_btn": "Nageltermin buchen", "why_label": "Warum wir", "why_title_1": "Kein", "why_title_2": "Kompromiss.", "why1_title": "Individuelle Analyse", "why1_desc": "Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.", "why2_title": "Moderne Geräte", "why2_desc": "Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.", "why3_title": "Komplexe Lösungen", "why3_desc": "Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.", "why4_title": "Erfahrung &amp; Qualifikation", "why4_desc": "Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.", "why5_title": "Ehrlicher Ansatz", "why5_desc": "Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.", "ba_label": "Ergebnisse", "ba_title": "Vorher &amp; ", "ba_title_em": "Nachher", "ba_sub": "Echte Ergebnisse unserer Kundinnen.", "ba_before": "Vorher", "ba_after": "Nachher", "video_label": "Behandlungen live", "video_title": "Sehen Sie ", "video_title_em": "unsere Behandlungen", "prices_label": "Preisliste", "prices_title_1": "Unsere", "prices_title_2": "Preise", "tab_face": "Gesicht", "tab_body": "Körper", "tab_laser": "Laser", "geo_face": "Gesicht", "geo_face_dec": "Gesicht &amp; Dekolleté", "mn_face": "RF Microneedling — Gesicht", "mn_face_neck": "RF Microneedling — Gesicht &amp; Hals", "fsr_face": "Fraktionales Resurfacing — Gesicht", "tp_eye": "Augenzone Lifting", "tp_face": "Gesicht Lifting", "es_face": "Gesicht", "es_face_dec": "Gesicht &amp; Dekolleté", "es_body_intro1": "Einführungssitzung (1 Zone)", "es_body_zone": "Problemzone", "es_body_full": "Ganzkörper", "es_body_zone6": "Abo x6 (Problemzone)", "z_belly": "Bauch &amp; Seiten", "z_arms": "Arme", "z_legs_full": "Volle Beine", "z_c1": "Beine + Gesäß", "z_c3": "Beine + Gesäß + Bauch", "laser_removal_head": "Diodenlaser Haarentfernung", "las_lip": "Oberlippe", "las_bikini_deep": "Tiefer Bikini", "las_armpits": "Achseln", "las_legs_half": "Beine bis Knie", "las_legs_full": "Volle Beine", "las_c5": "Volle Beine + tiefer Bikini + Achseln", "las_back": "Rücken", "las_face_": "Gesicht", "prices_btn": "Termin &amp; Preise anfragen", "prices_note": "Aktuelle Preise auf Anfrage", "reviews_label": "Bewertungen", "reviews_title_1": "Was unsere", "reviews_title_2": "Kundinnen sagen", "review_1": "„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu.“", "review_2": "„Das RF-Lifting bei EndyMed hat meine Augenpartie sichtbar angehoben. Keine Nadeln, keine Ausfallzeit.“", "review_3": "„Die GeneO-Behandlung ist magisch. Direkt nach der Session leuchtete mein Teint wie noch nie.“", "review_4": "„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend.“", "review_5": "„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich.“", "booking_label": "Termin buchen", "booking_title_1": "Bereit für", "booking_title_2": "Ihre Verwandlung?", "booking_sub": "Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.", "booking_btn": "Jetzt online buchen", "bi_address": "Adresse", "bi_phone": "Telefon / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Öffnungszeiten", "bi_hours_val": "Mo–Sa: 10:00–20:00", "footer_desc": "Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.", "footer_col_treatments": "Treatments", "footer_col_contact": "Kontakt", "footer_face": "Gesichtspflege", "footer_body": "Körperformung", "footer_laser": "Laser", "footer_nails": "Nageldesign", "footer_book": "Online buchen", "footer_privacy": "Datenschutz", "footer_rights": "© 2025 Solvata Beauty Club Berlin. Alle Rechte vorbehalten."}, "en": {"nav_name": "Solvata Beauty Club", "nav_about": "About", "nav_equip": "Treatments", "nav_nails": "Nails", "nav_prices": "Pricing", "nav_contact": "Contact", "nav_book": "Book Now", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Beauty", "hero_title_2": "redefined.", "hero_sub": "Advanced aesthetic treatments, facial care, body contouring and nail design at the highest level. Your transformation starts here.", "hero_photo_ph": "Hero Photo — to be inserted", "btn_book": "Book Appointment", "btn_services": "Our Treatments", "scroll_label": "Scroll", "statement_quote": "Real beauty demands precision, technology, and a personal touch.", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Premium Devices", "stat_individual": "Individual", "mission_label": "About Us", "mission_title_1": "Our", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club stands for uncompromising quality. We combine the latest medical devices with a deep understanding of individual beauty needs.", "mission_quote": "Every treatment is a composition of science, aesthetics, and personal care.", "badge_1": "Certified", "badge_2": "Premium Devices", "badge_3": "Individual Consultation", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon Photo", "equip_label": "Treatments", "equip_title_1": "Our", "equip_title_2": "Technologies", "equip_sub": "Only certified top-tier medical devices — for visible, lasting results.", "endymed_mn_desc": "Renews skin from within — activates new collagen and elastin formation. Skin becomes denser, smoother and younger, without surgery. Effect grows over 2–3 months.", "endymed_e1": "Lifting &amp; Tightening", "endymed_e2": "Scars", "endymed_e3": "Post-Acne", "endymed_e4": "Pigmentation", "endymed_mn_extra": "Rehabilitation: 3–7 days · 2–3 treatments · Effect up to 2 years", "endymed_fsr_desc": "Gentle skin resurfacing and RF lifting simultaneously — skin becomes more radiant, even and dense.", "fsr_e1": "Pigmentation", "fsr_e2": "Pores", "fsr_e3": "Acne Scars", "fsr_e6": "Glow", "fsr_extra": "Immediate result · Short rehabilitation · No side effects", "endyeye_desc": "Non-operative alternative to blepharoplasty. Three Endymed technologies in one protocol tighten eyelid skin, reduce puffiness and smooth crow\'s feet.", "endyeye_e1": "Eyelid Lifting", "endyeye_e2": "Eye Circles", "endyeye_e3": "Crow\'s Feet", "endyeye_e4": "Skin Density", "endyeye_extra": "RF Lifting · RF Microneedling · Fractional Renewal", "endo_desc": "Compression micro-vibration technology developed with a phlebologist. Improves circulation, reduces edema and cellulite, strengthens skin structure.", "endo_e1": "Edema Reduction", "endo_e2": "Lymph Drainage", "endo_e4": "Cellulite", "endo_f4": "Face Oval", "endo_course": "No downtime · Result visible from 1st session · Course: 6–12 sessions", "geneo_desc": "3-in-1 treatment: cleanses, oxygenates skin and stimulates collagen production. Visible result from the very first session.", "geneo_e1": "OxyGeneo Oxygen", "geneo_e2": "RF Lifting", "geneo_e4": "Glow Effect", "geneo_e5": "Pigmentation", "geneo_extra": "Capsules: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Classic RF lifting — gentle, without skin damage. Stimulates collagen, visible tightening from the first session.", "tripollar_e1": "Skin Tightening", "tripollar_e2": "Wrinkles", "tripollar_e3": "Face Oval", "tripollar_e5": "Skin Tone", "tripollar_extra": "Effect after 1st session · Long-lasting · For regular maintenance", "laser_tag": "Permanent Hair Removal", "laser_desc": "Modern diode laser for permanent hair removal. With cooling system — comfortable and safe for all skin types.", "laser_e1": "Permanent Epilation", "laser_e3": "All Skin Types", "laser_e4": "Minimal Discomfort", "laser_extra": "Course: 6–12 sessions · For face and body", "nails_label": "Nail Design", "nails_title_1": "Nails", "nails_title_2": "&amp; Care", "nails_sub": "From classic manicure to elaborate nail art — our experts turn your vision into reality.", "nails_cat_mani": "Manicure", "nails_cat_pedi": "Pedicure", "nails_cat_art": "Nail Art", "nail_classic": "Classic Manicure", "nail_gel": "Gel Polish Manicure", "nail_gel_ext": "Gel Extension", "nail_removal": "Gel Removal", "nail_pedi": "Classic Pedicure", "nail_pedi_gel": "Pedicure + Gel Polish", "nail_art_simple": "Simple Design (per nail)", "nail_art_complex": "Complex Design", "on_request": "on request", "nails_btn": "Book Nail Appointment", "why_label": "Why Us", "why_title_1": "No", "why_title_2": "compromise.", "why1_title": "Individual Analysis", "why1_desc": "Every client receives an individual skin analysis and a tailored treatment plan.", "why2_title": "Modern Devices", "why2_desc": "Latest-generation technologies with clinically proven effectiveness.", "why3_title": "Combined Solutions", "why3_desc": "Face, body and nails under one roof — combined for the best result.", "why4_title": "Experience &amp; Expertise", "why4_desc": "Specialists with medical education and over 5 years of experience.", "why5_title": "Honest Approach", "why5_desc": "No unnecessary treatments. We recommend only what truly helps.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exclusive, discreet atmosphere in the heart of Berlin Charlottenburg.", "ba_label": "Results", "ba_title": "Before &amp; ", "ba_title_em": "After", "ba_sub": "Real results of our clients.", "ba_before": "Before", "ba_after": "After", "video_label": "Treatments live", "video_title": "Watch ", "video_title_em": "our treatments", "prices_label": "Price List", "prices_title_1": "Our", "prices_title_2": "Prices", "tab_face": "Face", "tab_body": "Body", "tab_laser": "Laser", "geo_face": "Face", "geo_face_dec": "Face &amp; Décolleté", "mn_face": "RF Microneedling — Face", "mn_face_neck": "RF Microneedling — Face &amp; Neck", "fsr_face": "Fractional Resurfacing — Face", "tp_eye": "Eye Zone Lifting", "tp_face": "Face Lifting", "es_face": "Face", "es_face_dec": "Face &amp; Décolleté", "es_body_intro1": "Introductory Session (1 Zone)", "es_body_zone": "Problem Zone", "es_body_full": "Full Body", "es_body_zone6": "Subscription x6 (Problem Zone)", "z_belly": "Abdomen &amp; Sides", "z_arms": "Arms", "z_legs_full": "Full Legs", "z_c1": "Legs + Glutes", "z_c3": "Legs + Glutes + Abdomen", "laser_removal_head": "Diode Laser Hair Removal", "las_lip": "Upper Lip", "las_bikini_deep": "Deep Bikini", "las_armpits": "Armpits", "las_legs_half": "Legs to Knee", "las_legs_full": "Full Legs", "las_c5": "Full Legs + Deep Bikini + Armpits", "las_back": "Back", "las_face_": "Face", "prices_btn": "Request Appointment &amp; Prices", "prices_note": "Current prices on request", "reviews_label": "Reviews", "reviews_title_1": "What our", "reviews_title_2": "clients say", "review_1": "Incredible results after just three Endospheres sessions. My skin is firmer and I feel completely renewed.", "review_2": "The RF lifting at EndyMed visibly lifted my eye area. No needles, no downtime.", "review_3": "The GeneO treatment is magical. Right after the session my complexion glowed like never before.", "review_4": "Laser hair removal was completely painless and the results after just two sessions are impressive.", "review_5": "The nail design here is on another level. Detail-obsessed, long-lasting and so personal.", "booking_label": "Book Appointment", "booking_title_1": "Ready for", "booking_title_2": "your transformation?", "booking_sub": "Book your appointment online or contact us directly. We look forward to welcoming you.", "booking_btn": "Book Online Now", "bi_address": "Address", "bi_phone": "Phone / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Opening Hours", "bi_hours_val": "Mon–Sat: 10:00–20:00", "footer_desc": "Premium aesthetics in Berlin. Cutting-edge devices, individual treatments, lasting results.", "footer_col_treatments": "Treatments", "footer_col_contact": "Contact", "footer_face": "Facial Care", "footer_body": "Body Contouring", "footer_laser": "Laser", "footer_nails": "Nail Design", "footer_book": "Book Online", "footer_privacy": "Privacy Policy", "footer_rights": "© 2025 Solvata Beauty Club Berlin. All rights reserved."}}');
 
 var currentLang='de';
