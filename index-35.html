@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solvata Beauty Club Berlin — Premium Kosmetik & Nägel</title>
+<meta name="description" content="Solvata Beauty Club Berlin. Apparative Kosmetik, Gesichtspflege, Körperformung & Nageldesign. Berliner Straße 54, 10713 Berlin.">
+<meta property="og:title" content="Solvata Beauty Club Berlin">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/32%20x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blk:#080808;--blk2:#0f0f0f;--blk3:#161616;--blk4:#1e1e1e;
+  --w:#f4f0ea;--wd:rgba(244,240,234,.6);--wf:rgba(244,240,234,.10);
+  --g:#b89a6a;--gl:#d4b88a;--gf:rgba(184,154,106,.10);--gb:rgba(184,154,106,.22);
+  --tr:.5s cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blk);color:var(--w);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(8,8,8,.93);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--gb);}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-img{width:34px;height:34px;object-fit:contain;opacity:.9;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;letter-spacing:.06em;color:var(--w);}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wd);text-decoration:none;transition:color .3s;font-weight:400;}
+.nav-links a:hover{color:var(--g);}
+.nav-right{display:flex;align-items:center;gap:.8rem;}
+.lang-switcher{display:flex;border:1px solid var(--gb);}
+.lang-btn{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;padding:5px 12px;color:var(--wd);font-family:'Jost',sans-serif;font-weight:400;transition:all .3s;cursor:pointer;}
+.lang-btn.active{background:var(--g);color:var(--blk);}
+.lang-btn:hover:not(.active){color:var(--g);}
+.nav-cta{font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blk);background:var(--g);padding:9px 22px;text-decoration:none;font-weight:400;transition:background .3s;}
+.nav-cta:hover{background:var(--gl);}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:1px;background:var(--w);transition:all .3s;}
+@media(max-width:960px){.nav-links{display:none;}}
+@media(max-width:680px){.hamburger{display:flex;}.nav-cta{display:none;}}
+@media(max-width:480px){nav{padding:0 4vw;}.nav-name{font-size:1.05rem;}}
+
+/* MOBILE MENU */
+.mob-menu{display:none;position:fixed;inset:0;z-index:190;background:var(--blk);flex-direction:column;align-items:flex-start;justify-content:center;padding:0 8vw;transform:translateX(100%);transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.mob-menu.open{transform:translateX(0);}
+.mob-menu a{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,8vw,3.5rem);font-weight:400;color:var(--w);text-decoration:none;display:block;padding:.45rem 0;border-bottom:1px solid var(--wf);width:100%;transition:color .3s;}
+.mob-menu a:hover{color:var(--g);}
+.mob-close{position:absolute;top:22px;right:5vw;background:none;border:none;color:var(--wd);font-size:1.8rem;line-height:1;cursor:pointer;}
+.mob-bottom{margin-top:2.5rem;}
+@media(max-width:680px){.mob-menu{display:flex;}}
+
+/* HERO */
+#hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:var(--blk2);overflow:hidden;}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.60;filter:grayscale(10%) contrast(1.05);object-position:center 18%;}
+/* Desktop: hide portrait hero photo, show gradient bg only */
+@media(min-width:769px){.hero-photo{display:none;}}
+/* Mobile: show photo, works great as portrait */
+@media(max-width:768px){.hero-photo{display:block;object-position:center 18%;}}
+.hero-ph{position:absolute;inset:0;background:linear-gradient(135deg,#0d0d0d 0%,#150e0e 40%,#0d0808 70%,#080808 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.hero-ph svg{opacity:.2;}
+.hero-ph-label{font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gb);}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.97) 0%,rgba(8,8,8,.65) 35%,rgba(8,8,8,.15) 65%,transparent 100%);}
+.hero-grad-side{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,.55) 0%,transparent 55%);}
+.hero-noise{position:absolute;inset:0;opacity:.03;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px;}
+.hero-content{position:relative;z-index:2;padding:0 5vw 9vh;max-width:860px;}
+.hero-eyebrow{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g);margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp 1s .3s forwards;}
+.hero-eyebrow::after{content:'';width:36px;height:1px;background:var(--g);opacity:.5;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.8rem,9vw,8.5rem);font-weight:500;line-height:.93;letter-spacing:-.01em;margin-bottom:2.2rem;opacity:0;animation:fadeUp 1s .5s forwards;}
+.hero-title em{font-style:italic;font-weight:300;color:var(--g);display:block;}
+.hero-sub{font-size:1rem;line-height:1.8;color:var(--wd);max-width:460px;font-weight:300;margin-bottom:2.8rem;opacity:0;animation:fadeUp 1s .7s forwards;}
+.hero-actions{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1s .9s forwards;}
+.btn-primary{background:var(--g);color:var(--blk);padding:14px 36px;border:none;font-family:'Jost',sans-serif;font-size:.76rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .3s;}
+.btn-primary:hover{background:var(--gl);}
+.btn-ghost{color:var(--w);padding:13px 30px;border:1px solid rgba(244,240,234,.22);font-family:'Jost',sans-serif;font-size:.76rem;font-weight:300;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .3s;}
+.btn-ghost:hover{border-color:var(--g);color:var(--g);}
+.hero-scroll{position:absolute;bottom:4vh;right:5vw;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s 1.4s forwards;}
+.hero-scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,var(--g),transparent);animation:scrollPulse 2s ease-in-out infinite;}
+.hero-scroll-label{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--wd);writing-mode:vertical-rl;}
+@keyframes scrollPulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* STATEMENT */
+#statement{background:var(--g);padding:4.5rem 5vw;}
+.statement-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;}
+.statement-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:400;font-style:italic;color:var(--blk);line-height:1.35;max-width:640px;}
+.statement-sub{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(8,8,8,.5);margin-top:.75rem;font-family:'Jost',sans-serif;}
+.statement-div{width:1px;height:70px;background:rgba(8,8,8,.18);flex-shrink:0;}
+.statement-stats{display:flex;gap:2.5rem;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:500;color:var(--blk);line-height:1;}
+.stat-label{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(8,8,8,.5);margin-top:4px;font-family:'Jost',sans-serif;}
+
+/* SECTIONS */
+section{padding:100px 5vw;}
+.section-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.section-label::before{content:'';width:28px;height:1px;background:var(--g);opacity:.6;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:500;line-height:1.05;letter-spacing:-.01em;margin-bottom:1.4rem;}
+.section-title em{font-style:italic;font-weight:300;color:var(--g);}
+.section-sub{font-size:.92rem;color:var(--wd);line-height:1.85;max-width:520px;font-weight:300;}
+
+/* MISSION */
+#mission{background:var(--blk2);}
+.mission-inner{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:stretch;}
+.mission-quote-block{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,1.8vw,1.55rem);font-weight:300;font-style:italic;line-height:1.7;border-left:1px solid var(--g);padding-left:1.8rem;margin:2.2rem 0;color:var(--w);}
+.mission-badges{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:2rem;}
+.badge{border:1px solid var(--gb);padding:5px 15px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);font-family:'Jost',sans-serif;}
+.mission-visual{position:relative;background:var(--blk3);overflow:hidden;}
+.mission-visual-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;}
+.ph-label{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gb);font-family:'Jost',sans-serif;}
+.mission-accent{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--g);}
+@media(max-width:768px){.mission-inner{grid-template-columns:1fr;}}
+
+/* EQUIPMENT */
+#equipment{background:var(--blk);}
+.equipment-header{max-width:680px;margin-bottom:4.5rem;}
+.equipment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:var(--gb);border:1px solid var(--gb);}
+.equip-card{background:var(--blk2);overflow:hidden;display:flex;flex-direction:column;transition:background var(--tr);}
+.equip-card:hover{background:var(--blk3);}
+.equip-img{height:220px;overflow:hidden;position:relative;background:var(--blk3);}
+.equip-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.82;transition:transform .6s ease;}
+.equip-card:hover .equip-img img{transform:scale(1.04);}
+.equip-body{padding:26px 30px;flex:1;display:flex;flex-direction:column;}
+.equip-tag{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:.6rem;font-family:'Jost',sans-serif;}
+.equip-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;margin-bottom:.7rem;letter-spacing:-.01em;}
+.equip-desc{font-size:.85rem;line-height:1.8;color:var(--wd);margin-bottom:1.3rem;flex:1;}
+.equip-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.effect-tag{background:var(--gf);color:var(--g);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;font-family:'Jost',sans-serif;}
+.equip-extra{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--wf);font-size:.78rem;color:var(--wd);line-height:1.65;}
+
+/* NAILS */
+#nails{background:var(--blk3);position:relative;overflow:hidden;}
+#nails::before{content:'NÄGEL';position:absolute;right:-1vw;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,16vw,14rem);font-weight:500;color:var(--wf);pointer-events:none;line-height:1;letter-spacing:-.02em;}
+.nails-inner{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:start;position:relative;z-index:1;}
+.nails-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto auto;gap:3px;}
+.nail-photo{aspect-ratio:3/4;background:var(--blk4);overflow:hidden;position:relative;}
+.nail-photo:first-child{grid-row:span 2;grid-column:span 1;aspect-ratio:auto;}
+.nail-photo img{width:100%;height:100%;object-fit:cover;opacity:.82;}
+.nail-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.price-list{margin-top:2.5rem;}
+.price-cat{border-top:1px solid var(--gb);padding:1.3rem 0;}
+.price-cat-name{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:.85rem;font-family:'Jost',sans-serif;}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.42rem 0;border-bottom:1px solid var(--wf);}
+.price-row:last-child{border-bottom:none;}
+.price-name{font-size:.88rem;color:var(--wd);}
+.price-val{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--w);flex-shrink:0;margin-left:1rem;}
+@media(max-width:768px){.nails-inner{grid-template-columns:1fr;}#nails::before{display:none;}}
+
+/* WHY */
+#why{background:var(--blk2);}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--gb);border:1px solid var(--gb);margin-top:3.5rem;}
+.why-card{background:var(--blk2);padding:36px 32px;transition:background .4s;}
+.why-card:hover{background:var(--blk3);}
+.why-icon{font-size:1.3rem;color:var(--g);margin-bottom:1.2rem;display:block;}
+.why-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;margin-bottom:.6rem;}
+.why-desc{font-size:.85rem;color:var(--wd);line-height:1.8;}
+
+/* BEFORE/AFTER */
+#beforeafter{background:var(--blk);}
+.ba-wrap{overflow:hidden;margin-top:3.5rem;}
+.ba-track{display:flex;gap:4px;animation:baScroll 40s linear infinite;width:max-content;}
+.ba-track:hover{animation-play-state:paused;}
+@keyframes baScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ba-pair{flex:0 0 auto;width:280px;}
+.ba-pair-images{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.ba-pair-half{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--blk3);}
+.ba-pair-half img{width:100%;height:100%;object-fit:cover;display:block;}
+.ba-lbl{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:white;background:rgba(8,8,8,.65);padding:3px 9px;font-family:'Jost',sans-serif;white-space:nowrap;}
+
+/* VIDEO */
+#video-section{background:var(--blk2);}
+.video-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:3.5rem;}
+.video-frame{overflow:hidden;aspect-ratio:9/16;background:var(--blk3);position:relative;}
+.video-lbl{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(8,8,8,.7);backdrop-filter:blur(6px);color:var(--w);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;font-family:'Jost',sans-serif;white-space:nowrap;}
+@media(max-width:640px){.video-grid{grid-template-columns:1fr;}.video-frame{aspect-ratio:16/9;}}
+
+/* PRICES */
+#prices{background:var(--blk2);}
+.prices-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem;}
+.price-tabs{display:flex;border:1px solid var(--gb);overflow-x:auto;}
+.price-tab{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:10px 20px;background:none;border:none;color:var(--wd);font-family:'Jost',sans-serif;font-weight:400;transition:all .3s;white-space:nowrap;cursor:pointer;}
+.price-tab.active{background:var(--g);color:var(--blk);}
+.price-tab:hover:not(.active){color:var(--g);}
+.price-panel{display:none;}
+.price-panel.active{display:block;}
+.price-table{width:100%;border-collapse:collapse;}
+.price-table tr{border-bottom:1px solid var(--wf);}
+.price-table tr:hover td{background:var(--blk3);}
+.price-table td{padding:13px 0;font-size:.87rem;}
+.price-table td:first-child{color:var(--wd);width:100%;padding-right:2rem;}
+.price-table td:last-child{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--w);text-align:right;white-space:nowrap;}
+.price-sec-head{font-family:'Jost',sans-serif;font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);padding:1.4rem 0 .4rem!important;border-bottom:none!important;}
+
+/* REVIEWS */
+#reviews{background:var(--blk);overflow:hidden;}
+.reviews-track{display:flex;gap:4px;margin-top:3.5rem;overflow-x:auto;padding-bottom:1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.reviews-track::-webkit-scrollbar{display:none;}
+.review-card{flex:0 0 320px;background:var(--blk2);border:1px solid var(--gb);padding:32px 28px;}
+.review-stars{color:var(--g);font-size:.8rem;margin-bottom:1rem;letter-spacing:3px;}
+.review-text{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;line-height:1.75;color:var(--wd);margin-bottom:1.3rem;}
+.reviewer-name{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--w);}
+.reviewer-proc{font-size:.7rem;color:var(--g);margin-top:3px;}
+
+/* BOOKING */
+#booking{background:var(--blk3);}
+.booking-inner{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;}
+.booking-visual{position:relative;aspect-ratio:9/16;background:var(--blk3);overflow:hidden;}
+.booking-accent{position:absolute;right:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--g),transparent);}
+.booking-cta{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.8vw,3.4rem);font-weight:500;line-height:1.05;margin-bottom:1.3rem;}
+.booking-cta em{font-style:italic;font-weight:300;color:var(--g);display:block;}
+.booking-sub{font-size:.9rem;color:var(--wd);line-height:1.8;margin-bottom:2.2rem;}
+.booking-info{margin-top:2.5rem;}
+.bi-row{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--wf);}
+.bi-row:first-child{border-top:1px solid var(--wf);}
+.bi-icon{width:15px;flex-shrink:0;color:var(--g);margin-top:2px;}
+.bi-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);display:block;margin-bottom:2px;font-family:'Jost',sans-serif;}
+.bi-val{font-size:.86rem;color:var(--wd);}
+@media(max-width:768px){.booking-inner{grid-template-columns:1fr;}.booking-visual{aspect-ratio:9/16;max-height:70vw;}}
+
+/* FOOTER */
+footer{background:var(--blk);border-top:1px solid var(--gb);padding:5rem 5vw 3rem;}
+.footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3.5rem;margin-bottom:3.5rem;}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
+.footer-logo img{width:28px;object-fit:contain;opacity:.85;}
+.footer-logo-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--w);}
+.footer-desc{font-size:.83rem;color:var(--wd);line-height:1.8;max-width:280px;}
+.footer-col-title{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:1.1rem;font-family:'Jost',sans-serif;}
+.footer-links{display:flex;flex-direction:column;gap:.5rem;}
+.footer-links a{font-size:.85rem;color:var(--wd);text-decoration:none;transition:color .3s;}
+.footer-links a:hover{color:var(--g);}
+.footer-bottom{border-top:1px solid var(--wf);padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.74rem;color:rgba(244,240,234,.28);}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem;}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-d1{transition-delay:.1s;}
+.reveal-d2{transition-delay:.2s;}
+.reveal-d3{transition-delay:.3s;}
+
+/* COOKIE */
+.cookie-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:999;width:calc(100% - 40px);max-width:620px;background:rgba(14,14,14,.97);border:1px solid var(--gb);padding:18px 22px;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;animation:ckIn .5s ease forwards;}
+@keyframes ckIn{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.cookie-banner.hide{animation:ckOut .3s ease forwards;}
+@keyframes ckOut{to{opacity:0;transform:translateX(-50%) translateY(10px)}}
+.cookie-text{flex:1;min-width:180px;font-size:.78rem;color:var(--wd);line-height:1.65;}
+.cookie-text a{color:var(--g);text-decoration:none;}
+.cookie-actions{display:flex;gap:.6rem;}
+.ck-accept{background:var(--g);color:var(--blk);border:none;padding:8px 18px;font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .3s;}
+.ck-accept:hover{background:var(--gl);}
+.ck-decline{background:none;border:1px solid rgba(244,240,234,.18);color:var(--wd);padding:8px 14px;font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.ck-decline:hover{border-color:var(--wd);color:var(--w);}
+@media(max-width:520px){.cookie-banner{flex-direction:column;align-items:flex-start;}.cookie-actions{width:100%;}.ck-accept,.ck-decline{flex:1;text-align:center;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">
+    <img src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" alt="Solvata" class="nav-logo-img">
+    <span class="nav-name" data-i18n="nav_name">Solvata Beauty Club</span>
+  </a>
+  <div class="nav-links">
+    <a href="#mission"   data-i18n="nav_about">Über uns</a>
+    <a href="#equipment" data-i18n="nav_equip">Treatments</a>
+    <a href="#nails"     data-i18n="nav_nails">Nägel</a>
+    <a href="#prices"    data-i18n="nav_prices">Preise</a>
+    <a href="#booking"   data-i18n="nav_contact">Kontakt</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn"        onclick="setLang('en')">EN</button>
+    </div>
+    <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="nav-cta" data-i18n="nav_book">Termin buchen</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-menu" id="mob-menu">
+  <button class="mob-close" onclick="toggleMenu()">×</button>
+  <a href="#mission"   onclick="toggleMenu()" data-i18n="nav_about">Über uns</a>
+  <a href="#equipment" onclick="toggleMenu()" data-i18n="nav_equip">Treatments</a>
+  <a href="#nails"     onclick="toggleMenu()" data-i18n="nav_nails">Nägel</a>
+  <a href="#prices"    onclick="toggleMenu()" data-i18n="nav_prices">Preise</a>
+  <a href="#booking"   onclick="toggleMenu()" data-i18n="nav_contact">Kontakt</a>
+  <div class="mob-bottom"><a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="nav_book">Termin buchen</a></div>
+</div>
+
+<section id="hero">
+  <div class="hero-bg">
+    <img class="hero-photo" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main" alt="Solvata Beauty Club Berlin" fetchpriority="high">
+    <div class="hero-grad"></div><div class="hero-grad-side"></div><div class="hero-noise"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Berlin · Premium Beauty</div>
+    <h1 class="hero-title"><span data-i18n="hero_title_1">Schönheit</span><em data-i18n="hero_title_2">neu definiert.</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.</p>
+    <div class="hero-actions">
+      <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="btn_book">Termin buchen</a>
+      <a href="#equipment" class="btn-ghost" data-i18n="btn_services">Unsere Treatments</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div><span class="hero-scroll-label" data-i18n="scroll_label">Scroll</span></div>
+</section>
+
+<div id="statement">
+  <div class="statement-inner">
+    <div>
+      <p class="statement-quote" data-i18n="statement_quote">„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note."</p>
+      <p class="statement-sub" data-i18n="statement_sub">— Solvata Beauty Club, Berlin</p>
+    </div>
+    <div class="statement-div"></div>
+    <div class="statement-stats">
+      <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label" data-i18n="stat_devices">Premium-Geräte</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label" data-i18n="stat_individual">Individuell</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="mission">
+  <div class="mission-inner">
+    <div class="reveal">
+      <span class="section-label" data-i18n="mission_label">Über uns</span>
+      <h2 class="section-title"><span data-i18n="mission_title_1">Unser</span> <em data-i18n="mission_title_2">Salon</em></h2>
+      <p class="section-sub" data-i18n="mission_sub">Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.</p>
+      <blockquote class="mission-quote-block" data-i18n="mission_quote">Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.</blockquote>
+      <div class="mission-badges">
+        <span class="badge" data-i18n="badge_1">Zertifiziert</span>
+        <span class="badge" data-i18n="badge_2">Premium-Geräte</span>
+        <span class="badge" data-i18n="badge_3">Individuelle Beratung</span>
+        <span class="badge" data-i18n="badge_4">Berlin Charlottenburg</span>
+      </div>
+    </div>
+    <div class="mission-visual reveal reveal-d2" style="background:var(--blk3);overflow:hidden;position:relative;min-height:400px;aspect-ratio:unset;align-self:stretch;">
+      <iframe
+        src="https://player.vimeo.com/video/1193971429?autoplay=1&muted=1&loop=1&background=1&autopause=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;"
+        title="Solvata Beauty Club Berlin"></iframe>
+      <div class="mission-accent"></div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <div class="equipment-header reveal">
+    <span class="section-label" data-i18n="equip_label">Treatments</span>
+    <h2 class="section-title"><span data-i18n="equip_title_1">Unsere</span> <em data-i18n="equip_title_2">Technologien</em></h2>
+    <p class="section-sub" data-i18n="equip_sub">Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.</p>
+  </div>
+  <div class="equipment-grid">
+
+    <div class="equip-card reveal">
+      <div class="equip-img"><img src="https://ik.imagekit.io/erewhile/Solvata/Endymed%20Intensive%20Microneedling.png" alt="Endymed Intensive Microneedling"></div>
+      <div class="equip-body">
+        <div class="equip-tag">RF Microneedling</div>
+        <div class="equip-name">Endymed Intensive Microneedling</div>
+        <p class="equip-desc" data-i18n="endymed_mn_desc">Erneuert die Haut von innen — aktiviert die Bildung von neuem Kollagen und Elastin. Die Haut wird dichter, glatter und jünger, ohne Operation. Der Effekt wächst über 2–3 Monate.</p>
+        <div class="equip-tags"><span class="effect-tag" data-i18n="endymed_e1">Lifting &amp; Straffung</span><span class="effect-tag" data-i18n="endymed_e2">Narben</span><span class="effect-tag" data-i18n="endymed_e3">Post-Akne</span><span class="effect-tag" data-i18n="endymed_e4">Pigmentierung</span></div>
+        <p class="equip-extra" data-i18n="endymed_mn_extra">Rehabilitation: 3–7 Tage · 2–3 Behandlungen · Effekt bis zu 2 Jahre</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal reveal-d1">
+      <div class="equip-img"><img src="https://ik.imagekit.io/erewhile/Solvata/endymed%20fsr.png" alt="Endymed FSR"></div>
+      <div class="equip-body">
+        <div class="equip-tag">Fraktionales Resurfacing</div>
+        <div class="equip-name">Endymed FSR</div>
+        <p class="equip-desc" data-i18n="endymed_fsr_desc">Sanftes Hautresurfacing und RF-Lifting gleichzeitig — die Haut wird strahlender, ebenmäßiger und dichter. Kürzere Rehabilitationszeit als bei Laserbehandlungen.</p>
+        <div class="equip-tags"><span class="effect-tag" data-i18n="fsr_e1">Pigmentierung</span><span class="effect-tag" data-i18n="fsr_e2">Poren</span><span class="effect-tag" data-i18n="fsr_e3">Akne-Narben</span><span class="effect-tag" data-i18n="fsr_e6">Glow</span></div>
+        <p class="equip-extra" data-i18n="fsr_extra">Sofortiges Ergebnis · Kurze Rehabilitationszeit · Keine Nebenwirkungen</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal">
+      <div class="equip-img"><img src="https://ik.imagekit.io/erewhile/Solvata/endy%20eye.png" alt="ENDYEye"></div>
+      <div class="equip-body">
+        <div class="equip-tag">Augen-Lifting</div>
+        <div class="equip-name">ENDYEye — Eyes Lifting</div>
+        <p class="equip-desc" data-i18n="endyeye_desc">Nicht-operative Alternative zur Blepharoplastik. Drei Endymed-Technologien in einem Protokoll straffen die Lidhaut, reduzieren Schwellungen und glätten Krähenfüße — ohne Eingriff und Heilungszeit.</p>
+        <div class="equip-tags"><span class="effect-tag" data-i18n="endyeye_e1">Lid-Lifting</span><span class="effect-tag" data-i18n="endyeye_e2">Augenringe</span><span class="effect-tag" data-i18n="endyeye_e3">Krähenfüße</span><span class="effect-tag" data-i18n="endyeye_e4">Hautdichte</span></div>
+        <p class="equip-extra" data-i18n="endyeye_extra">RF-Lifting · RF-Microneedling · Fraktionale Erneuerung</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal reveal-d1">
+      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/endospheres%20de.png" alt="Endospheres"></div>
+      <div class="equip-body">
+        <div class="equip-tag">Körper &amp; Gesicht</div>
+        <div class="equip-name">Endospheres Therapy</div>
+        <p class="equip-desc" data-i18n="endo_desc">Kompressionsmikrovibrations-Technologie, entwickelt mit einem Phlebologen. Verbessert Durchblutung, reduziert Ödeme und Cellulite, stärkt die Hautstruktur. Auch für das Gesicht: Oval-Lifting und Hauttönung.</p>
+        <div class="equip-tags"><span class="effect-tag" data-i18n="endo_e1">Ödem-Reduktion</span><span class="effect-tag" data-i18n="endo_e2">Lymphdrainage</span><span class="effect-tag" data-i18n="endo_e4">Cellulite</span><span class="effect-tag" data-i18n="endo_f4">Gesichtsoval</span></div>
+        <p class="equip-extra" data-i18n="endo_course">Ohne Ausfallzeit · Ergebnis nach 1. Behandlung · Kurs: 6–12 Sitzungen</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal">
+      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/Hydrafacial.png" alt="Hydrafacial Skinfusor"></div>
+      <div class="equip-body">
+        <div class="equip-tag">Hydrafacial · Sauerstoff</div>
+        <div class="equip-name">Hydrafacial — Skinfusor</div>
+        <p class="equip-desc">Tiefe Hautreinigung und intensive Wirkstoffinfusion in einem. Hydrafacial Skinfusor reinigt die Poren, exfoliiert sanft und versorgt die Haut gleichzeitig mit maßgeschneiderten Seren. Sichtbarer Glow direkt nach der ersten Anwendung.</p>
+        <div class="equip-tags"><span class="effect-tag">Tiefenreinigung</span><span class="effect-tag">Sauerstoff</span><span class="effect-tag">Glow-Effekt</span><span class="effect-tag">Pigmentierung</span><span class="effect-tag">Feuchtigkeitspflege</span></div>
+        <p class="equip-extra">Gesicht ab 129 € · Gesicht &amp; Hals 139 € · Gesicht, Hals &amp; Dekolleté 159 €</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal reveal-d1">
+      <div class="equip-img"><img src="https://ik.imagekit.io/erewhile/Solvata/TriPollar%20RF.jpg" alt="TriPollar RF"></div>
+      <div class="equip-body">
+        <div class="equip-tag">RF Lifting</div>
+        <div class="equip-name">TriPollar RF</div>
+        <p class="equip-desc" data-i18n="tripollar_desc">Klassisches RF-Lifting — sanft, ohne Hautschäden. Erwärmt das Gewebe, stimuliert Kollagen und sorgt für sichtbare Straffung bereits nach der ersten Behandlung. Ideal für regelmäßige Pflege.</p>
+        <div class="equip-tags"><span class="effect-tag" data-i18n="tripollar_e1">Hautstraffung</span><span class="effect-tag" data-i18n="tripollar_e2">Falten</span><span class="effect-tag" data-i18n="tripollar_e3">Gesichtsoval</span><span class="effect-tag" data-i18n="tripollar_e5">Hauttonus</span></div>
+        <p class="equip-extra" data-i18n="tripollar_extra">Effekt nach 1. Behandlung · Langanhaltend · Für regelmäßige Pflege geeignet</p>
+      </div>
+    </div>
+
+    <div class="equip-card reveal">
+      <div class="equip-img" style="background:var(--blk3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.6rem;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(184,154,106,0.3)" stroke-width="1"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="3" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="21" y2="12"/></svg>
+        <span style="font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,154,106,0.3);font-family:'Jost',sans-serif;">Foto folgt</span>
+      </div>
+      <div class="equip-body">
+        <div class="equip-tag">Dauerhafte Haarentfernung</div>
+        <div class="equip-name">Primelaser</div>
+        <p class="equip-desc">Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ganzjährig einsetzbar. Bereits nach der ersten Sitzung sind 15–20% der Haare weg. Mit einem Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erzielt.</p>
+        <div class="equip-tags"><span class="effect-tag">Dauerhafte Epilation</span><span class="effect-tag">Alle Hauttypen</span><span class="effect-tag">Ganzjährig</span><span class="effect-tag">Schmerzlos</span><span class="effect-tag">Kühlung</span></div>
+        <p class="equip-extra">Kurs: 6–8 Sitzungen · Ab 1. Sitzung sichtbarer Effekt · Für Gesicht und Körper</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="nails">
+  <div class="nails-inner">
+    <div class="nails-gallery reveal">
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/3f9305d2-c5a2-4414-885b-72f64a241fc5.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/643db5e1-5471-446b-9d10-bdbcf7292d36.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/ff846e73-b1f5-46e4-baa0-d8304b4a9a26.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/af178302-a6ce-4c08-93a5-e15079542433.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/9ae59607-70b1-4195-aa36-53a8743fc7a3.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/0a9225e2-97f4-4c95-8657-49c98e7e5789.JPG" alt="Nageldesign" loading="lazy"></div>
+      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/00ea5f36-7115-4a66-98ac-332133137158.JPG" alt="Nageldesign" loading="lazy"></div>
+    </div>
+    <div class="reveal reveal-d2">
+      <span class="section-label" data-i18n="nails_label">Nageldesign</span>
+      <h2 class="section-title"><em data-i18n="nails_title_1">Nägel</em> <span data-i18n="nails_title_2">&amp; Pflege</span></h2>
+      <p class="section-sub" data-i18n="nails_sub">Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.</p>
+      <div class="price-list">
+        <div class="price-cat">
+          <div class="price-cat-name" data-i18n="nails_cat_mani">Maniküre</div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_classic">Klassische Maniküre</span><span class="price-val">ab 25 €</span></div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_gel">Gel-Lack Maniküre</span><span class="price-val">ab 35 €</span></div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_gel_ext">Gelverlängerung</span><span class="price-val">ab 55 €</span></div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_removal">Gel-Abnahme</span><span class="price-val">ab 15 €</span></div>
+        </div>
+        <div class="price-cat">
+          <div class="price-cat-name" data-i18n="nails_cat_pedi">Pediküre</div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_pedi">Klassische Pediküre</span><span class="price-val">ab 35 €</span></div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_pedi_gel">Pediküre + Gel-Lack</span><span class="price-val">ab 50 €</span></div>
+        </div>
+        <div class="price-cat">
+          <div class="price-cat-name" data-i18n="nails_cat_art">Nail Art</div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_art_simple">Einfaches Design (je Nagel)</span><span class="price-val">ab 2 €</span></div>
+          <div class="price-row"><span class="price-name" data-i18n="nail_art_complex">Komplexes Design</span><span class="price-val" data-i18n="on_request">auf Anfrage</span></div>
+        </div>
+      </div>
+      <div style="margin-top:2rem;"><a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="nails_btn">Nageltermin buchen</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="reveal">
+    <span class="section-label" data-i18n="why_label">Warum wir</span>
+    <h2 class="section-title"><span data-i18n="why_title_1">Kein</span> <em data-i18n="why_title_2">Kompromiss.</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal"><span class="why-icon">✦</span><div class="why-title" data-i18n="why1_title">Individuelle Analyse</div><p class="why-desc" data-i18n="why1_desc">Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.</p></div>
+    <div class="why-card reveal reveal-d1"><span class="why-icon">◈</span><div class="why-title" data-i18n="why2_title">Moderne Geräte</div><p class="why-desc" data-i18n="why2_desc">Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.</p></div>
+    <div class="why-card reveal reveal-d2"><span class="why-icon">⬡</span><div class="why-title" data-i18n="why3_title">Komplexe Lösungen</div><p class="why-desc" data-i18n="why3_desc">Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.</p></div>
+    <div class="why-card reveal"><span class="why-icon">✿</span><div class="why-title" data-i18n="why4_title">Erfahrung &amp; Qualifikation</div><p class="why-desc" data-i18n="why4_desc">Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.</p></div>
+    <div class="why-card reveal reveal-d1"><span class="why-icon">◎</span><div class="why-title" data-i18n="why5_title">Ehrlicher Ansatz</div><p class="why-desc" data-i18n="why5_desc">Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.</p></div>
+    <div class="why-card reveal reveal-d2"><span class="why-icon">❋</span><div class="why-title" data-i18n="why6_title">Comfort &amp; Service</div><p class="why-desc" data-i18n="why6_desc">Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.</p></div>
+  </div>
+</section>
+
+<section id="beforeafter">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+    <span class="section-label" style="justify-content:center" data-i18n="ba_label">Ergebnisse</span>
+    <h2 class="section-title"><span data-i18n="ba_title">Vorher &amp; </span><em data-i18n="ba_title_em">Nachher</em></h2>
+    <p class="section-sub" style="margin:0 auto" data-i18n="ba_sub">Echte Ergebnisse unserer Kundinnen.</p>
+  </div>
+  <div class="ba-wrap">
+    <div class="ba-track">
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <!-- loop duplicate -->
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+      <div class="ba-pair"><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="video-section">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+    <span class="section-label" style="justify-content:center" data-i18n="video_label">Behandlungen live</span>
+    <h2 class="section-title"><span data-i18n="video_title">Sehen Sie </span><em data-i18n="video_title_em">unsere Behandlungen</em></h2>
+  </div>
+  <div class="video-grid">
+    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1187762526?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Zionic EMS</div></div>
+    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1193974387?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Endospheres</div></div>
+    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1187762498?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Diodenlaser</div></div>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="prices-top reveal">
+    <div>
+      <span class="section-label" data-i18n="prices_label">Preisliste</span>
+      <h2 class="section-title"><em data-i18n="prices_title_1">Unsere</em> <span data-i18n="prices_title_2">Preise</span></h2>
+    </div>
+    <div class="price-tabs">
+      <button class="price-tab active" onclick="showTab('gesicht',this)" data-i18n="tab_face">Gesicht</button>
+      <button class="price-tab" onclick="showTab('koerper',this)" data-i18n="tab_body">Körper</button>
+      <button class="price-tab" onclick="showTab('laser',this)" data-i18n="tab_laser">Laser</button>
+    </div>
+  </div>
+  <div class="price-panel active" id="tab-gesicht">
+    <table class="price-table">
+      <tr><td colspan="2" class="price-sec-head">Barbo-Gesichtsbehandlung</td></tr>
+      <tr><td>Willkommentreatment</td><td>140 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Exklusive Gesichtsbehandlungen</td></tr>
+      <tr><td>Klassische Gesichtsbehandlung</td><td>80 €</td></tr>
+      <tr><td>Intensive Gesichtsreinigung (Tiefenreinigung)</td><td>90 €</td></tr>
+      <tr><td>Vitamin C Treatment</td><td>70 €</td></tr>
+      <tr><td>Anti Aging Treatment</td><td>130 €</td></tr>
+      <tr><td>Revitalisierend</td><td>150 €</td></tr>
+      <tr><td>Intensiv Treatment</td><td>75 €</td></tr>
+      <tr><td>Aknebehandlung</td><td>100 €</td></tr>
+      <tr><td>BB Glow</td><td>120 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Hydrafacial — Skinfusor</td></tr>
+      <tr><td>Gesicht</td><td>129 €</td></tr>
+      <tr><td>Gesicht &amp; Hals</td><td>139 €</td></tr>
+      <tr><td>Gesicht, Hals &amp; Dekolleté</td><td>159 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Mikroneedling</td></tr>
+      <tr><td>Gesicht — 60 min</td><td>99 €</td></tr>
+      <tr><td>Gesicht &amp; Hals — 70 min</td><td>130 €</td></tr>
+      <tr><td>Gesicht, Hals &amp; Dekolleté — 90 min</td><td>140 €</td></tr>
+      <tr><td>BB Glow Needling — 90 min</td><td>120 €</td></tr>
+      <tr><td><strong>Combo: Hydrafacial + Mikroneedling</strong></td><td><strong>190 €</strong></td></tr>
+      <tr><td colspan="2" class="price-sec-head">Endosphärotherapie — Gesicht</td></tr>
+      <tr><td>Lifting, Massage &amp; Durchblutung (mit Maske)</td><td>65 €</td></tr>
+      <tr><td>Abo 6× 30 Minuten</td><td>270 €</td></tr>
+      <tr><td>Abo 6× 45 Minuten</td><td>360 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Weitere</td></tr>
+      <tr><td>LED-Therapie (auch als Zusatz)</td><td>20 €</td></tr>
+      <tr><td>Hautanalyse</td><td>auf Anfrage</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-koerper">
+    <table class="price-table">
+      <tr><td colspan="2" class="price-sec-head">Endosphärotherapie — Körper (Einzelsitzungen)</td></tr>
+      <tr><td>45 Minuten</td><td>75 €</td></tr>
+      <tr><td>60 Minuten</td><td>85 €</td></tr>
+      <tr><td>90 Minuten</td><td>95 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Endosphärotherapie — Körper (Pakete 6×)</td></tr>
+      <tr><td>6× 45 Minuten</td><td>420 €</td></tr>
+      <tr><td>6× 60 Minuten</td><td>480 €</td></tr>
+      <tr><td>6× 90 Minuten</td><td>540 €</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-laser">
+    <table class="price-table">
+      <tr><td colspan="2" class="price-sec-head">Primelaser — Dauerhafte Haarentfernung</td></tr>
+      <tr><td>Oberlippe</td><td>35 €</td></tr>
+      <tr><td>Kinn</td><td>40 €</td></tr>
+      <tr><td>Wangen</td><td>55 €</td></tr>
+      <tr><td>Gesicht komplett</td><td>110 €</td></tr>
+      <tr><td>Achseln</td><td>60 €</td></tr>
+      <tr><td>Arme komplett</td><td>99 €</td></tr>
+      <tr><td>Bauch</td><td>90 €</td></tr>
+      <tr><td>Rücken</td><td>120 €</td></tr>
+      <tr><td>Unterschenkel</td><td>160 €</td></tr>
+      <tr><td>Beine komplett</td><td>260 €</td></tr>
+      <tr><td>Bikini</td><td>60 €</td></tr>
+      <tr><td>Bikini + Intim</td><td>110 €</td></tr>
+      <tr><td>Bikini + Intim + Gesäß</td><td>130 €</td></tr>
+      <tr><td colspan="2" class="price-sec-head">Combo</td></tr>
+      <tr><td><strong>Ganzkörper</strong></td><td><strong>430 €</strong></td></tr>
+      <tr><td colspan="2" class="price-sec-head">Basic-Pakete</td></tr>
+      <tr><td>Achsel + Bikini + Intim + Unterschenkel</td><td>190 €</td></tr>
+      <tr><td>Achsel + Bikini + Intim + Beine komplett</td><td>230 €</td></tr>
+    </table>
+  </div>
+  <div style="margin-top:2.5rem;" class="reveal">
+    <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="prices_btn">Termin &amp; Preise anfragen</a>
+    <span style="margin-left:1.5rem;font-size:.76rem;color:rgba(244,240,234,.32);" data-i18n="prices_note">Aktuelle Preise auf Anfrage</span>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="reveal">
+    <span class="section-label" data-i18n="reviews_label">Bewertungen</span>
+    <h2 class="section-title"><em data-i18n="reviews_title_1">Was unsere</em> <span data-i18n="reviews_title_2">Kundinnen sagen</span></h2>
+  </div>
+  <div class="reviews-track">
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_1">„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu."</p><div class="reviewer-name">Julia M.</div><div class="reviewer-proc">Endospheres Körper</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_2">„Das RF-Lifting bei EndyMed hat meine Augenpartie sichtbar angehoben. Keine Nadeln, keine Ausfallzeit."</p><div class="reviewer-name">Sophie K.</div><div class="reviewer-proc">EndyMed RF Lifting</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_3">„Die GeneO-Behandlung ist magisch. Direkt nach der Session leuchtete mein Teint wie noch nie."</p><div class="reviewer-name">Lena B.</div><div class="reviewer-proc">GeneO+ Gesicht</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_4">„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend."</p><div class="reviewer-name">Anna W.</div><div class="reviewer-proc">Diodenlaser</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_5">„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich."</p><div class="reviewer-name">Maria F.</div><div class="reviewer-proc">Nail Art</div></div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="booking-inner">
+    <div class="booking-visual reveal" style="aspect-ratio:9/16;overflow:hidden;position:relative;background:var(--blk3);">
+      <iframe
+        src="https://player.vimeo.com/video/1193978591?autoplay=1&muted=1&loop=1&background=1&autopause=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        style="position:absolute;top:50%;left:50%;width:100%;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;"
+        title="Solvata Beauty Club Berlin"></iframe>
+      <div class="booking-accent"></div>
+    </div>
+    <div class="reveal reveal-d2">
+      <span class="section-label" data-i18n="booking_label">Termin buchen</span>
+      <h2 class="booking-cta"><span data-i18n="booking_title_1">Bereit für</span><em data-i18n="booking_title_2">Ihre Verwandlung?</em></h2>
+      <p class="booking-sub" data-i18n="booking_sub">Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.</p>
+      <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="booking_btn">Jetzt online buchen</a>
+      <a href="https://wa.me/4917680880879" target="_blank" class="btn-ghost" style="margin-top:.8rem;display:inline-flex;align-items:center;gap:.5rem;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="opacity:.8"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.5 5.785L0 24l6.388-1.673A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.727.977.995-3.645-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+        WhatsApp
+      </a>
+      <div class="booking-info">
+        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><span class="bi-label" data-i18n="bi_address">Adresse</span><span class="bi-val">Berliner Straße 54, 10713 Berlin</span></div></div>
+        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><span class="bi-label" data-i18n="bi_phone">Telefon / WhatsApp</span><a href="https://wa.me/4917680880879" target="_blank" style="color:var(--w);text-decoration:none;font-size:.86rem;display:block;">+49 176 80880879</a></div></div>
+        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><span class="bi-label" data-i18n="bi_hours">Öffnungszeiten</span><span class="bi-val" data-i18n="bi_hours_val">Mo–Sa: 10:00–20:00</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><img src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" alt="Solvata"><span class="footer-logo-name">Solvata Beauty Club</span></div>
+      <p class="footer-desc" data-i18n="footer_desc">Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_col_treatments">Treatments</div>
+      <div class="footer-links">
+        <a href="#equipment" data-i18n="footer_face">Gesichtspflege</a>
+        <a href="#equipment" data-i18n="footer_body">Körperformung</a>
+        <a href="#equipment" data-i18n="footer_laser">Laser</a>
+        <a href="#nails"     data-i18n="footer_nails">Nageldesign</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_col_contact">Kontakt</div>
+      <div class="footer-links">
+        <a href="#">Berliner Straße 54, 10713 Berlin</a>
+        <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" data-i18n="footer_book">Online buchen</a>
+        <a href="privacy-policy.html" data-i18n="footer_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-i18n="footer_rights">© 2025 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span>
+    <div class="lang-switcher" style="border-color:rgba(184,154,106,.18);">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn"        onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-text" id="cookie-text"></div>
+  <div class="cookie-actions">
+    <button class="ck-decline" id="ck-decline" onclick="cookieDecline()">—</button>
+    <button class="ck-accept"  id="ck-accept"  onclick="cookieAccept()">—</button>
+  </div>
+</div>
+
+<script>
+var T=JSON.parse('{"de": {"nav_name": "Solvata Beauty Club", "nav_about": "Über uns", "nav_equip": "Treatments", "nav_nails": "Nägel", "nav_prices": "Preise", "nav_contact": "Kontakt", "nav_book": "Termin buchen", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Schönheit", "hero_title_2": "neu definiert.", "hero_sub": "Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.", "hero_photo_ph": "Hero-Foto — wird eingefügt", "btn_book": "Termin buchen", "btn_services": "Unsere Treatments", "scroll_label": "Scroll", "statement_quote": "„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note.“", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Premium-Geräte", "stat_individual": "Individuell", "mission_label": "Über uns", "mission_title_1": "Unser", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.", "mission_quote": "Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.", "badge_1": "Zertifiziert", "badge_2": "Premium-Geräte", "badge_3": "Individuelle Beratung", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon-Foto", "equip_label": "Treatments", "equip_title_1": "Unsere", "equip_title_2": "Technologien", "equip_sub": "Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.", "endymed_mn_desc": "Erneuert die Haut von innen — aktiviert die Bildung von neuem Kollagen und Elastin. Die Haut wird dichter, glatter und jünger, ohne Operation. Der Effekt wächst über 2–3 Monate.", "endymed_e1": "Lifting &amp; Straffung", "endymed_e2": "Narben", "endymed_e3": "Post-Akne", "endymed_e4": "Pigmentierung", "endymed_mn_extra": "Rehabilitation: 3–7 Tage · 2–3 Behandlungen · Effekt bis zu 2 Jahre", "endymed_fsr_desc": "Sanftes Hautresurfacing und RF-Lifting gleichzeitig — die Haut wird strahlender, ebenmäßiger und dichter.", "fsr_e1": "Pigmentierung", "fsr_e2": "Poren", "fsr_e3": "Akne-Narben", "fsr_e6": "Glow", "fsr_extra": "Sofortiges Ergebnis · Kurze Rehabilitationszeit · Keine Nebenwirkungen", "endyeye_desc": "Nicht-operative Alternative zur Blepharoplastik. Drei Endymed-Technologien in einem Protokoll straffen die Lidhaut, reduzieren Schwellungen und glätten Krähenfüße.", "endyeye_e1": "Lid-Lifting", "endyeye_e2": "Augenringe", "endyeye_e3": "Krähenfüße", "endyeye_e4": "Hautdichte", "endyeye_extra": "RF-Lifting · RF-Microneedling · Fraktionale Erneuerung", "endo_desc": "Kompressionsmikrovibrations-Technologie, entwickelt mit einem Phlebologen. Verbessert Durchblutung, reduziert Ödeme und Cellulite, stärkt die Hautstruktur.", "endo_e1": "Ödem-Reduktion", "endo_e2": "Lymphdrainage", "endo_e4": "Cellulite", "endo_f4": "Gesichtsoval", "endo_course": "Ohne Ausfallzeit · Ergebnis nach 1. Behandlung · Kurs: 6–12 Sitzungen", "geneo_desc": "3-in-1 Behandlung: reinigt, versorgt die Haut mit Sauerstoff und stimuliert die Kollagenbildung. Sichtbares Ergebnis bereits nach der ersten Anwendung.", "geneo_e1": "OxyGeneo Sauerstoff", "geneo_e2": "RF-Lifting", "geneo_e4": "Glow-Effekt", "geneo_e5": "Pigmentierung", "geneo_extra": "Kapseln: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Klassisches RF-Lifting — sanft, ohne Hautschäden. Stimuliert Kollagen, sichtbare Straffung ab der ersten Behandlung.", "tripollar_e1": "Hautstraffung", "tripollar_e2": "Falten", "tripollar_e3": "Gesichtsoval", "tripollar_e5": "Hauttonus", "tripollar_extra": "Effekt nach 1. Behandlung · Langanhaltend · Für regelmäßige Pflege", "laser_tag": "Dauerhafte Haarentfernung", "laser_desc": "Moderner Diodenlaser für dauerhafte Haarentfernung. Mit Kühlsystem — angenehm und sicher für alle Hauttypen.", "laser_e1": "Dauerhafte Epilation", "laser_e3": "Alle Hauttypen", "laser_e4": "Minimaler Schmerz", "laser_extra": "Kurs: 6–12 Sitzungen · Für Gesicht und Körper", "nails_label": "Nageldesign", "nails_title_1": "Nägel", "nails_title_2": "&amp; Pflege", "nails_sub": "Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.", "nails_cat_mani": "Maniküre", "nails_cat_pedi": "Pediküre", "nails_cat_art": "Nail Art", "nail_classic": "Klassische Maniküre", "nail_gel": "Gel-Lack Maniküre", "nail_gel_ext": "Gelverlängerung", "nail_removal": "Gel-Abnahme", "nail_pedi": "Klassische Pediküre", "nail_pedi_gel": "Pediküre + Gel-Lack", "nail_art_simple": "Einfaches Design (je Nagel)", "nail_art_complex": "Komplexes Design", "on_request": "auf Anfrage", "nails_btn": "Nageltermin buchen", "why_label": "Warum wir", "why_title_1": "Kein", "why_title_2": "Kompromiss.", "why1_title": "Individuelle Analyse", "why1_desc": "Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.", "why2_title": "Moderne Geräte", "why2_desc": "Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.", "why3_title": "Komplexe Lösungen", "why3_desc": "Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.", "why4_title": "Erfahrung &amp; Qualifikation", "why4_desc": "Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.", "why5_title": "Ehrlicher Ansatz", "why5_desc": "Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.", "ba_label": "Ergebnisse", "ba_title": "Vorher &amp; ", "ba_title_em": "Nachher", "ba_sub": "Echte Ergebnisse unserer Kundinnen.", "ba_before": "Vorher", "ba_after": "Nachher", "video_label": "Behandlungen live", "video_title": "Sehen Sie ", "video_title_em": "unsere Behandlungen", "prices_label": "Preisliste", "prices_title_1": "Unsere", "prices_title_2": "Preise", "tab_face": "Gesicht", "tab_body": "Körper", "tab_laser": "Laser", "geo_face": "Gesicht", "geo_face_dec": "Gesicht &amp; Dekolleté", "mn_face": "RF Microneedling — Gesicht", "mn_face_neck": "RF Microneedling — Gesicht &amp; Hals", "fsr_face": "Fraktionales Resurfacing — Gesicht", "tp_eye": "Augenzone Lifting", "tp_face": "Gesicht Lifting", "es_face": "Gesicht", "es_face_dec": "Gesicht &amp; Dekolleté", "es_body_intro1": "Einführungssitzung (1 Zone)", "es_body_zone": "Problemzone", "es_body_full": "Ganzkörper", "es_body_zone6": "Abo x6 (Problemzone)", "z_belly": "Bauch &amp; Seiten", "z_arms": "Arme", "z_legs_full": "Volle Beine", "z_c1": "Beine + Gesäß", "z_c3": "Beine + Gesäß + Bauch", "laser_removal_head": "Diodenlaser Haarentfernung", "las_lip": "Oberlippe", "las_bikini_deep": "Tiefer Bikini", "las_armpits": "Achseln", "las_legs_half": "Beine bis Knie", "las_legs_full": "Volle Beine", "las_c5": "Volle Beine + tiefer Bikini + Achseln", "las_back": "Rücken", "las_face_": "Gesicht", "prices_btn": "Termin &amp; Preise anfragen", "prices_note": "Aktuelle Preise auf Anfrage", "reviews_label": "Bewertungen", "reviews_title_1": "Was unsere", "reviews_title_2": "Kundinnen sagen", "review_1": "„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu.“", "review_2": "„Das RF-Lifting bei EndyMed hat meine Augenpartie sichtbar angehoben. Keine Nadeln, keine Ausfallzeit.“", "review_3": "„Die GeneO-Behandlung ist magisch. Direkt nach der Session leuchtete mein Teint wie noch nie.“", "review_4": "„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend.“", "review_5": "„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich.“", "booking_label": "Termin buchen", "booking_title_1": "Bereit für", "booking_title_2": "Ihre Verwandlung?", "booking_sub": "Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.", "booking_btn": "Jetzt online buchen", "bi_address": "Adresse", "bi_phone": "Telefon / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Öffnungszeiten", "bi_hours_val": "Mo–Sa: 10:00–20:00", "footer_desc": "Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.", "footer_col_treatments": "Treatments", "footer_col_contact": "Kontakt", "footer_face": "Gesichtspflege", "footer_body": "Körperformung", "footer_laser": "Laser", "footer_nails": "Nageldesign", "footer_book": "Online buchen", "footer_privacy": "Datenschutz", "footer_rights": "© 2025 Solvata Beauty Club Berlin. Alle Rechte vorbehalten."}, "en": {"nav_name": "Solvata Beauty Club", "nav_about": "About", "nav_equip": "Treatments", "nav_nails": "Nails", "nav_prices": "Pricing", "nav_contact": "Contact", "nav_book": "Book Now", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Beauty", "hero_title_2": "redefined.", "hero_sub": "Advanced aesthetic treatments, facial care, body contouring and nail design at the highest level. Your transformation starts here.", "hero_photo_ph": "Hero Photo — to be inserted", "btn_book": "Book Appointment", "btn_services": "Our Treatments", "scroll_label": "Scroll", "statement_quote": "Real beauty demands precision, technology, and a personal touch.", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Premium Devices", "stat_individual": "Individual", "mission_label": "About Us", "mission_title_1": "Our", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club stands for uncompromising quality. We combine the latest medical devices with a deep understanding of individual beauty needs.", "mission_quote": "Every treatment is a composition of science, aesthetics, and personal care.", "badge_1": "Certified", "badge_2": "Premium Devices", "badge_3": "Individual Consultation", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon Photo", "equip_label": "Treatments", "equip_title_1": "Our", "equip_title_2": "Technologies", "equip_sub": "Only certified top-tier medical devices — for visible, lasting results.", "endymed_mn_desc": "Renews skin from within — activates new collagen and elastin formation. Skin becomes denser, smoother and younger, without surgery. Effect grows over 2–3 months.", "endymed_e1": "Lifting &amp; Tightening", "endymed_e2": "Scars", "endymed_e3": "Post-Acne", "endymed_e4": "Pigmentation", "endymed_mn_extra": "Rehabilitation: 3–7 days · 2–3 treatments · Effect up to 2 years", "endymed_fsr_desc": "Gentle skin resurfacing and RF lifting simultaneously — skin becomes more radiant, even and dense.", "fsr_e1": "Pigmentation", "fsr_e2": "Pores", "fsr_e3": "Acne Scars", "fsr_e6": "Glow", "fsr_extra": "Immediate result · Short rehabilitation · No side effects", "endyeye_desc": "Non-operative alternative to blepharoplasty. Three Endymed technologies in one protocol tighten eyelid skin, reduce puffiness and smooth crow\'s feet.", "endyeye_e1": "Eyelid Lifting", "endyeye_e2": "Eye Circles", "endyeye_e3": "Crow\'s Feet", "endyeye_e4": "Skin Density", "endyeye_extra": "RF Lifting · RF Microneedling · Fractional Renewal", "endo_desc": "Compression micro-vibration technology developed with a phlebologist. Improves circulation, reduces edema and cellulite, strengthens skin structure.", "endo_e1": "Edema Reduction", "endo_e2": "Lymph Drainage", "endo_e4": "Cellulite", "endo_f4": "Face Oval", "endo_course": "No downtime · Result visible from 1st session · Course: 6–12 sessions", "geneo_desc": "3-in-1 treatment: cleanses, oxygenates skin and stimulates collagen production. Visible result from the very first session.", "geneo_e1": "OxyGeneo Oxygen", "geneo_e2": "RF Lifting", "geneo_e4": "Glow Effect", "geneo_e5": "Pigmentation", "geneo_extra": "Capsules: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Classic RF lifting — gentle, without skin damage. Stimulates collagen, visible tightening from the first session.", "tripollar_e1": "Skin Tightening", "tripollar_e2": "Wrinkles", "tripollar_e3": "Face Oval", "tripollar_e5": "Skin Tone", "tripollar_extra": "Effect after 1st session · Long-lasting · For regular maintenance", "laser_tag": "Permanent Hair Removal", "laser_desc": "Modern diode laser for permanent hair removal. With cooling system — comfortable and safe for all skin types.", "laser_e1": "Permanent Epilation", "laser_e3": "All Skin Types", "laser_e4": "Minimal Discomfort", "laser_extra": "Course: 6–12 sessions · For face and body", "nails_label": "Nail Design", "nails_title_1": "Nails", "nails_title_2": "&amp; Care", "nails_sub": "From classic manicure to elaborate nail art — our experts turn your vision into reality.", "nails_cat_mani": "Manicure", "nails_cat_pedi": "Pedicure", "nails_cat_art": "Nail Art", "nail_classic": "Classic Manicure", "nail_gel": "Gel Polish Manicure", "nail_gel_ext": "Gel Extension", "nail_removal": "Gel Removal", "nail_pedi": "Classic Pedicure", "nail_pedi_gel": "Pedicure + Gel Polish", "nail_art_simple": "Simple Design (per nail)", "nail_art_complex": "Complex Design", "on_request": "on request", "nails_btn": "Book Nail Appointment", "why_label": "Why Us", "why_title_1": "No", "why_title_2": "compromise.", "why1_title": "Individual Analysis", "why1_desc": "Every client receives an individual skin analysis and a tailored treatment plan.", "why2_title": "Modern Devices", "why2_desc": "Latest-generation technologies with clinically proven effectiveness.", "why3_title": "Combined Solutions", "why3_desc": "Face, body and nails under one roof — combined for the best result.", "why4_title": "Experience &amp; Expertise", "why4_desc": "Specialists with medical education and over 5 years of experience.", "why5_title": "Honest Approach", "why5_desc": "No unnecessary treatments. We recommend only what truly helps.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exclusive, discreet atmosphere in the heart of Berlin Charlottenburg.", "ba_label": "Results", "ba_title": "Before &amp; ", "ba_title_em": "After", "ba_sub": "Real results of our clients.", "ba_before": "Before", "ba_after": "After", "video_label": "Treatments live", "video_title": "Watch ", "video_title_em": "our treatments", "prices_label": "Price List", "prices_title_1": "Our", "prices_title_2": "Prices", "tab_face": "Face", "tab_body": "Body", "tab_laser": "Laser", "geo_face": "Face", "geo_face_dec": "Face &amp; Décolleté", "mn_face": "RF Microneedling — Face", "mn_face_neck": "RF Microneedling — Face &amp; Neck", "fsr_face": "Fractional Resurfacing — Face", "tp_eye": "Eye Zone Lifting", "tp_face": "Face Lifting", "es_face": "Face", "es_face_dec": "Face &amp; Décolleté", "es_body_intro1": "Introductory Session (1 Zone)", "es_body_zone": "Problem Zone", "es_body_full": "Full Body", "es_body_zone6": "Subscription x6 (Problem Zone)", "z_belly": "Abdomen &amp; Sides", "z_arms": "Arms", "z_legs_full": "Full Legs", "z_c1": "Legs + Glutes", "z_c3": "Legs + Glutes + Abdomen", "laser_removal_head": "Diode Laser Hair Removal", "las_lip": "Upper Lip", "las_bikini_deep": "Deep Bikini", "las_armpits": "Armpits", "las_legs_half": "Legs to Knee", "las_legs_full": "Full Legs", "las_c5": "Full Legs + Deep Bikini + Armpits", "las_back": "Back", "las_face_": "Face", "prices_btn": "Request Appointment &amp; Prices", "prices_note": "Current prices on request", "reviews_label": "Reviews", "reviews_title_1": "What our", "reviews_title_2": "clients say", "review_1": "Incredible results after just three Endospheres sessions. My skin is firmer and I feel completely renewed.", "review_2": "The RF lifting at EndyMed visibly lifted my eye area. No needles, no downtime.", "review_3": "The GeneO treatment is magical. Right after the session my complexion glowed like never before.", "review_4": "Laser hair removal was completely painless and the results after just two sessions are impressive.", "review_5": "The nail design here is on another level. Detail-obsessed, long-lasting and so personal.", "booking_label": "Book Appointment", "booking_title_1": "Ready for", "booking_title_2": "your transformation?", "booking_sub": "Book your appointment online or contact us directly. We look forward to welcoming you.", "booking_btn": "Book Online Now", "bi_address": "Address", "bi_phone": "Phone / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Opening Hours", "bi_hours_val": "Mon–Sat: 10:00–20:00", "footer_desc": "Premium aesthetics in Berlin. Cutting-edge devices, individual treatments, lasting results.", "footer_col_treatments": "Treatments", "footer_col_contact": "Contact", "footer_face": "Facial Care", "footer_body": "Body Contouring", "footer_laser": "Laser", "footer_nails": "Nail Design", "footer_book": "Book Online", "footer_privacy": "Privacy Policy", "footer_rights": "© 2025 Solvata Beauty Club Berlin. All rights reserved."}}');
+
+var currentLang='de';
+function setLang(lang){
+  currentLang=lang;
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.toLowerCase()===lang);});
+  var tr=T[lang];if(!tr)return;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(tr[k]!==undefined)el.innerHTML=tr[k];});
+  document.documentElement.lang=lang;
+  renderCookie(lang);
+}
+function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open');}
+function showTab(id,btn){
+  document.querySelectorAll('.price-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.price-tab').forEach(function(t){t.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  if(btn)btn.classList.add('active');
+}
+var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+var cookieTexts={de:{msg:'Diese Website verwendet funktionale Cookies. Weitere Informationen in unserer ',link:'Datenschutzerklärung',accept:'Verstanden',decline:'Schließen'},en:{msg:'This site uses functional cookies. See our ',link:'Privacy Policy',accept:'Got it',decline:'Close'}};
+function renderCookie(lang){var ck=document.getElementById('cookie-banner');if(!ck||ck.style.display==='none')return;var tx=cookieTexts[lang]||cookieTexts.de;document.getElementById('cookie-text').innerHTML=tx.msg+'<a href="privacy-policy.html">'+tx.link+'</a>.';document.getElementById('ck-decline').textContent=tx.decline;document.getElementById('ck-accept').textContent=tx.accept;}
+(function(){if(localStorage.getItem('sb_de_cookies')){document.getElementById('cookie-banner').style.display='none';return;}renderCookie('de');})();
+function cookieAccept(){localStorage.setItem('sb_de_cookies','accepted');hideCookie();}
+function cookieDecline(){localStorage.setItem('sb_de_cookies','declined');hideCookie();}
+function hideCookie(){var b=document.getElementById('cookie-banner');b.classList.add('hide');setTimeout(function(){b.style.display='none';},350);}
+setLang('de');
+</script>
+</body>
+</html>
