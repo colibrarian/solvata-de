@@ -87,6 +87,24 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:3rem 5vw;tex
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+
+.tmt-price-block{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--gb);}
+.tmt-price-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:.6rem;font-family:'Jost',sans-serif;}
+.tmt-price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.32rem 0;border-bottom:1px solid var(--wf);}
+.tmt-price-row:last-child{border-bottom:none;}
+.tmt-price-name{font-size:.85rem;color:var(--wd);}
+.tmt-price-val{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--w);flex-shrink:0;margin-left:1rem;}
+.tmt-price-note{font-size:.74rem;color:rgba(244,240,234,.35);margin-top:.5rem;font-family:'Jost',sans-serif;}
+
+.booking-section{background:var(--blk2);padding:90px 5vw;}
+.booking-inner-sub{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:start;max-width:1200px;margin:0 auto;}
+.booking-info-sub{margin-top:2rem;}
+.bi-row{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--wf);}
+.bi-row:first-child{border-top:1px solid var(--wf);}
+.bi-icon{width:15px;flex-shrink:0;color:var(--g);margin-top:2px;}
+.bi-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);display:block;margin-bottom:2px;font-family:'Jost',sans-serif;}
+.bi-val{font-size:.86rem;color:var(--wd);}
+@media(max-width:768px){.booking-inner-sub{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -338,9 +356,112 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:3rem 5vw;tex
   <div class="cat-header reveal">
     <span class="cat-label" data-i18n="bsec_label">Gesichtsbehandlungen</span>
     <h2 class="cat-title"><span data-i18n="geraete_title_1">Apparative</span> <em data-i18n="geraete_title_2">Technologien</em></h2>
-    <p class="cat-desc" data-i18n="geraete_desc">Hydrafacial-Skinfusor, Radiofrequenz-Lifting und Endosphères für das Gesicht — Details und Preise finden Sie auf der Startseite.</p>
+    <p class="cat-desc" data-i18n="geraete_desc">Modernste Geräte für Gesichtsbehandlungen — Hydrafacial, Endosphères und Radiofrequenz-Lifting für sichtbare Ergebnisse ab der ersten Sitzung.</p>
   </div>
-  <a href="index.html#equipment" class="btn-outline" data-i18n="geraete_btn">Zu den Geräte-Behandlungen →</a>
+
+  <div class="tmt-grid">
+
+    <!-- Endosphères Gesicht -->
+    <div class="tmt-card reveal">
+      <div class="tmt-media">
+        <img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/endospheres%20de.png" alt="Endosphères Gesicht">
+      </div>
+      <div class="tmt-body">
+        <div class="tmt-tag" data-i18n="esf_tag">Kompressions-Mikrovibration · Gesicht</div>
+        <div class="tmt-name" data-i18n="esf_name">Endosphères — Gesicht</div>
+        <p class="tmt-lead" data-i18n="esf_lead">Gezielte Kompressions-Mikrovibration für das Gesichtsoval — strafft Konturen, verbessert Durchblutung und Lymphfluss und sorgt für einen frischeren, klareren Teint.</p>
+        <p class="tmt-desc" data-i18n="esf_desc">Die Technologie wurde in Zusammenarbeit mit einem Phlebologen entwickelt und wirkt nicht nur an der Hautoberfläche. Die mechanische Mikrostimulation fördert die Mikrozirkulation, aktiviert den Lymphabfluss und verbessert sichtbar den Hauttonus — ohne Eingriff und ohne Erholungszeit. Ergebnisse sind bereits nach der ersten Behandlung spürbar.</p>
+        <div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div>
+        <ul class="tmt-list">
+          <li data-i18n="esf_l1">Straffung des Gesichtsovals und der Konturen</li>
+          <li data-i18n="esf_l2">Verbesserte Lymphdrainage, weniger Schwellungen</li>
+          <li data-i18n="esf_l3">Frischerer, hellerer Teint</li>
+          <li data-i18n="esf_l4">Verbesserte Hautdichte und -elastizität</li>
+        </ul>
+        <div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div>
+        <ul class="tmt-list">
+          <li data-i18n="esf_fw1">Nachlassende Konturen und Gesichtsoval</li>
+          <li data-i18n="esf_fw2">Geschwollenes, müdes Erscheinungsbild</li>
+          <li data-i18n="esf_fw3">Wunsch nach sanftem, nicht-invasivem Lifting</li>
+        </ul>
+        <div class="tmt-price-block">
+          <div class="tmt-price-label" data-i18n="price_label">Preise</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p1_n">Einzelbehandlung mit Maske</span><span class="tmt-price-val">65 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p2_n">Abo 6× 30 Minuten</span><span class="tmt-price-val">270 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p3_n">Abo 6× 45 Minuten</span><span class="tmt-price-val">360 €</span></div>
+        </div>
+        <div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="esf_c1">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="esf_c2">Sofort sichtbar</span><span class="tmt-tag-chip" data-i18n="esf_c3">Lymphdrainage</span></div>
+      </div>
+    </div>
+
+    <!-- Hydrafacial Skinfusor -->
+    <div class="tmt-card reveal">
+      <div class="tmt-media">
+        <img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/Hydrafacial.png" alt="Hydrafacial Skinfusor">
+      </div>
+      <div class="tmt-body">
+        <div class="tmt-tag" data-i18n="hf_tag">Hydrafacial · BABOR Skinfusor</div>
+        <div class="tmt-name" data-i18n="hf_name">Hydrafacial — Skinfusor</div>
+        <p class="tmt-lead" data-i18n="hf_lead">Tiefe Hautreinigung und intensive Wirkstoffinfusion in einer Sitzung — für sofortigen Glow ohne Erholungszeit.</p>
+        <p class="tmt-desc" data-i18n="hf_desc">Der BABOR SkinFusor kombiniert vier Schritte: Vakuumreinigung der Poren, sanfte Exfoliation mit Diamantkopf, transdermale Einschleusung von Wirkstoffen und eine stimulierende Impulsmassage für Mikrozirkulation und Lymphfluss. Das Ergebnis ist eine tiefgereinigte, hydratisierte Haut mit unmittelbarem Red-Carpet-Effekt — geeignet für alle Hauttypen, auch für empfindliche Haut.</p>
+        <div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div>
+        <ul class="tmt-list">
+          <li data-i18n="hf_l1">Tiefengereingte Poren, verfeinertes Hautbild</li>
+          <li data-i18n="hf_l2">Intensive Hydratation und Wirkstoffsättigung</li>
+          <li data-i18n="hf_l3">Verbesserter Hautton und Glow-Effekt</li>
+          <li data-i18n="hf_l4">Aktivierte Mikrozirkulation und Lymphfluss</li>
+        </ul>
+        <div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div>
+        <ul class="tmt-list">
+          <li data-i18n="hf_fw1">Alle Hauttypen, auch empfindlich</li>
+          <li data-i18n="hf_fw2">Unreine Haut, verstopfte Poren</li>
+          <li data-i18n="hf_fw3">Vor besonderen Anlässen — sofortiger Effekt</li>
+        </ul>
+        <div class="tmt-price-block">
+          <div class="tmt-price-label" data-i18n="price_label">Preise</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p1_n">Gesicht</span><span class="tmt-price-val">129 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p2_n">Gesicht &amp; Hals</span><span class="tmt-price-val">139 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p3_n">Gesicht, Hals &amp; Dekolleté</span><span class="tmt-price-val">159 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p4_n"><strong>Combo: Hydrafacial + Mikroneedling</strong></span><span class="tmt-price-val"><strong>190 €</strong></span></div>
+        </div>
+        <div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="hf_c1">Alle Hauttypen</span><span class="tmt-tag-chip" data-i18n="hf_c2">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="hf_c3">Sofort-Glow</span></div>
+      </div>
+    </div>
+
+    <!-- RF Lifting -->
+    <div class="tmt-card reveal">
+      <div class="tmt-media">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/TriPollar%20RF.jpg" alt="Radiofrequenz-Lifting">
+      </div>
+      <div class="tmt-body">
+        <div class="tmt-tag" data-i18n="rf_tag">Radiofrequenz-Lifting</div>
+        <div class="tmt-name" data-i18n="rf_name">RF Lifting</div>
+        <p class="tmt-lead" data-i18n="rf_lead">Klassisches Radiofrequenz-Lifting — sanft, ohne Hautschäden, mit sichtbarer Straffung bereits nach der ersten Behandlung.</p>
+        <p class="tmt-desc" data-i18n="rf_desc">Die Radiofrequenzenergie erwärmt gezielt die tiefen Hautschichten und stimuliert die Kollagenproduktion. Das Ergebnis: straffere, dichtere Haut und ein erfrischtes Gesichtsoval — ohne Nadeln, ohne Eingriff. Die Behandlung eignet sich ideal als regelmäßige Pflegebehandlung zur langfristigen Hautverjüngung. Das Gerät wird aktuell finalisiert — die Behandlung ist buchbar.</p>
+        <div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div>
+        <ul class="tmt-list">
+          <li data-i18n="rf_l1">Hautstraffung und verbesserter Tonus</li>
+          <li data-i18n="rf_l2">Feinere Falten und glatteres Hautbild</li>
+          <li data-i18n="rf_l3">Klareres Gesichtsoval</li>
+          <li data-i18n="rf_l4">Stimulierte Kollagenproduktion</li>
+        </ul>
+        <div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div>
+        <ul class="tmt-list">
+          <li data-i18n="rf_fw1">Nachlassende Hautspannkraft</li>
+          <li data-i18n="rf_fw2">Wunsch nach regelmäßiger, sanfter Anti-Age-Pflege</li>
+          <li data-i18n="rf_fw3">Geeignet für alle Hauttypen</li>
+        </ul>
+        <div class="tmt-price-block">
+          <div class="tmt-price-label" data-i18n="price_label">Preise</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="rf_p1_n">Augenzone Lifting</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="rf_p2_n">Gesicht Lifting</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div>
+          <p class="tmt-price-note" data-i18n="rf_price_note">Preise werden nach Auswahl des finalen Geräts aktualisiert</p>
+        </div>
+        <div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="rf_c1">Keine Nadeln</span><span class="tmt-tag-chip" data-i18n="rf_c2">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="rf_c3">Kollagenaufbau</span></div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="cat-section" id="koerper">
@@ -400,210 +521,113 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:3rem 5vw;tex
 
 <section class="cat-section" id="laser">
   <div class="cat-header reveal">
-    <span class="cat-label" data-i18n="lsec_label">Haarentfernung</span>
+    <span class="cat-label" data-i18n="lsec_label">Dauerhafte Haarentfernung</span>
     <h2 class="cat-title"><span data-i18n="lsec_title_1">Primelaser</span> <em data-i18n="lsec_title_2">Diodenlaser</em></h2>
-    <p class="cat-desc" data-i18n="lsec_desc">Dauerhafte, schmerzlose Haarentfernung für alle Hauttypen. Vollständige Preisliste für alle Zonen finden Sie auf der Startseite.</p>
+    <p class="cat-desc" data-i18n="lsec_desc">Einer der leistungsstärksten Diodenlaser auf dem Markt — schmerzlos, ganzjährig einsetzbar, wirksam auf allen Hauttypen.</p>
   </div>
-  <a href="index.html#prices" class="btn-outline" data-i18n="lsec_btn">Zur Laser-Preisliste →</a>
+
+  <div class="tmt-grid">
+    <div class="tmt-card reveal">
+      <div class="tmt-media" style="background:var(--blk3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.6rem;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(184,154,106,0.3)" stroke-width="1"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="3" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="21" y2="12"/></svg>
+        <span style="font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,154,106,0.3);" data-i18n="ph_media">Foto folgt</span>
+      </div>
+      <div class="tmt-body">
+        <div class="tmt-tag" data-i18n="pl_tag">Diodenlaser · Ganzjährig</div>
+        <div class="tmt-name">Primelaser</div>
+        <p class="tmt-lead" data-i18n="pl_lead">Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ohne saisonale Einschränkungen.</p>
+        <p class="tmt-desc" data-i18n="pl_desc">Der Primelaser arbeitet mit hochpräziser Diodentechnologie und einem integrierten Kühlsystem, das die Behandlung angenehm und sicher macht. Bereits nach der ersten Sitzung gehen 15–20% der Haare dauerhaft verloren. Nach einem vollständigen Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erreicht. Zwischen den Sitzungen wächst das Haar feiner und dünner — bis es schließlich ganz ausbleibt.</p>
+        <div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div>
+        <ul class="tmt-list">
+          <li data-i18n="pl_l1">15–20% Haarreduktion bereits nach der 1. Sitzung</li>
+          <li data-i18n="pl_l2">Bis zu 90% dauerhaftes Ergebnis nach dem Kurs</li>
+          <li data-i18n="pl_l3">Wirksam auf allen Hauttypen, ganzjährig einsetzbar</li>
+          <li data-i18n="pl_l4">Schmerzlos dank aktivem Kühlsystem</li>
+        </ul>
+        <div class="tmt-block-title" data-i18n="pl_kurs_lbl">Empfohlener Kurs</div>
+        <p class="tmt-desc" data-i18n="pl_kurs">6–8 Sitzungen im Abstand von 4–6 Wochen, je nach Körperzone und Haarwuchs. Eine individuelle Beratung ist vor dem Beginn des Kurses empfohlen.</p>
+
+        <div class="tmt-price-block">
+          <div class="tmt-price-label" data-i18n="pl_price_gesicht">Gesicht</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_lip">Oberlippe</span><span class="tmt-price-val">35 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_chin">Kinn</span><span class="tmt-price-val">40 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_cheeks">Wangen</span><span class="tmt-price-val">55 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_face_full">Gesicht komplett</span><span class="tmt-price-val">110 €</span></div>
+
+          <div class="tmt-price-label" style="margin-top:1rem;" data-i18n="pl_price_body">Körper</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_armpits">Achseln</span><span class="tmt-price-val">60 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_arms">Arme komplett</span><span class="tmt-price-val">99 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_belly">Bauch</span><span class="tmt-price-val">90 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_back">Rücken</span><span class="tmt-price-val">120 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_lower_legs">Unterschenkel</span><span class="tmt-price-val">160 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_full_legs">Beine komplett</span><span class="tmt-price-val">260 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini">Bikini</span><span class="tmt-price-val">60 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini_intim">Bikini + Intim</span><span class="tmt-price-val">110 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini_intim_glut">Bikini + Intim + Gesäß</span><span class="tmt-price-val">130 €</span></div>
+
+          <div class="tmt-price-label" style="margin-top:1rem;" data-i18n="pl_price_combo">Kombi-Pakete</div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_fullbody"><strong>Ganzkörper</strong></span><span class="tmt-price-val"><strong>430 €</strong></span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_basic1">Achsel + Bikini + Intim + Unterschenkel</span><span class="tmt-price-val">190 €</span></div>
+          <div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_basic2">Achsel + Bikini + Intim + Beine komplett</span><span class="tmt-price-val">230 €</span></div>
+        </div>
+
+        <div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="pl_c1">Alle Hauttypen</span><span class="tmt-tag-chip" data-i18n="pl_c2">Ganzjährig</span><span class="tmt-tag-chip" data-i18n="pl_c3">Schmerzlos</span><span class="tmt-tag-chip" data-i18n="pl_c4">Kühlung</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="cta-strip reveal">
   <h2 class="cta-title"><span data-i18n="cta_title_1">Nicht sicher, welche</span> <em data-i18n="cta_title_2">Behandlung passt?</em></h2>
-  <a href="index.html#booking" class="btn-dark" data-i18n="cta_btn">Beratungstermin vereinbaren</a>
+  <a href="#booking" class="btn-dark" data-i18n="cta_btn">Beratungstermin vereinbaren</a>
 </div>
 
+<section class="booking-section" id="booking">
+  <div class="booking-inner-sub">
+    <div class="reveal">
+      <span class="cat-label" data-i18n="bk_label">Termin &amp; Kontakt</span>
+      <h2 class="cat-title"><span data-i18n="bk_title_1">Bereit für</span> <em data-i18n="bk_title_2">Ihre Behandlung?</em></h2>
+      <p class="cat-desc" data-i18n="bk_sub">Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt — wir beraten Sie gerne zu den passenden Behandlungen.</p>
+      <div style="margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1rem;">
+        <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-dark" data-i18n="bk_book">Jetzt online buchen</a>
+        <a href="https://wa.me/4917680880879" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.5 5.785L0 24l6.388-1.673A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.727.977.995-3.645-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+          <span data-i18n="bk_wa">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:0;">
+      <div class="booking-info-sub">
+        <div class="bi-row">
+          <svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <div><span class="bi-label" data-i18n="bi_address">Adresse</span><span class="bi-val">Berliner Straße 54, 10713 Berlin</span></div>
+        </div>
+        <div class="bi-row">
+          <svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><span class="bi-label" data-i18n="bi_phone">Telefon / WhatsApp</span><a href="https://wa.me/4917680880879" target="_blank" style="color:var(--w);text-decoration:none;font-size:.86rem;display:block;">+49 176 80880879</a></div>
+        </div>
+        <div class="bi-row">
+          <svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div><span class="bi-label" data-i18n="bi_hours">Öffnungszeiten</span><span class="bi-val" data-i18n="bi_hours_val">Mo–Sa: 10:00–20:00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <span class="footer-copy" data-i18n="footer_rights">© 2025 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span><br>
-  <a href="index.html" class="footer-back" data-i18n="nav_back">← Zurück zur Startseite</a>
+  <span class="footer-copy" data-i18n="footer_rights">© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span><br>
+  <a href="https://www.instagram.com/solvatabeautyclub" target="_blank" style="display:inline-block;margin-bottom:.5rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;">@solvatabeautyclub</a><br>
+  <a href="index.html" class="footer-back" data-i18n="nav_back">← Zur Startseite</a>
 </footer>
 
 <script>
-var T = {
-  "de": {
-    "nav_back":"← Zur Startseite","nav_book":"Termin buchen",
-    "hero_eyebrow":"Vollständige Übersicht","hero_title_1":"Alle","hero_title_2":"Behandlungen",
-    "hero_sub":"Jede Behandlung bei Solvata wird individuell auf Ihre Haut abgestimmt — auf Basis professioneller BABOR-Wirkstoffkonzepte und moderner Gerätetechnologie.",
-    "catnav_babor":"Gesicht — BABOR","catnav_geraete":"Gesicht — Geräte","catnav_koerper":"Körper","catnav_laser":"Laser",
-    "bsec_label":"Gesichtsbehandlungen","bsec_title_1":"BABOR","bsec_title_2":"Wirkstoffkonzepte",
-    "bsec_desc":"Unsere Gesichtsbehandlungen basieren auf den professionellen Linien von BABOR — von sanfter Reinigung bis zu intensiver Anti-Age-Therapie. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.",
-    "ph_media":"Foto/Video folgt","lbl_fuerwen":"Für wen","lbl_wirkung":"Wirkung","lbl_kurs":"Empfohlener Kurs","lbl_ablauf":"Ablauf","lbl_hinweis":"Hinweis",
-    "skv_tag":"Anti-Age · Epigenetik",
-    "skv_lead":"Ein gezielter Hautpflege-Ansatz auf Basis moderner epigenetischer Prinzipien, der den Alterungsprozess der Haut verlangsamt.",
-    "skv_desc":"Die Behandlung reinigt die Haut, stellt das Gleichgewicht von Feuchtigkeit und Lipiden wieder her und sorgt für einen ausgeprägten Anti-Age-Effekt. Zum Einsatz kommen Stammzellen der Alpenrose, die die Zell-DNA schützen, der Wirkstoffkomplex OsmoTek für eine optimierte Aufnahme der Aktivstoffe sowie individuell abgestimmte BABOR-Konzentrate in Kombination mit einer fließenden manuellen Massage.",
-    "skv_l1":"Alle Hauttypen, besonders bei ersten oder fortgeschrittenen Alterserscheinungen","skv_l2":"Fahler Teint, nachlassende Spannkraft","skv_l3":"Empfindliche Haut, die einen sanften, aber wirksamen Anti-Age-Ansatz benötigt",
-    "skv_c1":"Hauterneuerung","skv_c2":"Feuchtigkeitsbalance","skv_c3":"Porenverfeinerung",
-    "hsr_tag":"Lifting · Festigkeit",
-    "hsr_lead":"Eine hochwirksame Anti-Age-Behandlung auf Basis der exklusiven BABOR HSR LIFTING-Linie für ein sichtbares Lifting-Ergebnis und ein klareres Gesichtsoval.",
-    "hsr_desc":"Fünf hochaktive Komponenten — Multitendin Plus, Lupinen-Extrakt, Carnosin, Relaxo Peptide und Neuro-Receptor Peptide — wirken auf mehreren Ebenen der Haut. Sie reduzieren Mimikfalten, wirken gravitationsbedingten Hautveränderungen entgegen und stärken Bindegewebe und Hautelastizität. In Kombination mit einer Anti-Age-Massage und der straffenden Gel-Maske HSR Lifting Line Mask zeigt sich bereits nach der ersten Behandlung ein deutlich strafferer, glatterer Teint.",
-    "hsr_l1":"Sichtbare Alterserscheinungen, nachlassende Spannkraft","hsr_l2":"Besonders empfehlenswert für Kundinnen 40+","hsr_l3":"Wunsch nach Lifting-Effekt ohne invasive Methoden",
-    "hsr_c1":"Lifting","hsr_c2":"Faltenreduktion","hsr_c3":"Gesichtsoval",
-    "db_tag":"Dermokosmetik · Klinisch",
-    "db_lead":"Eine hochwirksame Hautpflege-Therapie, die professionelle Dermokosmetik mit apparativen Methoden und weiteren ästhetischen Techniken kombiniert.",
-    "db_desc":"Die Linie DOCTOR BABOR zeichnet sich durch besonders hohe Wirkstoffkonzentrationen aus — stabilisiertes Vitamin C, Retinol-Komplexe, Hyaluronsäure in verschiedenen Molekülgrößen, Peptide und Niacinamid wirken gezielt in tieferen Hautschichten. Je nach Hautzustand werden Peelings, Ampullen, Seren, Masken, Massage und bei Bedarf apparative Methoden individuell kombiniert.",
-    "db_l1":"Vorzeitige Hautalterung, nachlassende Festigkeit","db_l2":"Pigmentflecken und unebener Teint","db_l3":"Sehr trockene oder empfindliche Haut, aktive Hautprobleme",
-    "db_c1":"Individuell","db_c2":"Tiefenwirkung","db_c3":"Klinisch fundiert",
-    "aha_tag":"Peeling · Fruchtsäuren","aha_name":"AHA Peeling",
-    "aha_lead":"Ein chemisches Peeling auf Basis von Alpha-Hydroxysäuren, das abgestorbene Hautzellen sanft entfernt und die natürliche Erneuerung der Haut anregt.",
-    "aha_desc":"Die Fruchtsäuren lösen die Verbindungen zwischen abgestorbenen Hautzellen und fördern deren Abschuppung. Das regt die Zellerneuerung an und verbessert die Aufnahmefähigkeit der Haut für weitere Wirkstoffe. Zusätzlich wird der Feuchtigkeitsgehalt verbessert und die Kollagensynthese angeregt — für ein glatteres, elastischeres Hautbild.",
-    "aha_l1":"Fahle, müde Haut mit unebenem Teint","aha_l2":"Erweiterte Poren, erste Alterserscheinungen","aha_l3":"Als Vorbereitung vor intensiveren Behandlungen oder als Kur",
-    "aha_c1":"Sanfte Exfoliation","aha_c2":"Hautglättung","aha_c3":"Sofort-Glow",
-    "cf_tag":"Tiefenreinigung · 98% Natur",
-    "cf_lead":"Eine sanfte, aber wirksame Reinigungsbehandlung auf Basis der nachhaltigen Linie CLEANFORMANCE — ohne tierische Inhaltsstoffe, Silikone, Parabene oder Mikroplastik.",
-    "cf_desc":"Bis zu 98% der Inhaltsstoffe sind natürlichen Ursprungs. Prä- und Probiotika balancieren das Mikrobiom der Haut, Rotahorn-Extrakt wirkt antioxidativ. Die Haut wird gründlich gereinigt und ihre Schutzbarriere gleichzeitig gestärkt — ideal für junge oder aus dem Gleichgewicht geratene Haut.",
-    "cf_l1":"Verstopfte Poren, unreine Haut","cf_l2":"Empfindliche oder reaktive Haut","cf_l3":"Erste Anzeichen von Dehydrierung oder Hautalterung",
-    "cf_c1":"Mikrobiom-Balance","cf_c2":"Ohne Reizung","cf_c3":"Keine Ausfallzeit",
-    "dp_tag":"Microneedling",
-    "dp_lead":"Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut.",
-    "dp_desc":"Die kontrollierte Mikroverletzung regt die natürlichen Regenerationsmechanismen der Haut an, setzt Wachstumsfaktoren frei und stimuliert die Neubildung von Kollagen und Elastin. Gleichzeitig verbessert sich die Aufnahmefähigkeit der Haut für Wirkstoffseren erheblich.",
-    "dp_l1":"Faltenreduktion und mehr Spannkraft","dp_l2":"Gleichmäßigerer Hautton, weniger Pigmentierung und Post-Akne","dp_l3":"Verfeinerte Poren, glattere Textur","dp_l4":"Mildert Narben und Dehnungsstreifen",
-    "dp_kurs":"4–6 Behandlungen im Abstand von 2–4 Wochen, je nach Hautzustand. Der Effekt verstärkt sich über mehrere Wochen, da die Kollagenproduktion nach der Behandlung weiterläuft.",
-    "dp_c1":"Kollagenaufbau","dp_c2":"Narben &amp; Aknenarben","dp_c3":"Porenverfeinerung",
-    "bbg_tag":"Microneedling · Tönung",
-    "bbg_lead":"Eine spezialisierte Mikroneedling-Behandlung mit Tönungseffekt — wie ein dauerhaft aufgetragenes, leichtes Make-up.",
-    "bbg_desc":"Über feinste Mikronadeln wird ein spezielles Tönungsserum mit lichtreflektierenden Partikeln in die oberen Hautschichten eingebracht. Es gleicht den Hautton aus, kaschiert Pigmentflecken und Rötungen und sorgt für ein gepflegtes, dezent geschminktes Erscheinungsbild — mit den regenerativen Vorteilen des klassischen Microneedlings.",
-    "bbg_l1":"Unebener Hautton, Rötungen, Pigmentflecken","bbg_l2":"Wunsch nach einem natürlich-ebenmäßigen Teint",
-    "bbg_c1":"Hautton-Ausgleich","bbg_c2":"Sanftes Tönen",
-    "vt_tag":"Exosomen-Therapie",
-    "vt_lead":"Eine innovative Erneuerungsmethode: Mikronadeln bringen das V-Tech-Wirkstoffsystem mit synthetischen Exosomen, Polynukleotiden, Stammzell-Faktoren und Peptiden tief in die Dermis.",
-    "vt_desc":"Exosomen wirken auf Ebene der Zellkommunikation — dort, wo Hautalterung beginnt. Sie aktivieren Fibroblasten und die Kollagenproduktion, fördern die Gewebereparatur, reduzieren Entzündungsprozesse und verbessern Elastizität, Feuchtigkeit und Hautton. Die im V-Tech System verwendeten synthetischen Exosomen bieten dabei eine standardisierte Zusammensetzung, hohe Reinheit und ein minimales allergisches Risiko — ganz ohne biologisches Ausgangsmaterial.",
-    "vt_lbl":"Besonders geeignet bei",
-    "vt_l1":"Feinen bis mittleren Falten","vt_l2":"Trockener, fahler Haut","vt_l3":"Nachlassender Elastizität","vt_l4":"Lichtbedingter Hautalterung, zur Regeneration nach anderen Behandlungen",
-    "vt_c1":"Zellregeneration","vt_c2":"Ohne Ausfallzeit","vt_c3":"Wissenschaftlich fundiert",
-    "ha_name":"Hautanalyse",
-    "ha_lead":"Ein professionelles Dermatoskop mit 80-facher Vergrößerung macht Hautzustände sichtbar, die mit dem blossen Auge nicht erkennbar sind.",
-    "ha_desc":"Das Gerät analysiert Falten (Tiefe und Anzahl), Talgaktivität, Porengröße und -verteilung sowie verborgene Pigmentveränderungen. Die Kosmetikerin scannt verschiedene Gesichtszonen, vergleicht die Werte mit Normwerten und erstellt auf dieser Basis ein individuelles Behandlungs- und Pflegeprotokoll.",
-    "ha_l1":"Diagnose: Scan verschiedener Gesichtszonen","ha_l2":"Analyse: Vergleich mit Referenzwerten","ha_l3":"Empfehlung: individuelles Behandlungs- und Pflegeprogramm",
-    "ha_c1":"Individuelle Diagnose","ha_c2":"Maßgeschneidertes Protokoll",
-    "cf2_tag":"Hydrafacial · BABOR Skinfusor","cf2_name":"CleanFusion / Glow Solution",
-    "cf2_lead":"Eine mehrstufige Behandlung, die Reinigung, Exfoliation, Wirkstoffinfusion und Aktivierungsmassage in einer einzigen Sitzung vereint — für sofortigen Glow ohne Erholungszeit.",
-    "cf2_desc":"Die Behandlung kombiniert vier aufeinander abgestimmte Technologien des BABOR SkinFusor-Systems. Sie eignet sich für alle Hauttypen, auch für empfindliche Haut, und liefert einen unmittelbaren Red-Carpet-Effekt.",
-    "cf2_steps_lbl":"Die 4 Schritte",
-    "cf2_s1_title":"CleanFusion","cf2_s1":"Tiefes Reinigen der Poren mit Vakuumtechnologie und speziellen BABOR-Seren",
-    "cf2_s2_title":"PolishFusion","cf2_s2":"Sanfte Exfoliation mit Diamantkopf, Vakuum und Fruchtsäure-Wirkstoff — entfernt abgestorbene Zellen und reinigt die Poren",
-    "cf2_s3_title":"HydroFusion","cf2_s3":"Transdermale Einschleusung von Wirkstoffen mit Niederfrequenztechnologie für tiefe Feuchtigkeitsversorgung",
-    "cf2_s4_title":"ImpulsFusion","cf2_s4":"Dynamische Impulsmassage im Pulsvakuum-Modus stimuliert Mikrozirkulation, Lymphfluss und Zellstoffwechsel",
-    "cf2_e1":"Tiefengereinigte, erfrischt wirkende Haut","cf2_e2":"Verfeinerte Poren und verbesserter Mikrorelief",
-    "cf2_e3":"Intensive Hydratation und Wirkstoffsättigung","cf2_e4":"Verbesserte Mikrozirkulation und Hauttönung",
-    "cf2_e5":"Sofortiger Glow — ideal vor besonderen Anlässen",
-    "cf2_c1":"Alle Hauttypen","cf2_c2":"Keine Ausfallzeit","cf2_c3":"Sofort-Glow","cf2_c4":"Red-Carpet-Ready",
-    "geraete_title_1":"Apparative","geraete_title_2":"Technologien",
-    "geraete_desc":"Hydrafacial-Skinfusor, Radiofrequenz-Lifting und Endosphères für das Gesicht — Details und Preise finden Sie auf der Startseite.",
-    "geraete_btn":"Zu den Geräte-Behandlungen →",
-    "ksec_label":"Körperbehandlungen","ksec_title_1":"Silhouette &amp;","ksec_title_2":"Hautqualität",
-    "ksec_desc":"Gezielte Behandlungen zur Konturverbesserung, Entstauung und Stärkung der Hautelastizität am Körper.",
-    "esb_tag":"Kompressions-Mikrovibration",
-    "esb_lead":"Eine gemeinsam mit einem Phlebologen entwickelte Technologie, die Durchblutung und Lymphfluss aktiv verbessert.",
-    "esb_desc":"Im Gegensatz zu rein oberflächlichen Methoden wirkt Endosphères auf das gesamte Gewebe — reduziert Schwellungen, Müdigkeit in den Beinen und verbessert sichtbar die Hautstruktur. Spürbare Ergebnisse zeigen sich bereits nach der ersten Behandlung.",
-    "esb_l1":"Reduktion von Cellulite und Ödemen","esb_l2":"Verbesserte Lymphdrainage und Mikrozirkulation","esb_l3":"Glattere, straffere Haut",
-    "esb_c1":"Ohne Ausfallzeit","esb_c2":"Kurs: 6–12 Sitzungen",
-    "ar_tag":"Bandagen-Wickel · Italien","ar_name":"AROSHA Körperwickel",
-    "ar_lead":"Ein bewährtes italienisches Bandagier-Konzept zur Konturverbesserung — Kompression und hochkonzentrierte Wirkstoffe in einem.",
-    "ar_desc":"Spezielle Einweg-Bandagen, getränkt mit L-Carnitin, Hyaluronsäure, Koffein, Algen- und Ginseng-Extrakten, werden auf die Problemzonen (Bauch, Oberschenkel, Arme) aufgebracht. Die leichte Kompression verstärkt Lymphdrainage und Stoffwechselaktivität und unterstützt den Abbau von Fettdepots.",
-    "ar_l1":"Reduktion von Wassereinlagerungen und Umfang","ar_l2":"Glättere Hautoberfläche, weniger \"Orangenhaut\"","ar_l3":"Intensive Feuchtigkeit, Lifting-Effekt","ar_l4":"Konturierung der Silhouette",
-    "ar_ablauf":"Eine Sitzung dauert 45–60 Minuten. Für ein dauerhaftes Ergebnis empfehlen wir einen Kurs von 4–8 Behandlungen im Abstand von wenigen Tagen.",
-    "ar_hinweis":"Nicht empfohlen bei Schwangerschaft, Stillzeit, Krampfadern, Diabetes, onkologischen Erkrankungen oder Hautverletzungen im Behandlungsbereich.",
-    "ar_c1":"Entstauung","ar_c2":"Konturierung","ar_c3":"Sofort spürbar",
-    "lsec_label":"Haarentfernung","lsec_title_1":"Primelaser","lsec_title_2":"Diodenlaser",
-    "lsec_desc":"Dauerhafte, schmerzlose Haarentfernung für alle Hauttypen. Vollständige Preisliste für alle Zonen finden Sie auf der Startseite.",
-    "lsec_btn":"Zur Laser-Preisliste →",
-    "cta_title_1":"Nicht sicher, welche","cta_title_2":"Behandlung passt?","cta_btn":"Beratungstermin vereinbaren",
-    "footer_rights":"© 2025 Solvata Beauty Club Berlin. Alle Rechte vorbehalten."
-  },
-  "en": {
-    "nav_back":"← Back to Home","nav_book":"Book Appointment",
-    "hero_eyebrow":"Complete Overview","hero_title_1":"All","hero_title_2":"Treatments",
-    "hero_sub":"Every treatment at Solvata is individually tailored to your skin — based on professional BABOR formulations and modern device technology.",
-    "catnav_babor":"Face — BABOR","catnav_geraete":"Face — Devices","catnav_koerper":"Body","catnav_laser":"Laser",
-    "bsec_label":"Facial Treatments","bsec_title_1":"BABOR","bsec_title_2":"Active Concepts",
-    "bsec_desc":"Our facial treatments are based on BABOR's professional lines — from gentle cleansing to intensive anti-aging therapy. Every treatment is individually tailored to your skin condition.",
-    "ph_media":"Photo/video coming soon","lbl_fuerwen":"Suitable for","lbl_wirkung":"Effect","lbl_kurs":"Recommended Course","lbl_ablauf":"Procedure","lbl_hinweis":"Note",
-    "skv_tag":"Anti-Aging · Epigenetics",
-    "skv_lead":"A targeted skincare approach based on modern epigenetic principles that slows the skin's aging process.",
-    "skv_desc":"The treatment cleanses the skin, restores its moisture-lipid balance and delivers a pronounced anti-aging effect. It uses alpine rose stem cells that protect cell DNA, the OsmoTek delivery complex for optimized active ingredient absorption, and individually tailored BABOR concentrates combined with a flowing manual massage.",
-    "skv_l1":"All skin types, especially with early or advanced signs of aging","skv_l2":"Dull complexion, loss of firmness","skv_l3":"Sensitive skin that needs a gentle yet effective anti-aging approach",
-    "skv_c1":"Skin Renewal","skv_c2":"Moisture Balance","skv_c3":"Pore Refinement",
-    "hsr_tag":"Lifting · Firmness",
-    "hsr_lead":"A highly effective anti-aging treatment based on the exclusive BABOR HSR LIFTING line for a visible lifting result and a clearer facial oval.",
-    "hsr_desc":"Five highly active components — Multitendin Plus, lupin extract, carnosine, Relaxo Peptide and Neuro-Receptor Peptide — work on multiple levels of the skin. They reduce expression lines, counteract gravity-related skin changes, and strengthen connective tissue and skin elasticity. Combined with an anti-aging massage and the firming HSR Lifting Line Mask, a noticeably firmer, smoother complexion appears after just the first treatment.",
-    "hsr_l1":"Visible signs of aging, loss of firmness","hsr_l2":"Especially recommended for clients 40+","hsr_l3":"Desire for a lifting effect without invasive methods",
-    "hsr_c1":"Lifting","hsr_c2":"Wrinkle Reduction","hsr_c3":"Facial Oval",
-    "db_tag":"Dermo-Cosmetics · Clinical",
-    "db_lead":"A highly effective skincare therapy combining professional dermo-cosmetics with device-based methods and other aesthetic techniques.",
-    "db_desc":"The DOCTOR BABOR line is characterized by especially high active ingredient concentrations — stabilized vitamin C, retinol complexes, hyaluronic acid in various molecular sizes, peptides and niacinamide work specifically in deeper skin layers. Depending on skin condition, peels, ampoules, serums, masks, massage and, if needed, device-based methods are individually combined.",
-    "db_l1":"Premature skin aging, loss of firmness","db_l2":"Pigment spots and uneven complexion","db_l3":"Very dry or sensitive skin, active skin concerns",
-    "db_c1":"Individual","db_c2":"Deep Action","db_c3":"Clinically Based",
-    "aha_tag":"Peeling · Fruit Acids","aha_name":"AHA Peeling",
-    "aha_lead":"A chemical peel based on alpha-hydroxy acids that gently removes dead skin cells and stimulates the skin's natural renewal.",
-    "aha_desc":"The fruit acids dissolve the bonds between dead skin cells and promote their shedding. This stimulates cell renewal and improves the skin's ability to absorb further active ingredients. It also improves moisture levels and stimulates collagen synthesis — for smoother, more elastic-looking skin.",
-    "aha_l1":"Dull, tired skin with uneven complexion","aha_l2":"Enlarged pores, early signs of aging","aha_l3":"As preparation before more intensive treatments or as a course",
-    "aha_c1":"Gentle Exfoliation","aha_c2":"Skin Smoothing","aha_c3":"Instant Glow",
-    "cf_tag":"Deep Cleansing · 98% Natural",
-    "cf_lead":"A gentle yet effective cleansing treatment based on the sustainable CLEANFORMANCE line — free from animal ingredients, silicones, parabens or microplastics.",
-    "cf_desc":"Up to 98% of ingredients are of natural origin. Pre- and probiotics balance the skin's microbiome, red maple extract provides antioxidant action. The skin is thoroughly cleansed while its protective barrier is strengthened — ideal for young or imbalanced skin.",
-    "cf_l1":"Clogged pores, impure skin","cf_l2":"Sensitive or reactive skin","cf_l3":"Early signs of dehydration or skin aging",
-    "cf_c1":"Microbiome Balance","cf_c2":"No Irritation","cf_c3":"No Downtime",
-    "dp_tag":"Microneedling",
-    "dp_lead":"Micro-fine needles create thousands of controlled micro-channels per minute, activating the skin's natural collagen and elastin production.",
-    "dp_desc":"The controlled micro-injury stimulates the skin's natural regeneration mechanisms, releases growth factors and stimulates the formation of new collagen and elastin. At the same time, the skin's ability to absorb active serums improves significantly.",
-    "dp_l1":"Wrinkle reduction and more firmness","dp_l2":"More even skin tone, less pigmentation and post-acne marks","dp_l3":"Refined pores, smoother texture","dp_l4":"Reduces scars and stretch marks",
-    "dp_kurs":"4–6 treatments at intervals of 2–4 weeks, depending on skin condition. The effect intensifies over several weeks as collagen production continues after treatment.",
-    "dp_c1":"Collagen Building","dp_c2":"Scars &amp; Acne Scars","dp_c3":"Pore Refinement",
-    "bbg_tag":"Microneedling · Tinting",
-    "bbg_lead":"A specialized microneedling treatment with a tinting effect — like a permanently applied, light makeup.",
-    "bbg_desc":"Through ultra-fine microneedles, a special tinting serum with light-reflecting particles is introduced into the upper skin layers. It evens out skin tone, conceals pigment spots and redness, and creates a well-groomed, subtly made-up appearance — with the regenerative benefits of classic microneedling.",
-    "bbg_l1":"Uneven skin tone, redness, pigment spots","bbg_l2":"Desire for a naturally even complexion",
-    "bbg_c1":"Skin Tone Evening","bbg_c2":"Gentle Tinting",
-    "vt_tag":"Exosome Therapy",
-    "vt_lead":"An innovative renewal method: microneedles deliver the V-Tech active system with synthetic exosomes, polynucleotides, stem cell factors and peptides deep into the dermis.",
-    "vt_desc":"Exosomes act at the level of cell communication — exactly where skin aging begins. They activate fibroblasts and collagen production, promote tissue repair, reduce inflammatory processes, and improve elasticity, hydration and skin tone. The synthetic exosomes used in the V-Tech system offer a standardized composition, high purity and minimal allergic risk — entirely without biological source material.",
-    "vt_lbl":"Particularly suitable for",
-    "vt_l1":"Fine to medium wrinkles","vt_l2":"Dry, dull skin","vt_l3":"Loss of elasticity","vt_l4":"Photo-aging, regeneration after other treatments",
-    "vt_c1":"Cell Regeneration","vt_c2":"No Downtime","vt_c3":"Scientifically Backed",
-    "ha_name":"Skin Analysis",
-    "ha_lead":"A professional dermatoscope with 80x magnification reveals skin conditions invisible to the naked eye.",
-    "ha_desc":"The device analyzes wrinkles (depth and number), sebum activity, pore size and distribution, as well as hidden pigment changes. The esthetician scans different facial zones, compares the values with reference norms, and creates an individual treatment and skincare protocol based on this.",
-    "ha_l1":"Diagnosis: scanning various facial zones","ha_l2":"Analysis: comparison with reference values","ha_l3":"Recommendation: individual treatment and skincare program",
-    "ha_c1":"Individual Diagnosis","ha_c2":"Tailored Protocol",
-    "cf2_tag":"Hydrafacial · BABOR Skinfusor","cf2_name":"CleanFusion / Glow Solution",
-    "cf2_lead":"A multi-step treatment combining deep cleansing, exfoliation, active ingredient infusion and an activating massage in a single session — for instant glow with zero downtime.",
-    "cf2_desc":"The treatment combines four precisely coordinated technologies of the BABOR SkinFusor system. It suits all skin types, including sensitive skin, and delivers an immediate red-carpet effect.",
-    "cf2_steps_lbl":"The 4 Steps",
-    "cf2_s1_title":"CleanFusion","cf2_s1":"Deep pore cleansing using vacuum technology and specialized BABOR serums",
-    "cf2_s2_title":"PolishFusion","cf2_s2":"Gentle exfoliation with a diamond tip, vacuum and fruit acid formula — removes dead cells and clears pores",
-    "cf2_s3_title":"HydroFusion","cf2_s3":"Transdermal delivery of active ingredients using low-frequency technology for deep hydration",
-    "cf2_s4_title":"ImpulsFusion","cf2_s4":"Dynamic pulse massage in pulsating vacuum mode stimulates microcirculation, lymphatic flow and cellular metabolism",
-    "cf2_e1":"Deeply cleansed, refreshed-looking skin","cf2_e2":"Refined pores and improved skin texture",
-    "cf2_e3":"Intensive hydration and active ingredient saturation","cf2_e4":"Improved microcirculation and skin tone",
-    "cf2_e5":"Instant glow — ideal before special occasions",
-    "cf2_c1":"All Skin Types","cf2_c2":"No Downtime","cf2_c3":"Instant Glow","cf2_c4":"Red-Carpet-Ready",
-    "geraete_title_1":"Device-Based","geraete_title_2":"Technologies",
-    "geraete_desc":"Hydrafacial-Skinfusor, radiofrequency lifting and Endosphères for the face — details and prices can be found on the homepage.",
-    "geraete_btn":"View Device-Based Treatments →",
-    "ksec_label":"Body Treatments","ksec_title_1":"Silhouette &amp;","ksec_title_2":"Skin Quality",
-    "ksec_desc":"Targeted treatments for improving contours, reducing fluid retention, and strengthening skin elasticity on the body.",
-    "esb_tag":"Compression Micro-Vibration",
-    "esb_lead":"A technology developed together with a phlebologist that actively improves circulation and lymphatic flow.",
-    "esb_desc":"Unlike purely surface-level methods, Endosphères works on the entire tissue — reducing swelling and leg fatigue while visibly improving skin structure. Noticeable results appear after just the first treatment.",
-    "esb_l1":"Reduction of cellulite and edema","esb_l2":"Improved lymphatic drainage and microcirculation","esb_l3":"Smoother, firmer skin",
-    "esb_c1":"No Downtime","esb_c2":"Course: 6–12 sessions",
-    "ar_tag":"Bandage Wrap · Italy","ar_name":"AROSHA Body Wrap",
-    "ar_lead":"A proven Italian bandage-wrap concept for body contouring — compression and highly concentrated active ingredients in one.",
-    "ar_desc":"Special single-use bandages, soaked in L-carnitine, hyaluronic acid, caffeine, algae and ginseng extracts, are applied to problem areas (abdomen, thighs, arms). The light compression enhances lymphatic drainage and metabolic activity, supporting the breakdown of fat deposits.",
-    "ar_l1":"Reduction of water retention and circumference","ar_l2":"Smoother skin surface, less \"orange-peel skin\"","ar_l3":"Intense hydration, lifting effect","ar_l4":"Contouring of the silhouette",
-    "ar_ablauf":"One session lasts 45–60 minutes. For a lasting result, we recommend a course of 4–8 treatments spaced a few days apart.",
-    "ar_hinweis":"Not recommended during pregnancy, breastfeeding, varicose veins, diabetes, oncological conditions, or skin injuries in the treatment area.",
-    "ar_c1":"Decongestion","ar_c2":"Contouring","ar_c3":"Instantly Noticeable",
-    "lsec_label":"Hair Removal","lsec_title_1":"Primelaser","lsec_title_2":"Diode Laser",
-    "lsec_desc":"Permanent, painless hair removal for all skin types. Full price list for all zones can be found on the homepage.",
-    "lsec_btn":"View Laser Price List →",
-    "cta_title_1":"Not sure which","cta_title_2":"treatment is right for you?","cta_btn":"Book a Consultation",
-    "footer_rights":"© 2025 Solvata Beauty Club Berlin. All rights reserved."
-  }
-};
+var T = {"de": {"nav_back": "← Zur Startseite", "nav_book": "Termin buchen", "hero_eyebrow": "Vollständige Übersicht", "hero_title_1": "Alle", "hero_title_2": "Behandlungen", "hero_sub": "Jede Behandlung bei Solvata wird individuell auf Ihre Haut abgestimmt — auf Basis professioneller BABOR-Wirkstoffkonzepte und moderner Gerätetechnologie.", "catnav_babor": "Gesicht — BABOR", "catnav_geraete": "Gesicht — Geräte", "catnav_koerper": "Körper", "catnav_laser": "Laser", "bsec_label": "Gesichtsbehandlungen", "bsec_title_1": "BABOR", "bsec_title_2": "Wirkstoffkonzepte", "bsec_desc": "Unsere Gesichtsbehandlungen basieren auf den professionellen Linien von BABOR — von sanfter Reinigung bis zu intensiver Anti-Age-Therapie. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.", "ph_media": "Foto/Video folgt", "lbl_fuerwen": "Für wen", "lbl_wirkung": "Wirkung", "lbl_kurs": "Empfohlener Kurs", "lbl_ablauf": "Ablauf", "lbl_hinweis": "Hinweis", "skv_tag": "Anti-Age · Epigenetik", "skv_lead": "Ein gezielter Hautpflege-Ansatz auf Basis moderner epigenetischer Prinzipien, der den Alterungsprozess der Haut verlangsamt.", "skv_desc": "Die Behandlung reinigt die Haut, stellt das Gleichgewicht von Feuchtigkeit und Lipiden wieder her und sorgt für einen ausgeprägten Anti-Age-Effekt. Zum Einsatz kommen Stammzellen der Alpenrose, die die Zell-DNA schützen, der Wirkstoffkomplex OsmoTek für eine optimierte Aufnahme der Aktivstoffe sowie individuell abgestimmte BABOR-Konzentrate in Kombination mit einer fließenden manuellen Massage.", "skv_l1": "Alle Hauttypen, besonders bei ersten oder fortgeschrittenen Alterserscheinungen", "skv_l2": "Fahler Teint, nachlassende Spannkraft", "skv_l3": "Empfindliche Haut, die einen sanften, aber wirksamen Anti-Age-Ansatz benötigt", "skv_c1": "Hauterneuerung", "skv_c2": "Feuchtigkeitsbalance", "skv_c3": "Porenverfeinerung", "hsr_tag": "Lifting · Festigkeit", "hsr_lead": "Eine hochwirksame Anti-Age-Behandlung auf Basis der exklusiven BABOR HSR LIFTING-Linie für ein sichtbares Lifting-Ergebnis und ein klareres Gesichtsoval.", "hsr_desc": "Fünf hochaktive Komponenten — Multitendin Plus, Lupinen-Extrakt, Carnosin, Relaxo Peptide und Neuro-Receptor Peptide — wirken auf mehreren Ebenen der Haut. Sie reduzieren Mimikfalten, wirken gravitationsbedingten Hautveränderungen entgegen und stärken Bindegewebe und Hautelastizität. In Kombination mit einer Anti-Age-Massage und der straffenden Gel-Maske HSR Lifting Line Mask zeigt sich bereits nach der ersten Behandlung ein deutlich strafferer, glatterer Teint.", "hsr_l1": "Sichtbare Alterserscheinungen, nachlassende Spannkraft", "hsr_l2": "Besonders empfehlenswert für Kundinnen 40+", "hsr_l3": "Wunsch nach Lifting-Effekt ohne invasive Methoden", "hsr_c1": "Lifting", "hsr_c2": "Faltenreduktion", "hsr_c3": "Gesichtsoval", "db_tag": "Dermokosmetik · Klinisch", "db_lead": "Eine hochwirksame Hautpflege-Therapie, die professionelle Dermokosmetik mit apparativen Methoden und weiteren ästhetischen Techniken kombiniert.", "db_desc": "Die Linie DOCTOR BABOR zeichnet sich durch besonders hohe Wirkstoffkonzentrationen aus — stabilisiertes Vitamin C, Retinol-Komplexe, Hyaluronsäure in verschiedenen Molekülgrößen, Peptide und Niacinamid wirken gezielt in tieferen Hautschichten. Je nach Hautzustand werden Peelings, Ampullen, Seren, Masken, Massage und bei Bedarf apparative Methoden individuell kombiniert.", "db_l1": "Vorzeitige Hautalterung, nachlassende Festigkeit", "db_l2": "Pigmentflecken und unebener Teint", "db_l3": "Sehr trockene oder empfindliche Haut, aktive Hautprobleme", "db_c1": "Individuell", "db_c2": "Tiefenwirkung", "db_c3": "Klinisch fundiert", "aha_tag": "Peeling · Fruchtsäuren", "aha_name": "AHA Peeling", "aha_lead": "Ein chemisches Peeling auf Basis von Alpha-Hydroxysäuren, das abgestorbene Hautzellen sanft entfernt und die natürliche Erneuerung der Haut anregt.", "aha_desc": "Die Fruchtsäuren lösen die Verbindungen zwischen abgestorbenen Hautzellen und fördern deren Abschuppung. Das regt die Zellerneuerung an und verbessert die Aufnahmefähigkeit der Haut für weitere Wirkstoffe. Zusätzlich wird der Feuchtigkeitsgehalt verbessert und die Kollagensynthese angeregt — für ein glatteres, elastischeres Hautbild.", "aha_l1": "Fahle, müde Haut mit unebenem Teint", "aha_l2": "Erweiterte Poren, erste Alterserscheinungen", "aha_l3": "Als Vorbereitung vor intensiveren Behandlungen oder als Kur", "aha_c1": "Sanfte Exfoliation", "aha_c2": "Hautglättung", "aha_c3": "Sofort-Glow", "cf_tag": "Tiefenreinigung · 98% Natur", "cf_lead": "Eine sanfte, aber wirksame Reinigungsbehandlung auf Basis der nachhaltigen Linie CLEANFORMANCE — ohne tierische Inhaltsstoffe, Silikone, Parabene oder Mikroplastik.", "cf_desc": "Bis zu 98% der Inhaltsstoffe sind natürlichen Ursprungs. Prä- und Probiotika balancieren das Mikrobiom der Haut, Rotahorn-Extrakt wirkt antioxidativ. Die Haut wird gründlich gereinigt und ihre Schutzbarriere gleichzeitig gestärkt — ideal für junge oder aus dem Gleichgewicht geratene Haut.", "cf_l1": "Verstopfte Poren, unreine Haut", "cf_l2": "Empfindliche oder reaktive Haut", "cf_l3": "Erste Anzeichen von Dehydrierung oder Hautalterung", "cf_c1": "Mikrobiom-Balance", "cf_c2": "Ohne Reizung", "cf_c3": "Keine Ausfallzeit", "dp_tag": "Microneedling", "dp_lead": "Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut.", "dp_desc": "Die kontrollierte Mikroverletzung regt die natürlichen Regenerationsmechanismen der Haut an, setzt Wachstumsfaktoren frei und stimuliert die Neubildung von Kollagen und Elastin. Gleichzeitig verbessert sich die Aufnahmefähigkeit der Haut für Wirkstoffseren erheblich.", "dp_l1": "Faltenreduktion und mehr Spannkraft", "dp_l2": "Gleichmäßigerer Hautton, weniger Pigmentierung und Post-Akne", "dp_l3": "Verfeinerte Poren, glattere Textur", "dp_l4": "Mildert Narben und Dehnungsstreifen", "dp_kurs": "4–6 Behandlungen im Abstand von 2–4 Wochen, je nach Hautzustand. Der Effekt verstärkt sich über mehrere Wochen, da die Kollagenproduktion nach der Behandlung weiterläuft.", "dp_c1": "Kollagenaufbau", "dp_c2": "Narben &amp; Aknenarben", "dp_c3": "Porenverfeinerung", "bbg_tag": "Microneedling · Tönung", "bbg_lead": "Eine spezialisierte Mikroneedling-Behandlung mit Tönungseffekt — wie ein dauerhaft aufgetragenes, leichtes Make-up.", "bbg_desc": "Über feinste Mikronadeln wird ein spezielles Tönungsserum mit lichtreflektierenden Partikeln in die oberen Hautschichten eingebracht. Es gleicht den Hautton aus, kaschiert Pigmentflecken und Rötungen und sorgt für ein gepflegtes, dezent geschminktes Erscheinungsbild — mit den regenerativen Vorteilen des klassischen Microneedlings.", "bbg_l1": "Unebener Hautton, Rötungen, Pigmentflecken", "bbg_l2": "Wunsch nach einem natürlich-ebenmäßigen Teint", "bbg_c1": "Hautton-Ausgleich", "bbg_c2": "Sanftes Tönen", "vt_tag": "Exosomen-Therapie", "vt_lead": "Eine innovative Erneuerungsmethode: Mikronadeln bringen das V-Tech-Wirkstoffsystem mit synthetischen Exosomen, Polynukleotiden, Stammzell-Faktoren und Peptiden tief in die Dermis.", "vt_desc": "Exosomen wirken auf Ebene der Zellkommunikation — dort, wo Hautalterung beginnt. Sie aktivieren Fibroblasten und die Kollagenproduktion, fördern die Gewebereparatur, reduzieren Entzündungsprozesse und verbessern Elastizität, Feuchtigkeit und Hautton. Die im V-Tech System verwendeten synthetischen Exosomen bieten dabei eine standardisierte Zusammensetzung, hohe Reinheit und ein minimales allergisches Risiko — ganz ohne biologisches Ausgangsmaterial.", "vt_lbl": "Besonders geeignet bei", "vt_l1": "Feinen bis mittleren Falten", "vt_l2": "Trockener, fahler Haut", "vt_l3": "Nachlassender Elastizität", "vt_l4": "Lichtbedingter Hautalterung, zur Regeneration nach anderen Behandlungen", "vt_c1": "Zellregeneration", "vt_c2": "Ohne Ausfallzeit", "vt_c3": "Wissenschaftlich fundiert", "ha_name": "Hautanalyse", "ha_lead": "Ein professionelles Dermatoskop mit 80-facher Vergrößerung macht Hautzustände sichtbar, die mit dem blossen Auge nicht erkennbar sind.", "ha_desc": "Das Gerät analysiert Falten (Tiefe und Anzahl), Talgaktivität, Porengröße und -verteilung sowie verborgene Pigmentveränderungen. Die Kosmetikerin scannt verschiedene Gesichtszonen, vergleicht die Werte mit Normwerten und erstellt auf dieser Basis ein individuelles Behandlungs- und Pflegeprotokoll.", "ha_l1": "Diagnose: Scan verschiedener Gesichtszonen", "ha_l2": "Analyse: Vergleich mit Referenzwerten", "ha_l3": "Empfehlung: individuelles Behandlungs- und Pflegeprogramm", "ha_c1": "Individuelle Diagnose", "ha_c2": "Maßgeschneidertes Protokoll", "cf2_tag": "Hydrafacial · BABOR Skinfusor", "cf2_name": "CleanFusion / Glow Solution", "cf2_lead": "Eine mehrstufige Behandlung, die Reinigung, Exfoliation, Wirkstoffinfusion und Aktivierungsmassage in einer einzigen Sitzung vereint — für sofortigen Glow ohne Erholungszeit.", "cf2_desc": "Die Behandlung kombiniert vier aufeinander abgestimmte Technologien des BABOR SkinFusor-Systems. Sie eignet sich für alle Hauttypen, auch für empfindliche Haut, und liefert einen unmittelbaren Red-Carpet-Effekt.", "cf2_steps_lbl": "Die 4 Schritte", "cf2_s1_title": "CleanFusion", "cf2_s1": "Tiefes Reinigen der Poren mit Vakuumtechnologie und speziellen BABOR-Seren", "cf2_s2_title": "PolishFusion", "cf2_s2": "Sanfte Exfoliation mit Diamantkopf, Vakuum und Fruchtsäure-Wirkstoff — entfernt abgestorbene Zellen und reinigt die Poren", "cf2_s3_title": "HydroFusion", "cf2_s3": "Transdermale Einschleusung von Wirkstoffen mit Niederfrequenztechnologie für tiefe Feuchtigkeitsversorgung", "cf2_s4_title": "ImpulsFusion", "cf2_s4": "Dynamische Impulsmassage im Pulsvakuum-Modus stimuliert Mikrozirkulation, Lymphfluss und Zellstoffwechsel", "cf2_e1": "Tiefengereinigte, erfrischt wirkende Haut", "cf2_e2": "Verfeinerte Poren und verbesserter Mikrorelief", "cf2_e3": "Intensive Hydratation und Wirkstoffsättigung", "cf2_e4": "Verbesserte Mikrozirkulation und Hauttönung", "cf2_e5": "Sofortiger Glow — ideal vor besonderen Anlässen", "cf2_c1": "Alle Hauttypen", "cf2_c2": "Keine Ausfallzeit", "cf2_c3": "Sofort-Glow", "cf2_c4": "Red-Carpet-Ready", "geraete_title_1": "Apparative", "geraete_title_2": "Technologien", "geraete_desc": "Modernste Geräte für Gesichtsbehandlungen — Hydrafacial, Endosphères und Radiofrequenz-Lifting für sichtbare Ergebnisse ab der ersten Sitzung.", "geraete_btn": "Zu den Geräte-Behandlungen →", "ksec_label": "Körperbehandlungen", "ksec_title_1": "Silhouette &amp;", "ksec_title_2": "Hautqualität", "ksec_desc": "Gezielte Behandlungen zur Konturverbesserung, Entstauung und Stärkung der Hautelastizität am Körper.", "esb_tag": "Kompressions-Mikrovibration", "esb_lead": "Eine gemeinsam mit einem Phlebologen entwickelte Technologie, die Durchblutung und Lymphfluss aktiv verbessert.", "esb_desc": "Im Gegensatz zu rein oberflächlichen Methoden wirkt Endosphères auf das gesamte Gewebe — reduziert Schwellungen, Müdigkeit in den Beinen und verbessert sichtbar die Hautstruktur. Spürbare Ergebnisse zeigen sich bereits nach der ersten Behandlung.", "esb_l1": "Reduktion von Cellulite und Ödemen", "esb_l2": "Verbesserte Lymphdrainage und Mikrozirkulation", "esb_l3": "Glattere, straffere Haut", "esb_c1": "Ohne Ausfallzeit", "esb_c2": "Kurs: 6–12 Sitzungen", "ar_tag": "Bandagen-Wickel · Italien", "ar_name": "AROSHA Körperwickel", "ar_lead": "Ein bewährtes italienisches Bandagier-Konzept zur Konturverbesserung — Kompression und hochkonzentrierte Wirkstoffe in einem.", "ar_desc": "Spezielle Einweg-Bandagen, getränkt mit L-Carnitin, Hyaluronsäure, Koffein, Algen- und Ginseng-Extrakten, werden auf die Problemzonen (Bauch, Oberschenkel, Arme) aufgebracht. Die leichte Kompression verstärkt Lymphdrainage und Stoffwechselaktivität und unterstützt den Abbau von Fettdepots.", "ar_l1": "Reduktion von Wassereinlagerungen und Umfang", "ar_l2": "Glättere Hautoberfläche, weniger \"Orangenhaut\"", "ar_l3": "Intensive Feuchtigkeit, Lifting-Effekt", "ar_l4": "Konturierung der Silhouette", "ar_ablauf": "Eine Sitzung dauert 45–60 Minuten. Für ein dauerhaftes Ergebnis empfehlen wir einen Kurs von 4–8 Behandlungen im Abstand von wenigen Tagen.", "ar_hinweis": "Nicht empfohlen bei Schwangerschaft, Stillzeit, Krampfadern, Diabetes, onkologischen Erkrankungen oder Hautverletzungen im Behandlungsbereich.", "ar_c1": "Entstauung", "ar_c2": "Konturierung", "ar_c3": "Sofort spürbar", "lsec_label": "Haarentfernung", "lsec_title_1": "Primelaser", "lsec_title_2": "Diodenlaser", "lsec_desc": "Einer der leistungsstärksten Diodenlaser auf dem Markt — schmerzlos, ganzjährig einsetzbar, wirksam auf allen Hauttypen.", "lsec_btn": "Zur Laser-Preisliste →", "cta_title_1": "Nicht sicher, welche", "cta_title_2": "Behandlung passt?", "cta_btn": "Beratungstermin vereinbaren", "footer_rights": "© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.", "esf_tag": "Kompressions-Mikrovibration · Gesicht", "esf_name": "Endosphères — Gesicht", "esf_lead": "Gezielte Kompressions-Mikrovibration für das Gesichtsoval — strafft Konturen, verbessert Durchblutung und Lymphfluss und sorgt für einen frischeren, klareren Teint.", "esf_desc": "Die Technologie wurde in Zusammenarbeit mit einem Phlebologen entwickelt und wirkt nicht nur an der Hautoberfläche. Die mechanische Mikrostimulation fördert die Mikrozirkulation, aktiviert den Lymphabfluss und verbessert sichtbar den Hauttonus — ohne Eingriff und ohne Erholungszeit. Ergebnisse sind bereits nach der ersten Behandlung spürbar.", "esf_l1": "Straffung des Gesichtsovals und der Konturen", "esf_l2": "Verbesserte Lymphdrainage, weniger Schwellungen", "esf_l3": "Frischerer, hellerer Teint", "esf_l4": "Verbesserte Hautdichte und -elastizität", "esf_fw1": "Nachlassende Konturen und Gesichtsoval", "esf_fw2": "Geschwollenes, müdes Erscheinungsbild", "esf_fw3": "Wunsch nach sanftem, nicht-invasivem Lifting", "esf_p1_n": "Einzelbehandlung mit Maske", "esf_p2_n": "Abo 6× 30 Minuten", "esf_p3_n": "Abo 6× 45 Minuten", "esf_c1": "Keine Ausfallzeit", "esf_c2": "Sofort sichtbar", "esf_c3": "Lymphdrainage", "hf_tag": "Hydrafacial · BABOR Skinfusor", "hf_name": "Hydrafacial — Skinfusor", "hf_lead": "Tiefe Hautreinigung und intensive Wirkstoffinfusion in einer Sitzung — für sofortigen Glow ohne Erholungszeit.", "hf_desc": "Der BABOR SkinFusor kombiniert vier Schritte: Vakuumreinigung der Poren, sanfte Exfoliation mit Diamantkopf, transdermale Einschleusung von Wirkstoffen und eine stimulierende Impulsmassage für Mikrozirkulation und Lymphfluss. Das Ergebnis ist eine tiefgereinigte, hydratisierte Haut mit unmittelbarem Red-Carpet-Effekt — geeignet für alle Hauttypen, auch für empfindliche Haut.", "hf_l1": "Tiefengereinigte Poren, verfeinertes Hautbild", "hf_l2": "Intensive Hydratation und Wirkstoffsättigung", "hf_l3": "Verbesserter Hautton und Glow-Effekt", "hf_l4": "Aktivierte Mikrozirkulation und Lymphfluss", "hf_fw1": "Alle Hauttypen, auch empfindlich", "hf_fw2": "Unreine Haut, verstopfte Poren", "hf_fw3": "Vor besonderen Anlässen — sofortiger Effekt", "hf_p1_n": "Gesicht", "hf_p2_n": "Gesicht &amp; Hals", "hf_p3_n": "Gesicht, Hals &amp; Dekolleté", "hf_p4_n": "<strong>Combo: Hydrafacial + Mikroneedling</strong>", "hf_c1": "Alle Hauttypen", "hf_c2": "Keine Ausfallzeit", "hf_c3": "Sofort-Glow", "rf_tag": "Radiofrequenz-Lifting", "rf_name": "RF Lifting", "rf_lead": "Klassisches Radiofrequenz-Lifting — sanft, ohne Hautschäden, mit sichtbarer Straffung bereits nach der ersten Behandlung.", "rf_desc": "Die Radiofrequenzenergie erwärmt gezielt die tiefen Hautschichten und stimuliert die Kollagenproduktion. Das Ergebnis: straffere, dichtere Haut und ein erfrischtes Gesichtsoval — ohne Nadeln, ohne Eingriff. Die Behandlung eignet sich ideal als regelmäßige Pflegebehandlung zur langfristigen Hautverjüngung. Das Gerät wird aktuell finalisiert — die Behandlung ist buchbar.", "rf_l1": "Hautstraffung und verbesserter Tonus", "rf_l2": "Feinere Falten und glatteres Hautbild", "rf_l3": "Klareres Gesichtsoval", "rf_l4": "Stimulierte Kollagenproduktion", "rf_fw1": "Nachlassende Hautspannkraft", "rf_fw2": "Wunsch nach regelmäßiger, sanfter Anti-Age-Pflege", "rf_fw3": "Geeignet für alle Hauttypen", "rf_p1_n": "Augenzone Lifting", "rf_p2_n": "Gesicht Lifting", "rf_price_note": "Preise werden nach Auswahl des finalen Geräts aktualisiert", "rf_c1": "Keine Nadeln", "rf_c2": "Keine Ausfallzeit", "rf_c3": "Kollagenaufbau", "pl_tag": "Diodenlaser · Ganzjährig", "pl_lead": "Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ohne saisonale Einschränkungen.", "pl_desc": "Der Primelaser arbeitet mit hochpräziser Diodentechnologie und einem integrierten Kühlsystem, das die Behandlung angenehm und sicher macht. Bereits nach der ersten Sitzung gehen 15–20% der Haare dauerhaft verloren. Nach einem vollständigen Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erreicht. Zwischen den Sitzungen wächst das Haar feiner und dünner — bis es schließlich ganz ausbleibt.", "pl_l1": "15–20% Haarreduktion bereits nach der 1. Sitzung", "pl_l2": "Bis zu 90% dauerhaftes Ergebnis nach dem Kurs", "pl_l3": "Wirksam auf allen Hauttypen, ganzjährig einsetzbar", "pl_l4": "Schmerzlos dank aktivem Kühlsystem", "pl_kurs_lbl": "Empfohlener Kurs", "pl_kurs": "6–8 Sitzungen im Abstand von 4–6 Wochen, je nach Körperzone und Haarwuchs. Eine individuelle Beratung ist vor dem Beginn des Kurses empfohlen.", "pl_price_gesicht": "Gesicht", "pl_price_body": "Körper", "pl_price_combo": "Kombi-Pakete", "pl_lip": "Oberlippe", "pl_chin": "Kinn", "pl_cheeks": "Wangen", "pl_face_full": "Gesicht komplett", "pl_armpits": "Achseln", "pl_arms": "Arme komplett", "pl_belly": "Bauch", "pl_back": "Rücken", "pl_lower_legs": "Unterschenkel", "pl_full_legs": "Beine komplett", "pl_bikini": "Bikini", "pl_bikini_intim": "Bikini + Intim", "pl_bikini_intim_glut": "Bikini + Intim + Gesäß", "pl_fullbody": "<strong>Ganzkörper</strong>", "pl_basic1": "Achsel + Bikini + Intim + Unterschenkel", "pl_basic2": "Achsel + Bikini + Intim + Beine komplett", "pl_c1": "Alle Hauttypen", "pl_c2": "Ganzjährig", "pl_c3": "Schmerzlos", "pl_c4": "Kühlung", "price_label": "Preise", "price_on_request": "auf Anfrage", "bk_label": "Termin &amp; Kontakt", "bk_title_1": "Bereit für", "bk_title_2": "Ihre Behandlung?", "bk_sub": "Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt — wir beraten Sie gerne zu den passenden Behandlungen.", "bk_book": "Jetzt online buchen", "bk_wa": "WhatsApp", "bi_address": "Adresse", "bi_phone": "Telefon / WhatsApp", "bi_hours": "Öffnungszeiten", "bi_hours_val": "Mo–Sa: 10:00–20:00"}, "en": {"nav_back": "← Back to Home", "nav_book": "Book Appointment", "hero_eyebrow": "Complete Overview", "hero_title_1": "All", "hero_title_2": "Treatments", "hero_sub": "Every treatment at Solvata is individually tailored to your skin — based on professional BABOR formulations and modern device technology.", "catnav_babor": "Face — BABOR", "catnav_geraete": "Face — Devices", "catnav_koerper": "Body", "catnav_laser": "Laser", "bsec_label": "Facial Treatments", "bsec_title_1": "BABOR", "bsec_title_2": "Active Concepts", "bsec_desc": "Our facial treatments are based on BABOR's professional lines — from gentle cleansing to intensive anti-aging therapy. Every treatment is individually tailored to your skin condition.", "ph_media": "Photo/video coming soon", "lbl_fuerwen": "Suitable for", "lbl_wirkung": "Effect", "lbl_kurs": "Recommended Course", "lbl_ablauf": "Procedure", "lbl_hinweis": "Note", "skv_tag": "Anti-Aging · Epigenetics", "skv_lead": "A targeted skincare approach based on modern epigenetic principles that slows the skin's aging process.", "skv_desc": "The treatment cleanses the skin, restores its moisture-lipid balance and delivers a pronounced anti-aging effect. It uses alpine rose stem cells that protect cell DNA, the OsmoTek delivery complex for optimized active ingredient absorption, and individually tailored BABOR concentrates combined with a flowing manual massage.", "skv_l1": "All skin types, especially with early or advanced signs of aging", "skv_l2": "Dull complexion, loss of firmness", "skv_l3": "Sensitive skin that needs a gentle yet effective anti-aging approach", "skv_c1": "Skin Renewal", "skv_c2": "Moisture Balance", "skv_c3": "Pore Refinement", "hsr_tag": "Lifting · Firmness", "hsr_lead": "A highly effective anti-aging treatment based on the exclusive BABOR HSR LIFTING line for a visible lifting result and a clearer facial oval.", "hsr_desc": "Five highly active components — Multitendin Plus, lupin extract, carnosine, Relaxo Peptide and Neuro-Receptor Peptide — work on multiple levels of the skin. They reduce expression lines, counteract gravity-related skin changes, and strengthen connective tissue and skin elasticity. Combined with an anti-aging massage and the firming HSR Lifting Line Mask, a noticeably firmer, smoother complexion appears after just the first treatment.", "hsr_l1": "Visible signs of aging, loss of firmness", "hsr_l2": "Especially recommended for clients 40+", "hsr_l3": "Desire for a lifting effect without invasive methods", "hsr_c1": "Lifting", "hsr_c2": "Wrinkle Reduction", "hsr_c3": "Facial Oval", "db_tag": "Dermo-Cosmetics · Clinical", "db_lead": "A highly effective skincare therapy combining professional dermo-cosmetics with device-based methods and other aesthetic techniques.", "db_desc": "The DOCTOR BABOR line is characterized by especially high active ingredient concentrations — stabilized vitamin C, retinol complexes, hyaluronic acid in various molecular sizes, peptides and niacinamide work specifically in deeper skin layers. Depending on skin condition, peels, ampoules, serums, masks, massage and, if needed, device-based methods are individually combined.", "db_l1": "Premature skin aging, loss of firmness", "db_l2": "Pigment spots and uneven complexion", "db_l3": "Very dry or sensitive skin, active skin concerns", "db_c1": "Individual", "db_c2": "Deep Action", "db_c3": "Clinically Based", "aha_tag": "Peeling · Fruit Acids", "aha_name": "AHA Peeling", "aha_lead": "A chemical peel based on alpha-hydroxy acids that gently removes dead skin cells and stimulates the skin's natural renewal.", "aha_desc": "The fruit acids dissolve the bonds between dead skin cells and promote their shedding. This stimulates cell renewal and improves the skin's ability to absorb further active ingredients. It also improves moisture levels and stimulates collagen synthesis — for smoother, more elastic-looking skin.", "aha_l1": "Dull, tired skin with uneven complexion", "aha_l2": "Enlarged pores, early signs of aging", "aha_l3": "As preparation before more intensive treatments or as a course", "aha_c1": "Gentle Exfoliation", "aha_c2": "Skin Smoothing", "aha_c3": "Instant Glow", "cf_tag": "Deep Cleansing · 98% Natural", "cf_lead": "A gentle yet effective cleansing treatment based on the sustainable CLEANFORMANCE line — free from animal ingredients, silicones, parabens or microplastics.", "cf_desc": "Up to 98% of ingredients are of natural origin. Pre- and probiotics balance the skin's microbiome, red maple extract provides antioxidant action. The skin is thoroughly cleansed while its protective barrier is strengthened — ideal for young or imbalanced skin.", "cf_l1": "Clogged pores, impure skin", "cf_l2": "Sensitive or reactive skin", "cf_l3": "Early signs of dehydration or skin aging", "cf_c1": "Microbiome Balance", "cf_c2": "No Irritation", "cf_c3": "No Downtime", "dp_tag": "Microneedling", "dp_lead": "Micro-fine needles create thousands of controlled micro-channels per minute, activating the skin's natural collagen and elastin production.", "dp_desc": "The controlled micro-injury stimulates the skin's natural regeneration mechanisms, releases growth factors and stimulates the formation of new collagen and elastin. At the same time, the skin's ability to absorb active serums improves significantly.", "dp_l1": "Wrinkle reduction and more firmness", "dp_l2": "More even skin tone, less pigmentation and post-acne marks", "dp_l3": "Refined pores, smoother texture", "dp_l4": "Reduces scars and stretch marks", "dp_kurs": "4–6 treatments at intervals of 2–4 weeks, depending on skin condition. The effect intensifies over several weeks as collagen production continues after treatment.", "dp_c1": "Collagen Building", "dp_c2": "Scars &amp; Acne Scars", "dp_c3": "Pore Refinement", "bbg_tag": "Microneedling · Tinting", "bbg_lead": "A specialized microneedling treatment with a tinting effect — like a permanently applied, light makeup.", "bbg_desc": "Through ultra-fine microneedles, a special tinting serum with light-reflecting particles is introduced into the upper skin layers. It evens out skin tone, conceals pigment spots and redness, and creates a well-groomed, subtly made-up appearance — with the regenerative benefits of classic microneedling.", "bbg_l1": "Uneven skin tone, redness, pigment spots", "bbg_l2": "Desire for a naturally even complexion", "bbg_c1": "Skin Tone Evening", "bbg_c2": "Gentle Tinting", "vt_tag": "Exosome Therapy", "vt_lead": "An innovative renewal method: microneedles deliver the V-Tech active system with synthetic exosomes, polynucleotides, stem cell factors and peptides deep into the dermis.", "vt_desc": "Exosomes act at the level of cell communication — exactly where skin aging begins. They activate fibroblasts and collagen production, promote tissue repair, reduce inflammatory processes, and improve elasticity, hydration and skin tone. The synthetic exosomes used in the V-Tech system offer a standardized composition, high purity and minimal allergic risk — entirely without biological source material.", "vt_lbl": "Particularly suitable for", "vt_l1": "Fine to medium wrinkles", "vt_l2": "Dry, dull skin", "vt_l3": "Loss of elasticity", "vt_l4": "Photo-aging, regeneration after other treatments", "vt_c1": "Cell Regeneration", "vt_c2": "No Downtime", "vt_c3": "Scientifically Backed", "ha_name": "Skin Analysis", "ha_lead": "A professional dermatoscope with 80x magnification reveals skin conditions invisible to the naked eye.", "ha_desc": "The device analyzes wrinkles (depth and number), sebum activity, pore size and distribution, as well as hidden pigment changes. The esthetician scans different facial zones, compares the values with reference norms, and creates an individual treatment and skincare protocol based on this.", "ha_l1": "Diagnosis: scanning various facial zones", "ha_l2": "Analysis: comparison with reference values", "ha_l3": "Recommendation: individual treatment and skincare program", "ha_c1": "Individual Diagnosis", "ha_c2": "Tailored Protocol", "cf2_tag": "Hydrafacial · BABOR Skinfusor", "cf2_name": "CleanFusion / Glow Solution", "cf2_lead": "A multi-step treatment combining deep cleansing, exfoliation, active ingredient infusion and an activating massage in a single session — for instant glow with zero downtime.", "cf2_desc": "The treatment combines four precisely coordinated technologies of the BABOR SkinFusor system. It suits all skin types, including sensitive skin, and delivers an immediate red-carpet effect.", "cf2_steps_lbl": "The 4 Steps", "cf2_s1_title": "CleanFusion", "cf2_s1": "Deep pore cleansing using vacuum technology and specialized BABOR serums", "cf2_s2_title": "PolishFusion", "cf2_s2": "Gentle exfoliation with a diamond tip, vacuum and fruit acid formula — removes dead cells and clears pores", "cf2_s3_title": "HydroFusion", "cf2_s3": "Transdermal delivery of active ingredients using low-frequency technology for deep hydration", "cf2_s4_title": "ImpulsFusion", "cf2_s4": "Dynamic pulse massage in pulsating vacuum mode stimulates microcirculation, lymphatic flow and cellular metabolism", "cf2_e1": "Deeply cleansed, refreshed-looking skin", "cf2_e2": "Refined pores and improved skin texture", "cf2_e3": "Intensive hydration and active ingredient saturation", "cf2_e4": "Improved microcirculation and skin tone", "cf2_e5": "Instant glow — ideal before special occasions", "cf2_c1": "All Skin Types", "cf2_c2": "No Downtime", "cf2_c3": "Instant Glow", "cf2_c4": "Red-Carpet-Ready", "geraete_title_1": "Device-Based", "geraete_title_2": "Technologies", "geraete_desc": "Modern devices for facial treatments — Hydrafacial, Endosphères and radiofrequency lifting for visible results from the very first session.", "geraete_btn": "View Device-Based Treatments →", "ksec_label": "Body Treatments", "ksec_title_1": "Silhouette &amp;", "ksec_title_2": "Skin Quality", "ksec_desc": "Targeted treatments for improving contours, reducing fluid retention, and strengthening skin elasticity on the body.", "esb_tag": "Compression Micro-Vibration", "esb_lead": "A technology developed together with a phlebologist that actively improves circulation and lymphatic flow.", "esb_desc": "Unlike purely surface-level methods, Endosphères works on the entire tissue — reducing swelling and leg fatigue while visibly improving skin structure. Noticeable results appear after just the first treatment.", "esb_l1": "Reduction of cellulite and edema", "esb_l2": "Improved lymphatic drainage and microcirculation", "esb_l3": "Smoother, firmer skin", "esb_c1": "No Downtime", "esb_c2": "Course: 6–12 sessions", "ar_tag": "Bandage Wrap · Italy", "ar_name": "AROSHA Body Wrap", "ar_lead": "A proven Italian bandage-wrap concept for body contouring — compression and highly concentrated active ingredients in one.", "ar_desc": "Special single-use bandages, soaked in L-carnitine, hyaluronic acid, caffeine, algae and ginseng extracts, are applied to problem areas (abdomen, thighs, arms). The light compression enhances lymphatic drainage and metabolic activity, supporting the breakdown of fat deposits.", "ar_l1": "Reduction of water retention and circumference", "ar_l2": "Smoother skin surface, less \"orange-peel skin\"", "ar_l3": "Intense hydration, lifting effect", "ar_l4": "Contouring of the silhouette", "ar_ablauf": "One session lasts 45–60 minutes. For a lasting result, we recommend a course of 4–8 treatments spaced a few days apart.", "ar_hinweis": "Not recommended during pregnancy, breastfeeding, varicose veins, diabetes, oncological conditions, or skin injuries in the treatment area.", "ar_c1": "Decongestion", "ar_c2": "Contouring", "ar_c3": "Instantly Noticeable", "lsec_label": "Hair Removal", "lsec_title_1": "Primelaser", "lsec_title_2": "Diode Laser", "lsec_desc": "One of the most powerful diode lasers on the market — painless, usable year-round, effective on all skin types.", "lsec_btn": "View Laser Price List →", "cta_title_1": "Not sure which", "cta_title_2": "treatment is right for you?", "cta_btn": "Book a Consultation", "footer_rights": "© 2026 Solvata Beauty Club Berlin. All rights reserved.", "esf_tag": "Compression Micro-Vibration · Face", "esf_name": "Endosphères — Face", "esf_lead": "Targeted compression micro-vibration for the facial oval — firms contours, improves circulation and lymphatic flow and creates a fresher, clearer complexion.", "esf_desc": "The technology was developed in collaboration with a phlebologist and works beyond the skin surface. The mechanical micro-stimulation promotes microcirculation, activates lymphatic drainage and visibly improves skin tone — without intervention and without downtime. Results are noticeable after the very first treatment.", "esf_l1": "Firming of the facial oval and contours", "esf_l2": "Improved lymphatic drainage, reduced puffiness", "esf_l3": "Fresher, brighter complexion", "esf_l4": "Improved skin density and elasticity", "esf_fw1": "Loss of facial contours and oval", "esf_fw2": "Puffy, tired appearance", "esf_fw3": "Desire for gentle, non-invasive lifting", "esf_p1_n": "Single session with mask", "esf_p2_n": "Subscription 6× 30 minutes", "esf_p3_n": "Subscription 6× 45 minutes", "esf_c1": "No Downtime", "esf_c2": "Instantly Visible", "esf_c3": "Lymphatic Drainage", "hf_tag": "Hydrafacial · BABOR Skinfusor", "hf_name": "Hydrafacial — Skinfusor", "hf_lead": "Deep skin cleansing and intensive active ingredient infusion in one session — for instant glow with zero downtime.", "hf_desc": "The BABOR SkinFusor combines four steps: vacuum pore cleansing, gentle exfoliation with a diamond tip, transdermal infusion of active ingredients, and a stimulating pulse massage for microcirculation and lymphatic flow. The result is deeply cleansed, hydrated skin with an immediate red-carpet effect — suitable for all skin types, including sensitive skin.", "hf_l1": "Deep-cleansed pores, refined skin texture", "hf_l2": "Intensive hydration and active ingredient saturation", "hf_l3": "Improved skin tone and glow effect", "hf_l4": "Activated microcirculation and lymphatic flow", "hf_fw1": "All skin types, including sensitive", "hf_fw2": "Impure skin, clogged pores", "hf_fw3": "Before special occasions — immediate effect", "hf_p1_n": "Face", "hf_p2_n": "Face &amp; Neck", "hf_p3_n": "Face, Neck &amp; Décolleté", "hf_p4_n": "<strong>Combo: Hydrafacial + Microneedling</strong>", "hf_c1": "All Skin Types", "hf_c2": "No Downtime", "hf_c3": "Instant Glow", "rf_tag": "Radiofrequency Lifting", "rf_name": "RF Lifting", "rf_lead": "Classic radiofrequency lifting — gentle, without skin damage, with visible tightening from the first treatment.", "rf_desc": "Radiofrequency energy precisely heats the deep skin layers and stimulates collagen production. The result: firmer, denser skin and a refreshed facial oval — no needles, no intervention. Ideal as a regular maintenance treatment for long-term skin rejuvenation. The device is currently being finalized — the treatment is bookable.", "rf_l1": "Skin tightening and improved tone", "rf_l2": "Finer lines and smoother skin texture", "rf_l3": "Clearer facial oval", "rf_l4": "Stimulated collagen production", "rf_fw1": "Loss of skin firmness", "rf_fw2": "Desire for regular, gentle anti-aging care", "rf_fw3": "Suitable for all skin types", "rf_p1_n": "Eye Zone Lifting", "rf_p2_n": "Face Lifting", "rf_price_note": "Prices will be updated once the final device is selected", "rf_c1": "No Needles", "rf_c2": "No Downtime", "rf_c3": "Collagen Building", "pl_tag": "Diode Laser · Year-Round", "pl_lead": "One of the most powerful diode lasers — with active cooling system, painless and effective on all skin types, without seasonal restrictions.", "pl_desc": "The Primelaser uses high-precision diode technology with an integrated cooling system that makes the treatment comfortable and safe. Already after the first session, 15–20% of hair is permanently gone. After a complete course of 6–8 treatments, a permanent result of up to 90% is achieved. Between sessions, hair grows back finer and thinner — until it stops growing altogether.", "pl_l1": "15–20% hair reduction after the 1st session", "pl_l2": "Up to 90% permanent result after the course", "pl_l3": "Effective on all skin types, usable year-round", "pl_l4": "Painless thanks to active cooling system", "pl_kurs_lbl": "Recommended Course", "pl_kurs": "6–8 sessions at intervals of 4–6 weeks, depending on body zone and hair growth. An individual consultation before starting the course is recommended.", "pl_price_gesicht": "Face", "pl_price_body": "Body", "pl_price_combo": "Package Deals", "pl_lip": "Upper Lip", "pl_chin": "Chin", "pl_cheeks": "Cheeks", "pl_face_full": "Full Face", "pl_armpits": "Armpits", "pl_arms": "Full Arms", "pl_belly": "Abdomen", "pl_back": "Back", "pl_lower_legs": "Lower Legs", "pl_full_legs": "Full Legs", "pl_bikini": "Bikini", "pl_bikini_intim": "Bikini + Intimate", "pl_bikini_intim_glut": "Bikini + Intimate + Glutes", "pl_fullbody": "<strong>Full Body</strong>", "pl_basic1": "Armpit + Bikini + Intimate + Lower Legs", "pl_basic2": "Armpit + Bikini + Intimate + Full Legs", "pl_c1": "All Skin Types", "pl_c2": "Year-Round", "pl_c3": "Painless", "pl_c4": "Cooling", "price_label": "Prices", "price_on_request": "on request", "bk_label": "Appointment &amp; Contact", "bk_title_1": "Ready for", "bk_title_2": "your treatment?", "bk_sub": "Book your appointment online or contact us directly — we are happy to advise you on the right treatments.", "bk_book": "Book Online Now", "bk_wa": "WhatsApp", "bi_address": "Address", "bi_phone": "Phone / WhatsApp", "bi_hours": "Opening Hours", "bi_hours_val": "Mon–Sat: 10:00–20:00"}};
 
 var currentLang='de';
 function setLang(lang){
   currentLang=lang;
+  try{localStorage.setItem('solvata_lang',lang);}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.toLowerCase()===lang);});
   var tr=T[lang];if(!tr)return;
   document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(tr[k]!==undefined)el.innerHTML=tr[k];});
@@ -625,7 +649,7 @@ window.addEventListener('scroll',function(){
   });
 });
 
-setLang('de');
+(function(){var saved=localStorage.getItem('solvata_lang');setLang(saved&&T[saved]?saved:'de');})();
 </script>
 </body>
 </html>
