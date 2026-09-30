@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alle Behandlungen — Solvata Beauty Club Berlin</title>
+<meta content="Vollständige Übersicht aller Gesichts- und Körperbehandlungen bei Solvata Beauty Club Berlin: BABOR Anti-Age, Dermapen, Endosphères, Laser und mehr." name="description"/>
+<link href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/32%20x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blk:#080808;--blk2:#0f0f0f;--blk3:#161616;--blk4:#1e1e1e;
+  --w:#f4f0ea;--wd:rgba(244,240,234,.6);--wf:rgba(244,240,234,.10);
+  --g:#b89a6a;--gl:#d4b88a;--gf:rgba(184,154,106,.10);--gb:rgba(184,154,106,.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blk);color:var(--w);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(8,8,8,.93);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--gb);}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-img{width:34px;height:34px;object-fit:contain;opacity:.9;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;letter-spacing:.06em;color:var(--w);}
+.nav-back{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wd);text-decoration:none;transition:color .3s;display:flex;align-items:center;gap:.5rem;}
+.nav-back:hover{color:var(--g);}
+.nav-right{display:flex;align-items:center;gap:.8rem;}
+.lang-switcher{display:flex;border:1px solid var(--gb);}
+.lang-btn{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;padding:5px 12px;color:var(--wd);font-family:'Jost',sans-serif;font-weight:400;transition:all .3s;cursor:pointer;}
+.lang-btn.active{background:var(--g);color:var(--blk);}
+.lang-btn:hover:not(.active){color:var(--g);}
+.nav-cta{font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blk);background:var(--g);padding:9px 22px;text-decoration:none;font-weight:400;transition:background .3s;}
+.nav-cta:hover{background:var(--gl);}
+@media(max-width:680px){.nav-cta{display:none;}}
+
+.page-hero{padding:140px 5vw 60px;text-align:center;border-bottom:1px solid var(--gb);background:linear-gradient(180deg,var(--blk2),var(--blk));}
+.page-eyebrow{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g);margin-bottom:1.2rem;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4.6rem);font-weight:500;line-height:1.05;margin-bottom:1rem;}
+.page-title em{font-style:italic;font-weight:300;color:var(--g);}
+.page-sub{font-size:.95rem;color:var(--wd);max-width:560px;margin:0 auto;line-height:1.8;}
+
+.cat-nav{position:sticky;top:70px;z-index:100;background:rgba(8,8,8,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--gb);padding:0 5vw;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.cat-nav::-webkit-scrollbar{display:none;}
+.cat-link{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wd);text-decoration:none;padding:18px 22px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .3s;}
+.cat-link:hover,.cat-link.active{color:var(--g);border-bottom-color:var(--g);}
+
+.cat-section{padding:90px 5vw 40px;max-width:1200px;margin:0 auto;}
+.cat-header{margin-bottom:3rem;max-width:680px;}
+.cat-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.cat-label::before{content:'';width:28px;height:1px;background:var(--g);opacity:.6;}
+.cat-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.1;margin-bottom:1rem;}
+.cat-title em{font-style:italic;font-weight:300;color:var(--g);}
+.cat-desc{font-size:.9rem;color:var(--wd);line-height:1.8;}
+
+.tmt-grid{display:flex;flex-direction:column;gap:1px;background:var(--gb);border:1px solid var(--gb);}
+.tmt-card{background:var(--blk2);padding:40px 5vw 40px 0;display:grid;grid-template-columns:280px 1fr;gap:3rem;}
+.tmt-media{aspect-ratio:3/4;background:var(--blk3);overflow:hidden;position:relative;margin-left:5vw;}
+.tmt-media img,.tmt-media video,.tmt-media iframe{width:100%;height:100%;object-fit:cover;border:none;}
+.tmt-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;}
+.tmt-ph svg{opacity:.25;}
+.tmt-ph span{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,154,106,.35);}
+.tmt-body{padding-right:1vw;}
+.tmt-tag{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:.6rem;}
+.tmt-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;margin-bottom:.9rem;letter-spacing:-.01em;}
+.tmt-lead{font-size:.92rem;color:var(--w);line-height:1.85;margin-bottom:1.1rem;}
+.tmt-desc{font-size:.86rem;color:var(--wd);line-height:1.85;margin-bottom:1.1rem;}
+.tmt-block-title{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin:1.2rem 0 .5rem;}
+.tmt-list{list-style:none;}
+.tmt-list li{font-size:.85rem;color:var(--wd);line-height:1.75;padding-left:1.1rem;position:relative;}
+.tmt-list li::before{content:'—';position:absolute;left:0;color:var(--g);}
+.tmt-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1rem;}
+.tmt-tag-chip{background:var(--gf);color:var(--g);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;}
+@media(max-width:860px){.tmt-card{grid-template-columns:1fr;padding:0 5vw 32px;}.tmt-media{margin-left:0;margin-bottom:1.5rem;aspect-ratio:16/10;}}
+
+.cta-strip{background:var(--g);padding:4rem 5vw;text-align:center;margin-top:60px;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:var(--blk);margin-bottom:1.2rem;}
+.cta-title em{font-style:italic;font-weight:400;}
+.btn-dark{background:var(--blk);color:var(--w);padding:14px 36px;border:none;font-family:'Jost',sans-serif;font-size:.76rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .3s;}
+.btn-dark:hover{background:var(--blk3);}
+.btn-outline{background:transparent;border:1px solid var(--gb);color:var(--w);padding:14px 36px;font-family:'Jost',sans-serif;font-size:.76rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .3s;}
+.btn-outline:hover{border-color:var(--g);color:var(--g);}
+
+footer{background:var(--blk);border-top:1px solid var(--gb);padding:3rem 5vw;text-align:center;}
+.footer-copy{font-size:.74rem;color:rgba(244,240,234,.3);}
+.footer-back{display:inline-block;margin-top:1rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+.tmt-price-block{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--gb);}
+.tmt-price-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:.6rem;font-family:'Jost',sans-serif;}
+.tmt-price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.32rem 0;border-bottom:1px solid var(--wf);}
+.tmt-price-row:last-child{border-bottom:none;}
+.tmt-price-name{font-size:.85rem;color:var(--wd);}
+.tmt-price-val{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--w);flex-shrink:0;margin-left:1rem;}
+.tmt-price-note{font-size:.74rem;color:rgba(244,240,234,.35);margin-top:.5rem;font-family:'Jost',sans-serif;}
+
+.booking-section{background:var(--blk2);padding:90px 5vw;}
+.booking-inner-sub{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:start;max-width:1200px;margin:0 auto;}
+.booking-info-sub{margin-top:2rem;}
+.bi-row{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--wf);}
+.bi-row:first-child{border-top:1px solid var(--wf);}
+.bi-icon{width:15px;flex-shrink:0;color:var(--g);margin-top:2px;}
+.bi-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);display:block;margin-bottom:2px;font-family:'Jost',sans-serif;}
+.bi-val{font-size:.86rem;color:var(--wd);}
+@media(max-width:768px){.booking-inner-sub{grid-template-columns:1fr;}}
+
+/* ---- fixes ---- */
+[hidden]{display:none!important}
+a.lang-btn{text-decoration:none;display:inline-block}
+.cat-section{scroll-margin-top:40px}
+.tmt-media{align-self:start;position:sticky;top:130px}
+.tmt-card>.tmt-price-block{grid-column:1/-1;margin:0 0 0 5vw;padding-top:1.4rem}
+@media(max-width:860px){.tmt-media{position:static}.tmt-card>.tmt-price-block{margin-left:0}}
+
+/* BABOR: compact text cards (hand treatments, no device photos) */
+.babor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gb);border:1px solid var(--gb);counter-reset:bb}
+.babor-card{background:var(--blk2);padding:36px 32px;display:flex;flex-direction:column;counter-increment:bb;transition:background .4s}
+.babor-card:hover{background:var(--blk3)}
+.babor-card::before{content:counter(bb,decimal-leading-zero);font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;line-height:1;color:var(--gb);margin-bottom:1.3rem}
+.babor-card .tmt-name{font-size:1.5rem}
+.babor-card .tmt-lead{font-size:.88rem;color:var(--wd)}
+.babor-card .tmt-tags{margin-top:auto;padding-top:1rem}
+.babor-cta{background:var(--gf);justify-content:center;align-items:flex-start;counter-increment:none}
+.babor-cta::before{display:none}
+.babor-cta .btn-outline{margin-top:1.2rem;padding:12px 26px}
+.cat-note{font-size:.8rem;color:var(--wd);margin-top:.9rem}
+.cat-note a{color:var(--g);text-decoration:none;border-bottom:1px solid var(--gb)}
+@media(max-width:1000px){.babor-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.babor-grid{grid-template-columns:1fr}}
+
+/* collapsible detail text */
+details.tmt-more{margin-top:1.1rem;border-top:1px solid var(--wf);padding-top:.9rem}
+details.tmt-more summary{list-style:none;cursor:pointer;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--g);display:flex;align-items:center;gap:.6rem}
+details.tmt-more summary::-webkit-details-marker{display:none}
+details.tmt-more summary::after{content:'+';font-size:1.05rem;line-height:1}
+details.tmt-more[open] summary::after{content:'\2212'}
+details.tmt-more[open] summary{margin-bottom:.9rem}
+
+/* microneedling variants */
+.var-tabs{display:flex;flex-wrap:wrap;border:1px solid var(--gb);width:max-content;max-width:100%;margin-bottom:1.6rem}
+.var-tab{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:10px 20px;background:none;border:none;color:var(--wd);cursor:pointer;transition:all .3s;font-weight:400}
+.var-tab.active{background:var(--g);color:var(--blk)}
+.var-tab:hover:not(.active){color:var(--g)}
+.var-panel{display:none}
+.var-panel.active{display:block}
+
+/* laser prices: two columns */
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 3.5rem;grid-template-areas:"a b" "c b";align-items:start}
+.price-cols .g-face{grid-area:a}.price-cols .g-body{grid-area:b}.price-cols .g-combo{grid-area:c}
+.price-cols .tmt-price-label{margin-top:1.1rem}
+.price-cols .g-face .tmt-price-label,.price-cols .g-body .tmt-price-label{margin-top:0}
+@media(max-width:860px){.price-cols{grid-template-columns:1fr;grid-template-areas:"a" "b" "c"}}
+</style>
+</head>
+<body>
+<nav>
+<a class="nav-brand" href="index.html">
+<img alt="Solvata" class="nav-logo-img" src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png"/>
+<span class="nav-name">Solvata Beauty Club</span>
+</a>
+<a class="nav-back" data-i18n="nav_back" href="index.html">← Zur Startseite</a>
+<div class="nav-right">
+<div class="lang-switcher">
+<button class="lang-btn active" onclick="setLang('de')">DE</button>
+<button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+<a class="nav-cta" data-i18n="nav_book" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Termin buchen</a>
+</div>
+</nav>
+<div class="page-hero reveal">
+<div class="page-eyebrow" data-i18n="hero_eyebrow">Vollständige Übersicht</div>
+<h1 class="page-title"><span data-i18n="hero_title_1">Alle</span> <em data-i18n="hero_title_2">Behandlungen</em></h1>
+<p class="page-sub" data-i18n="hero_sub">Jede Behandlung bei Solvata wird individuell auf Ihre Haut abgestimmt — auf Basis professioneller BABOR-Wirkstoffkonzepte und moderner Gerätetechnologie.</p>
+</div>
+<div class="cat-nav">
+<a class="cat-link" data-i18n="catnav_babor" href="#gesicht-babor">Gesicht — BABOR</a>
+<a class="cat-link" data-i18n="catnav_geraete" href="#gesicht-geraete">Gesicht — Geräte</a>
+<a class="cat-link" data-i18n="catnav_koerper" href="#koerper">Körper</a>
+<a class="cat-link" data-i18n="catnav_laser" href="#laser">Laser</a>
+</div>
+<section class="cat-section" id="gesicht-babor">
+<div class="cat-header reveal">
+<span class="cat-label" data-i18n="bsec_label">Gesichtsbehandlungen</span>
+<h2 class="cat-title"><span data-i18n="bsec_title_1">BABOR</span> <em data-i18n="bsec_title_2">Wirkstoffkonzepte</em></h2>
+<p class="cat-desc" data-i18n="bsec_desc">Unsere Gesichtsbehandlungen basieren auf den professionellen Linien von BABOR — von sanfter Reinigung bis zu intensiver Anti-Age-Therapie. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.</p><p class="cat-note" data-i18n="babor_price_note">Preise für BABOR-Behandlungen finden Sie in unserer <a href="index.html#prices">Preisliste</a>.</p>
+</div>
+<div class="babor-grid"><article class="babor-card reveal"><div class="tmt-tag" data-i18n="skv_tag">Anti-Age · Epigenetik</div><div class="tmt-name">SKINOVAGE</div><p class="tmt-lead" data-i18n="skv_lead">Ein gezielter Hautpflege-Ansatz auf Basis moderner epigenetischer Prinzipien, der den Alterungsprozess der Haut verlangsamt.</p><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="skv_desc">Die Behandlung reinigt die Haut, stellt das Gleichgewicht von Feuchtigkeit und Lipiden wieder her und sorgt für einen ausgeprägten Anti-Age-Effekt. Zum Einsatz kommen Stammzellen der Alpenrose, die die Zell-DNA schützen, der Wirkstoffkomplex OsmoTek für eine optimierte Aufnahme der Aktivstoffe sowie individuell abgestimmte BABOR-Konzentrate in Kombination mit einer fließenden manuellen Massage.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="skv_l1">Alle Hauttypen, besonders bei ersten oder fortgeschrittenen Alterserscheinungen</li>
+<li data-i18n="skv_l2">Fahler Teint, nachlassende Spannkraft</li>
+<li data-i18n="skv_l3">Empfindliche Haut, die einen sanften, aber wirksamen Anti-Age-Ansatz benötigt</li>
+</ul></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="skv_c1">Hauterneuerung</span><span class="tmt-tag-chip" data-i18n="skv_c2">Feuchtigkeitsbalance</span><span class="tmt-tag-chip" data-i18n="skv_c3">Porenverfeinerung</span></div></article><article class="babor-card reveal"><div class="tmt-tag" data-i18n="hsr_tag">Lifting · Festigkeit</div><div class="tmt-name">HSR LIFTING</div><p class="tmt-lead" data-i18n="hsr_lead">Eine hochwirksame Anti-Age-Behandlung auf Basis der exklusiven BABOR HSR LIFTING-Linie für ein sichtbares Lifting-Ergebnis und ein klareres Gesichtsoval.</p><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="hsr_desc">Fünf hochaktive Komponenten — Multitendin Plus, Lupinen-Extrakt, Carnosin, Relaxo Peptide und Neuro-Receptor Peptide — wirken auf mehreren Ebenen der Haut. Sie reduzieren Mimikfalten, wirken gravitationsbedingten Hautveränderungen entgegen und stärken Bindegewebe und Hautelastizität. In Kombination mit einer Anti-Age-Massage und der straffenden Gel-Maske HSR Lifting Line Mask zeigt sich bereits nach der ersten Behandlung ein deutlich strafferer, glatterer Teint.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="hsr_l1">Sichtbare Alterserscheinungen, nachlassende Spannkraft</li>
+<li data-i18n="hsr_l2">Besonders empfehlenswert für Kundinnen 40+</li>
+<li data-i18n="hsr_l3">Wunsch nach Lifting-Effekt ohne invasive Methoden</li>
+</ul></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="hsr_c1">Lifting</span><span class="tmt-tag-chip" data-i18n="hsr_c2">Faltenreduktion</span><span class="tmt-tag-chip" data-i18n="hsr_c3">Gesichtsoval</span></div></article><article class="babor-card reveal"><div class="tmt-tag" data-i18n="db_tag">Dermokosmetik · Klinisch</div><div class="tmt-name">DOCTOR BABOR</div><p class="tmt-lead" data-i18n="db_lead">Eine hochwirksame Hautpflege-Therapie, die professionelle Dermokosmetik mit apparativen Methoden und weiteren ästhetischen Techniken kombiniert.</p><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="db_desc">Die Linie DOCTOR BABOR zeichnet sich durch besonders hohe Wirkstoffkonzentrationen aus — stabilisiertes Vitamin C, Retinol-Komplexe, Hyaluronsäure in verschiedenen Molekülgrößen, Peptide und Niacinamid wirken gezielt in tieferen Hautschichten. Je nach Hautzustand werden Peelings, Ampullen, Seren, Masken, Massage und bei Bedarf apparative Methoden individuell kombiniert.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="db_l1">Vorzeitige Hautalterung, nachlassende Festigkeit</li>
+<li data-i18n="db_l2">Pigmentflecken und unebener Teint</li>
+<li data-i18n="db_l3">Sehr trockene oder empfindliche Haut, aktive Hautprobleme</li>
+</ul></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="db_c1">Individuell</span><span class="tmt-tag-chip" data-i18n="db_c2">Tiefenwirkung</span><span class="tmt-tag-chip" data-i18n="db_c3">Klinisch fundiert</span></div></article><article class="babor-card reveal"><div class="tmt-tag" data-i18n="aha_tag">Peeling · Fruchtsäuren</div><div class="tmt-name" data-i18n="aha_name">AHA Peeling</div><p class="tmt-lead" data-i18n="aha_lead">Ein chemisches Peeling auf Basis von Alpha-Hydroxysäuren, das abgestorbene Hautzellen sanft entfernt und die natürliche Erneuerung der Haut anregt.</p><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="aha_desc">Die Fruchtsäuren lösen die Verbindungen zwischen abgestorbenen Hautzellen und fördern deren Abschuppung. Das regt die Zellerneuerung an und verbessert die Aufnahmefähigkeit der Haut für weitere Wirkstoffe. Zusätzlich wird der Feuchtigkeitsgehalt verbessert und die Kollagensynthese angeregt — für ein glatteres, elastischeres Hautbild.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="aha_l1">Fahle, müde Haut mit unebenem Teint</li>
+<li data-i18n="aha_l2">Erweiterte Poren, erste Alterserscheinungen</li>
+<li data-i18n="aha_l3">Als Vorbereitung vor intensiveren Behandlungen oder als Kur</li>
+</ul></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="aha_c1">Sanfte Exfoliation</span><span class="tmt-tag-chip" data-i18n="aha_c2">Hautglättung</span><span class="tmt-tag-chip" data-i18n="aha_c3">Sofort-Glow</span></div></article><article class="babor-card reveal"><div class="tmt-tag" data-i18n="cf_tag">Tiefenreinigung · 98% Natur</div><div class="tmt-name">DOCTOR BABOR CLEANFORMANCE</div><p class="tmt-lead" data-i18n="cf_lead">Eine sanfte, aber wirksame Reinigungsbehandlung auf Basis der nachhaltigen Linie CLEANFORMANCE — ohne tierische Inhaltsstoffe, Silikone, Parabene oder Mikroplastik.</p><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="cf_desc">Bis zu 98% der Inhaltsstoffe sind natürlichen Ursprungs. Prä- und Probiotika balancieren das Mikrobiom der Haut, Rotahorn-Extrakt wirkt antioxidativ. Die Haut wird gründlich gereinigt und ihre Schutzbarriere gleichzeitig gestärkt — ideal für junge oder aus dem Gleichgewicht geratene Haut.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="cf_l1">Verstopfte Poren, unreine Haut</li>
+<li data-i18n="cf_l2">Empfindliche oder reaktive Haut</li>
+<li data-i18n="cf_l3">Erste Anzeichen von Dehydrierung oder Hautalterung</li>
+</ul></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="cf_c1">Mikrobiom-Balance</span><span class="tmt-tag-chip" data-i18n="cf_c2">Ohne Reizung</span><span class="tmt-tag-chip" data-i18n="cf_c3">Keine Ausfallzeit</span></div></article><article class="babor-card babor-cta reveal"><div class="tmt-name" data-i18n="babor_cta_title">Welche BABOR-Behandlung passt zu Ihnen?</div><a class="btn-outline" data-i18n="cta_btn" href="#booking">Beratungstermin vereinbaren</a></article></div>
+</section>
+<section class="cat-section" id="gesicht-geraete">
+<div class="cat-header reveal">
+<span class="cat-label" data-i18n="bsec_label">Gesichtsbehandlungen</span>
+<h2 class="cat-title"><span data-i18n="geraete_title_1">Apparative</span> <em data-i18n="geraete_title_2">Technologien</em></h2>
+<p class="cat-desc" data-i18n="geraete_desc">Modernste Geräte für Gesichtsbehandlungen — Microneedling, Hautanalyse, Hydrafacial, Endosphères und Radiofrequenz-Lifting für sichtbare Ergebnisse ab der ersten Sitzung.</p>
+</div>
+<div class="tmt-grid"><div class="tmt-card reveal" id="microneedling"><div class="tmt-media"><img alt="Dermapen Microneedling" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/dermapen.jpg"/></div><div class="tmt-body"><div class="var-tabs" role="tablist"><button aria-selected="true" class="var-tab active" data-alt="Dermapen Microneedling" data-img="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/dermapen.jpg" data-target="mn-dp" role="tab" type="button">Dermapen</button><button aria-selected="false" class="var-tab" data-alt="Dermapen BB Glow" data-img="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/bb%20glow.jpg?updatedAt=1789989231977" data-target="mn-bb" role="tab" type="button">BB Glow</button><button aria-selected="false" class="var-tab" data-alt="Dermapen V-Tech Exosomen" data-img="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/v_tech.jpg?updatedAt=1789989230193" data-target="mn-vt" role="tab" type="button">V-Tech</button></div><div class="var-panel active" id="mn-dp"><div class="tmt-tag" data-i18n="dp_tag">Microneedling</div><div class="tmt-name">Dermapen</div><p class="tmt-lead" data-i18n="dp_lead">Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="dp_l1">Faltenreduktion und mehr Spannkraft</li>
+<li data-i18n="dp_l2">Gleichmäßigerer Hautton, weniger Pigmentierung und Post-Akne</li>
+<li data-i18n="dp_l3">Verfeinerte Poren, glattere Textur</li>
+<li data-i18n="dp_l4">Mildert Narben und Dehnungsstreifen</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="dp_desc">Die kontrollierte Mikroverletzung regt die natürlichen Regenerationsmechanismen der Haut an, setzt Wachstumsfaktoren frei und stimuliert die Neubildung von Kollagen und Elastin. Gleichzeitig verbessert sich die Aufnahmefähigkeit der Haut für Wirkstoffseren erheblich.</p><div class="tmt-block-title" data-i18n="lbl_kurs">Empfohlener Kurs</div><p class="tmt-desc" data-i18n="dp_kurs">4–6 Behandlungen im Abstand von 2–4 Wochen, je nach Hautzustand. Der Effekt verstärkt sich über mehrere Wochen, da die Kollagenproduktion nach der Behandlung weiterläuft.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="mn_p1_n">Gesicht — 60 min</span><span class="tmt-price-val">99 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="mn_p2_n">Gesicht &amp; Hals — 70 min</span><span class="tmt-price-val">130 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="mn_p3_n">Gesicht, Hals &amp; Dekolleté — 90 min</span><span class="tmt-price-val">140 €</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="dp_c1">Kollagenaufbau</span><span class="tmt-tag-chip" data-i18n="dp_c2">Narben &amp; Aknenarben</span><span class="tmt-tag-chip" data-i18n="dp_c3">Porenverfeinerung</span></div></div><div class="var-panel" id="mn-bb"><div class="tmt-tag" data-i18n="bbg_tag">Microneedling · Tönung</div><div class="tmt-name">Dermapen BB Glow</div><p class="tmt-lead" data-i18n="bbg_lead">Eine spezialisierte Mikroneedling-Behandlung mit Tönungseffekt — wie ein dauerhaft aufgetragenes, leichtes Make-up.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="bbg_l1">Unebener Hautton, Rötungen, Pigmentflecken</li>
+<li data-i18n="bbg_l2">Wunsch nach einem natürlich-ebenmäßigen Teint</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="bbg_desc">Über feinste Mikronadeln wird ein spezielles Tönungsserum mit lichtreflektierenden Partikeln in die oberen Hautschichten eingebracht. Es gleicht den Hautton aus, kaschiert Pigmentflecken und Rötungen und sorgt für ein gepflegtes, dezent geschminktes Erscheinungsbild — mit den regenerativen Vorteilen des klassischen Microneedlings.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="mn_p4_n">BB Glow Needling — 90 min</span><span class="tmt-price-val">120 €</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="bbg_c1">Hautton-Ausgleich</span><span class="tmt-tag-chip" data-i18n="bbg_c2">Sanftes Tönen</span></div></div><div class="var-panel" id="mn-vt"><div class="tmt-tag" data-i18n="vt_tag">Exosomen-Therapie</div><div class="tmt-name">Dermapen + V-Tech</div><p class="tmt-lead" data-i18n="vt_lead">Eine innovative Erneuerungsmethode: Mikronadeln bringen das V-Tech-Wirkstoffsystem mit synthetischen Exosomen, Polynukleotiden, Stammzell-Faktoren und Peptiden tief in die Dermis.</p><div class="tmt-block-title" data-i18n="vt_lbl">Besonders geeignet bei</div><ul class="tmt-list">
+<li data-i18n="vt_l1">Feinen bis mittleren Falten</li>
+<li data-i18n="vt_l2">Trockener, fahler Haut</li>
+<li data-i18n="vt_l3">Nachlassender Elastizität</li>
+<li data-i18n="vt_l4">Lichtbedingter Hautalterung, zur Regeneration nach anderen Behandlungen</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="vt_desc">Exosomen wirken auf Ebene der Zellkommunikation — dort, wo Hautalterung beginnt. Sie aktivieren Fibroblasten und die Kollagenproduktion, fördern die Gewebereparatur, reduzieren Entzündungsprozesse und verbessern Elastizität, Feuchtigkeit und Hautton. Die im V-Tech System verwendeten synthetischen Exosomen bieten dabei eine standardisierte Zusammensetzung, hohe Reinheit und ein minimales allergisches Risiko — ganz ohne biologisches Ausgangsmaterial.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="price_single">Einzelbehandlung</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="vt_c1">Zellregeneration</span><span class="tmt-tag-chip" data-i18n="vt_c2">Ohne Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="vt_c3">Wissenschaftlich fundiert</span></div></div></div></div><div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="BABOR Derma Visualizer Hautanalyse" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/analysis.jpg?updatedAt=1789989229109"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+<div class="tmt-tag">BABOR Derma Visualizer</div><div class="tmt-name" data-i18n="ha_name">Hautanalyse</div><p class="tmt-lead" data-i18n="ha_lead">Ein professionelles Dermatoskop mit 80-facher Vergrößerung macht Hautzustände sichtbar, die mit dem bloßen Auge nicht erkennbar sind.</p><div class="tmt-block-title" data-i18n="lbl_ablauf">Ablauf</div><ul class="tmt-list">
+<li data-i18n="ha_l1">Diagnose: Scan verschiedener Gesichtszonen</li>
+<li data-i18n="ha_l2">Analyse: Vergleich mit Referenzwerten</li>
+<li data-i18n="ha_l3">Empfehlung: individuelles Behandlungs- und Pflegeprogramm</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="ha_desc">Das Gerät analysiert Falten (Tiefe und Anzahl), Talgaktivität, Porengröße und -verteilung sowie verborgene Pigmentveränderungen. Die Kosmetikerin scannt verschiedene Gesichtszonen, vergleicht die Werte mit Normwerten und erstellt auf dieser Basis ein individuelles Behandlungs- und Pflegeprotokoll.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="ha_p1_n">Hautanalyse</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="ha_c1">Individuelle Diagnose</span><span class="tmt-tag-chip" data-i18n="ha_c2">Maßgeschneidertes Protokoll</span></div></div>
+</div>
+<!-- Endosphères Gesicht -->
+<div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="Endosphères Gesicht" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/1.jpg"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="esf_tag">Kompressions-Mikrovibration · Gesicht</div><div class="tmt-name" data-i18n="esf_name">Endosphères — Gesicht</div><p class="tmt-lead" data-i18n="esf_lead">Gezielte Kompressions-Mikrovibration für das Gesichtsoval — strafft Konturen, verbessert Durchblutung und Lymphfluss und sorgt für einen frischeren, klareren Teint.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="esf_l1">Straffung des Gesichtsovals und der Konturen</li>
+<li data-i18n="esf_l2">Verbesserte Lymphdrainage, weniger Schwellungen</li>
+<li data-i18n="esf_l3">Frischerer, hellerer Teint</li>
+<li data-i18n="esf_l4">Verbesserte Hautdichte und -elastizität</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="esf_desc">Die Technologie wurde in Zusammenarbeit mit einem Phlebologen entwickelt und wirkt nicht nur an der Hautoberfläche. Die mechanische Mikrostimulation fördert die Mikrozirkulation, aktiviert den Lymphabfluss und verbessert sichtbar den Hauttonus — ohne Eingriff und ohne Erholungszeit. Ergebnisse sind bereits nach der ersten Behandlung spürbar.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="esf_fw1">Nachlassende Konturen und Gesichtsoval</li>
+<li data-i18n="esf_fw2">Geschwollenes, müdes Erscheinungsbild</li>
+<li data-i18n="esf_fw3">Wunsch nach sanftem, nicht-invasivem Lifting</li>
+</ul></details><div class="tmt-price-block">
+<div class="tmt-price-label" data-i18n="price_label">Preise</div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p1_n">Einzelbehandlung mit Maske</span><span class="tmt-price-val">65 €</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p2_n">Abo 6× 30 Minuten</span><span class="tmt-price-val">270 €</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esf_p3_n">Abo 6× 45 Minuten</span><span class="tmt-price-val">360 €</span></div>
+</div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="esf_c1">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="esf_c2">Sofort sichtbar</span><span class="tmt-tag-chip" data-i18n="esf_c3">Lymphdrainage</span></div></div>
+</div>
+<!-- Hydrafacial Skinfusor -->
+<div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="Hydrafacial Skinfusor" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/Hydrafacial%20_%20Skinfusor.jpg"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="hf_tag">Hydrafacial · BABOR Skinfusor</div><div class="tmt-name" data-i18n="hf_name">Hydrafacial — Skinfusor</div><p class="tmt-lead" data-i18n="hf_lead">Tiefe Hautreinigung und intensive Wirkstoffinfusion in einer Sitzung — für sofortigen Glow ohne Erholungszeit.</p><div class="tmt-block-title" data-i18n="cf2_steps_lbl">Die 4 Schritte</div><ul class="tmt-list">
+<li><strong data-i18n="cf2_s1_title">CleanFusion</strong> — <span data-i18n="cf2_s1">Tiefes Reinigen der Poren mit Vakuumtechnologie und speziellen BABOR-Seren</span></li>
+<li><strong data-i18n="cf2_s2_title">PolishFusion</strong> — <span data-i18n="cf2_s2">Sanfte Exfoliation mit Diamantkopf, Vakuum und Fruchtsäure-Wirkstoff — entfernt abgestorbene Zellen und reinigt die Poren</span></li>
+<li><strong data-i18n="cf2_s3_title">HydroFusion</strong> — <span data-i18n="cf2_s3">Transdermale Einschleusung von Wirkstoffen mit Niederfrequenztechnologie für tiefe Feuchtigkeitsversorgung</span></li>
+<li><strong data-i18n="cf2_s4_title">ImpulsFusion</strong> — <span data-i18n="cf2_s4">Dynamische Impulsmassage im Pulsvakuum-Modus stimuliert Mikrozirkulation, Lymphfluss und Zellstoffwechsel</span></li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="hf_desc">Der BABOR SkinFusor verbindet vier Behandlungsschritte in einer Sitzung — für eine tiefgereinigte, hydratisierte Haut mit unmittelbarem Red-Carpet-Effekt. Geeignet für alle Hauttypen, auch für empfindliche Haut.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="hf_l1">Tiefengereinigte Poren, verfeinertes Hautbild</li>
+<li data-i18n="hf_l2">Intensive Hydratation und Wirkstoffsättigung</li>
+<li data-i18n="hf_l3">Verbesserter Hautton und Glow-Effekt</li>
+<li data-i18n="hf_l4">Aktivierte Mikrozirkulation und Lymphfluss</li>
+</ul><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="hf_fw1">Alle Hauttypen, auch empfindlich</li>
+<li data-i18n="hf_fw2">Unreine Haut, verstopfte Poren</li>
+<li data-i18n="hf_fw3">Vor besonderen Anlässen — sofortiger Effekt</li>
+</ul></details><div class="tmt-price-block">
+<div class="tmt-price-label" data-i18n="price_label">Preise</div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p1_n">Gesicht</span><span class="tmt-price-val">129 €</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p2_n">Gesicht &amp; Hals</span><span class="tmt-price-val">139 €</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p3_n">Gesicht, Hals &amp; Dekolleté</span><span class="tmt-price-val">159 €</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="hf_p4_n"><strong>Combo: Hydrafacial + Mikroneedling</strong></span><span class="tmt-price-val"><strong>190 €</strong></span></div>
+</div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="hf_c1">Alle Hauttypen</span><span class="tmt-tag-chip" data-i18n="hf_c2">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="hf_c3">Sofort-Glow</span></div></div>
+</div>
+<!-- RF Lifting -->
+<!-- TEMP: device for RF lifting is not final. Photo (tripolar rf.jpg) may show a different device - replace when decided. --><div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="Radiofrequenz-Lifting" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/tripolar%20rf.jpg"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="rf_tag">Radiofrequenz-Lifting</div><div class="tmt-name" data-i18n="rf_name">RF Lifting</div><p class="tmt-lead" data-i18n="rf_lead">Klassisches Radiofrequenz-Lifting — sanft, ohne Hautschäden, mit sichtbarer Straffung bereits nach der ersten Behandlung.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="rf_l1">Hautstraffung und verbesserter Tonus</li>
+<li data-i18n="rf_l2">Feinere Falten und glatteres Hautbild</li>
+<li data-i18n="rf_l3">Klareres Gesichtsoval</li>
+<li data-i18n="rf_l4">Stimulierte Kollagenproduktion</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="rf_desc">Die Radiofrequenzenergie erwärmt gezielt die tiefen Hautschichten und stimuliert die Kollagenproduktion. Das Ergebnis: straffere, dichtere Haut und ein erfrischtes Gesichtsoval — ohne Nadeln, ohne Eingriff. Die Behandlung eignet sich ideal als regelmäßige Pflegebehandlung zur langfristigen Hautverjüngung.</p><div class="tmt-block-title" data-i18n="lbl_fuerwen">Für wen</div><ul class="tmt-list">
+<li data-i18n="rf_fw1">Nachlassende Hautspannkraft</li>
+<li data-i18n="rf_fw2">Wunsch nach regelmäßiger, sanfter Anti-Age-Pflege</li>
+<li data-i18n="rf_fw3">Geeignet für alle Hauttypen</li>
+</ul></details><div class="tmt-price-block">
+<div class="tmt-price-label" data-i18n="price_label">Preise</div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="rf_p1_n">Augenzone Lifting</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div>
+<div class="tmt-price-row"><span class="tmt-price-name" data-i18n="rf_p2_n">Gesicht Lifting</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div>
+
+</div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="rf_c1">Keine Nadeln</span><span class="tmt-tag-chip" data-i18n="rf_c2">Keine Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="rf_c3">Kollagenaufbau</span></div></div>
+</div>
+</div>
+</section>
+<section class="cat-section" id="koerper">
+<div class="cat-header reveal">
+<span class="cat-label" data-i18n="ksec_label">Körperbehandlungen</span>
+<h2 class="cat-title"><span data-i18n="ksec_title_1">Silhouette &amp;</span> <em data-i18n="ksec_title_2">Hautqualität</em></h2>
+<p class="cat-desc" data-i18n="ksec_desc">Gezielte Behandlungen zur Konturverbesserung, Entstauung und Stärkung der Hautelastizität am Körper.</p>
+</div>
+<div class="tmt-grid">
+<div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="Endosphères Körper" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/2.jpg"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="esb_tag">Kompressions-Mikrovibration</div><div class="tmt-name" data-i18n="esb_name">Endosphères Therapy — Körper</div><p class="tmt-lead" data-i18n="esb_lead">Eine gemeinsam mit einem Phlebologen entwickelte Technologie, die Durchblutung und Lymphfluss aktiv verbessert.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="esb_l1">Reduktion von Cellulite und Ödemen</li>
+<li data-i18n="esb_l2">Verbesserte Lymphdrainage und Mikrozirkulation</li>
+<li data-i18n="esb_l3">Glattere, straffere Haut</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="esb_desc">Im Gegensatz zu rein oberflächlichen Methoden wirkt Endosphères auf das gesamte Gewebe — reduziert Schwellungen, Müdigkeit in den Beinen und verbessert sichtbar die Hautstruktur. Spürbare Ergebnisse zeigen sich bereits nach der ersten Behandlung.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p1_n">Einzelsitzung 45 Minuten</span><span class="tmt-price-val">75 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p2_n">Einzelsitzung 60 Minuten</span><span class="tmt-price-val">85 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p3_n">Einzelsitzung 90 Minuten</span><span class="tmt-price-val">95 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p4_n">Paket 6× 45 Minuten</span><span class="tmt-price-val">420 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p5_n">Paket 6× 60 Minuten</span><span class="tmt-price-val">480 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="esb_p6_n">Paket 6× 90 Minuten</span><span class="tmt-price-val">540 €</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="esb_c1">Ohne Ausfallzeit</span><span class="tmt-tag-chip" data-i18n="esb_c2">Kurs: 6–12 Sitzungen</span></div></div>
+</div>
+<div class="tmt-card reveal">
+<div class="tmt-media">
+<img alt="AROSHA Körperwickel" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/arosha.jpg"/>
+</div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="ar_tag">Bandagen-Wickel · Italien</div><div class="tmt-name" data-i18n="ar_name">AROSHA Körperwickel</div><p class="tmt-lead" data-i18n="ar_lead">Ein bewährtes italienisches Bandagier-Konzept zur Konturverbesserung — Kompression und hochkonzentrierte Wirkstoffe in einem.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="ar_l1">Reduktion von Wassereinlagerungen und Umfang</li>
+<li data-i18n="ar_l2">Glattere Hautoberfläche, weniger "Orangenhaut"</li>
+<li data-i18n="ar_l3">Intensive Feuchtigkeit, Lifting-Effekt</li>
+<li data-i18n="ar_l4">Konturierung der Silhouette</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="ar_desc">Spezielle Einweg-Bandagen, getränkt mit L-Carnitin, Hyaluronsäure, Koffein, Algen- und Ginseng-Extrakten, werden auf die Problemzonen (Bauch, Oberschenkel, Arme) aufgebracht. Die leichte Kompression verstärkt Lymphdrainage und Stoffwechselaktivität und unterstützt den Abbau von Fettdepots.</p><div class="tmt-block-title" data-i18n="lbl_ablauf">Ablauf</div><p class="tmt-desc" data-i18n="ar_ablauf">Eine Sitzung dauert 45–60 Minuten. Für ein dauerhaftes Ergebnis empfehlen wir einen Kurs von 4–8 Behandlungen im Abstand von wenigen Tagen.</p><div class="tmt-block-title" data-i18n="lbl_hinweis">Hinweis</div><p class="tmt-desc" data-i18n="ar_hinweis" style="opacity:.7;font-size:.78rem;">Nicht empfohlen bei Schwangerschaft, Stillzeit, Krampfadern, Diabetes, onkologischen Erkrankungen oder Hautverletzungen im Behandlungsbereich.</p></details><div class="tmt-price-block"><div class="tmt-price-label" data-i18n="price_label">Preise</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="price_single">Einzelbehandlung</span><span class="tmt-price-val" data-i18n="price_on_request">auf Anfrage</span></div></div><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="ar_c1">Entstauung</span><span class="tmt-tag-chip" data-i18n="ar_c2">Konturierung</span><span class="tmt-tag-chip" data-i18n="ar_c3">Sofort spürbar</span></div></div>
+</div>
+</div>
+</section>
+<section class="cat-section" id="laser">
+<div class="cat-header reveal">
+<span class="cat-label" data-i18n="lsec_label">Haarentfernung</span>
+<h2 class="cat-title"><span data-i18n="lsec_title_1">Primelaser</span> <em data-i18n="lsec_title_2">Diodenlaser</em></h2>
+<p class="cat-desc" data-i18n="lsec_desc">Einer der leistungsstärksten Diodenlaser auf dem Markt — schmerzlos, ganzjährig einsetzbar, wirksam auf allen Hauttypen.</p>
+</div>
+<div class="tmt-grid">
+<div class="tmt-card reveal">
+<div class="tmt-media"><img alt="Primelaser Diodenlaser" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/diode%20laser.jpg"/></div>
+<div class="tmt-body">
+
+
+
+
+
+
+
+
+
+
+<div class="tmt-tag" data-i18n="pl_tag">Diodenlaser · Ganzjährig</div><div class="tmt-name">Primelaser</div><p class="tmt-lead" data-i18n="pl_lead">Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ohne saisonale Einschränkungen.</p><div class="tmt-block-title" data-i18n="lbl_wirkung">Wirkung</div><ul class="tmt-list">
+<li data-i18n="pl_l1">15–20% Haarreduktion bereits nach der 1. Sitzung</li>
+<li data-i18n="pl_l2">Bis zu 90% dauerhaftes Ergebnis nach dem Kurs</li>
+<li data-i18n="pl_l3">Wirksam auf allen Hauttypen, ganzjährig einsetzbar</li>
+<li data-i18n="pl_l4">Schmerzlos dank aktivem Kühlsystem</li>
+</ul><details class="tmt-more"><summary data-i18n="more_btn">Mehr erfahren</summary><p class="tmt-desc" data-i18n="pl_desc">Der Primelaser arbeitet mit hochpräziser Diodentechnologie und einem integrierten Kühlsystem, das die Behandlung angenehm und sicher macht. Bereits nach der ersten Sitzung gehen 15–20% der Haare dauerhaft verloren. Nach einem vollständigen Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erreicht. Zwischen den Sitzungen wächst das Haar feiner und dünner — bis es schließlich ganz ausbleibt.</p><div class="tmt-block-title" data-i18n="pl_kurs_lbl">Empfohlener Kurs</div><p class="tmt-desc" data-i18n="pl_kurs">6–8 Sitzungen im Abstand von 4–6 Wochen, je nach Körperzone und Haarwuchs. Eine individuelle Beratung ist vor dem Beginn des Kurses empfohlen.</p></details><div class="tmt-tags"><span class="tmt-tag-chip" data-i18n="pl_c1">Alle Hauttypen</span><span class="tmt-tag-chip" data-i18n="pl_c2">Ganzjährig</span><span class="tmt-tag-chip" data-i18n="pl_c3">Schmerzlos</span><span class="tmt-tag-chip" data-i18n="pl_c4">Kühlung</span></div></div>
+<div class="tmt-price-block">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="price-cols"><div class="g-face"><div class="tmt-price-label" data-i18n="pl_price_gesicht">Gesicht</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_lip">Oberlippe</span><span class="tmt-price-val">35 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_chin">Kinn</span><span class="tmt-price-val">40 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_cheeks">Wangen</span><span class="tmt-price-val">55 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_face_full">Gesicht komplett</span><span class="tmt-price-val">110 €</span></div></div><div class="g-body"><div class="tmt-price-label" data-i18n="pl_price_body">Körper</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_armpits">Achseln</span><span class="tmt-price-val">60 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_arms">Arme komplett</span><span class="tmt-price-val">99 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_belly">Bauch</span><span class="tmt-price-val">90 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_back">Rücken</span><span class="tmt-price-val">120 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_lower_legs">Unterschenkel</span><span class="tmt-price-val">160 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_full_legs">Beine komplett</span><span class="tmt-price-val">260 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini">Bikini</span><span class="tmt-price-val">60 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini_intim">Bikini + Intim</span><span class="tmt-price-val">110 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_bikini_intim_glut">Bikini + Intim + Gesäß</span><span class="tmt-price-val">130 €</span></div></div><div class="g-combo"><div class="tmt-price-label" data-i18n="pl_price_combo">Kombi-Pakete</div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_fullbody"><strong>Ganzkörper</strong></span><span class="tmt-price-val"><strong>430 €</strong></span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_basic1">Achsel + Bikini + Intim + Unterschenkel</span><span class="tmt-price-val">190 €</span></div><div class="tmt-price-row"><span class="tmt-price-name" data-i18n="pl_basic2">Achsel + Bikini + Intim + Beine komplett</span><span class="tmt-price-val">230 €</span></div></div></div></div></div>
+</div>
+</section>
+<div class="cta-strip reveal">
+<h2 class="cta-title"><span data-i18n="cta_title_1">Nicht sicher, welche</span> <em data-i18n="cta_title_2">Behandlung passt?</em></h2>
+<a class="btn-dark" data-i18n="cta_btn" href="#booking">Beratungstermin vereinbaren</a>
+</div>
+<section class="booking-section" id="booking">
+<div class="booking-inner-sub">
+<div class="reveal">
+<span class="cat-label" data-i18n="bk_label">Termin &amp; Kontakt</span>
+<h2 class="cat-title"><span data-i18n="bk_title_1">Bereit für</span> <em data-i18n="bk_title_2">Ihre Behandlung?</em></h2>
+<p class="cat-desc" data-i18n="bk_sub">Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt — wir beraten Sie gerne zu den passenden Behandlungen.</p>
+<div style="margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1rem;">
+<a class="btn-dark" data-i18n="bk_book" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Jetzt online buchen</a>
+<a class="btn-outline" href="https://wa.me/4917680880879" style="display:inline-flex;align-items:center;gap:.5rem;" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.5 5.785L0 24l6.388-1.673A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.727.977.995-3.645-.235-.374A9.818 9.818 0 1 1 12 21.818z"></path></svg>
+<span data-i18n="bk_wa">WhatsApp</span>
+</a>
+</div>
+</div>
+<div class="reveal" style="margin-top:0;">
+<div class="booking-info-sub">
+<div class="bi-row">
+<svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+<div><span class="bi-label" data-i18n="bi_address">Adresse</span><span class="bi-val">Berliner Straße 54, 10713 Berlin</span></div>
+</div>
+<div class="bi-row">
+<svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<div><span class="bi-label" data-i18n="bi_phone">Telefon / WhatsApp</span><a href="https://wa.me/4917680880879" style="color:var(--w);text-decoration:none;font-size:.86rem;display:block;" target="_blank">+49 176 80880879</a></div>
+</div>
+<div class="bi-row">
+<svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+<div><span class="bi-label" data-i18n="bi_hours">Öffnungszeiten</span><span class="bi-val" data-i18n="bi_hours_val">Mo–Sa: 10:00–20:00</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<span class="footer-copy" data-i18n="footer_rights">© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span><br/>
+<a href="https://www.instagram.com/solvatabeautyclub" style="display:inline-block;margin-bottom:.5rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;" target="_blank">@solvatabeautyclub</a><br/>
+<a class="footer-back" data-i18n="nav_back" href="index.html">← Zur Startseite</a>
+</footer>
+<script>
+
+
+var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+
+var sections=document.querySelectorAll('.cat-section');
+var links=document.querySelectorAll('.cat-link');
+window.addEventListener('scroll',function(){
+  var pos=window.scrollY+150;
+  sections.forEach(function(s,i){
+    if(pos>=s.offsetTop && pos<s.offsetTop+s.offsetHeight){
+      links.forEach(function(l){l.classList.remove('active');});
+      if(links[i])links[i].classList.add('active');
+    }
+  });
+});
+
+
+document.querySelectorAll('.var-tabs').forEach(function(tabs){
+  var card=tabs.closest('.tmt-card');
+  tabs.querySelectorAll('.var-tab').forEach(function(b){
+    b.addEventListener('click',function(){
+      tabs.querySelectorAll('.var-tab').forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false');});
+      b.classList.add('active');b.setAttribute('aria-selected','true');
+      card.querySelectorAll('.var-panel').forEach(function(p){p.classList.toggle('active',p.id===b.dataset.target);});
+      var im=card.querySelector('.tmt-media img');
+      if(im&&b.dataset.img){im.src=b.dataset.img;im.alt=b.dataset.alt||'';}
+    });
+  });
+});
+</script>
+</body>
+</html>
