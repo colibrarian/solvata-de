@@ -110,9 +110,34 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:3rem 5vw;tex
 [hidden]{display:none!important}
 a.lang-btn{text-decoration:none;display:inline-block}
 .cat-section{scroll-margin-top:40px}
-.tmt-media{align-self:start;position:sticky;top:130px}
-.tmt-card>.tmt-price-block{grid-column:1/-1;margin:0 0 0 5vw;padding-top:1.4rem}
-@media(max-width:860px){.tmt-media{position:static}.tmt-card>.tmt-price-block{margin-left:0}}
+.tmt-card>.tmt-price-block{grid-column:1/-1;margin:0;padding-top:1.4rem}
+
+/* treatment cards: large static photo with framed corners (desktop) */
+@media(min-width:861px){
+  .cat-section{max-width:1360px}
+  .tmt-card{grid-template-columns:minmax(380px,45%) 1fr;gap:4.5rem;padding:64px 5vw;align-items:start}
+  .tmt-card>.tmt-media{grid-column:1;grid-row:1}
+  .tmt-card>.tmt-body{grid-column:2;grid-row:1}
+  .tmt-card>.tmt-price-block{grid-row:2}
+  .tmt-card:nth-child(even){grid-template-columns:1fr minmax(380px,45%)}
+  .tmt-card:nth-child(even)>.tmt-media{grid-column:2}
+  .tmt-card:nth-child(even)>.tmt-body{grid-column:1}
+  .tmt-media{margin:0;aspect-ratio:4/5;position:relative;overflow:visible;background:var(--blk3);box-shadow:0 40px 70px -30px rgba(0,0,0,.9),0 0 0 1px var(--gb)}
+  .tmt-media img{filter:contrast(1.04) saturate(1.06);opacity:.94;transition:opacity .6s}
+  .tmt-card:hover .tmt-media img{opacity:1}
+  .tmt-media::before,.tmt-media::after{content:'';position:absolute;width:46px;height:46px;border:1px solid var(--g);pointer-events:none;z-index:2;transition:all .6s cubic-bezier(.16,1,.3,1)}
+  .tmt-media::before{top:-10px;left:-10px;border-right:0;border-bottom:0}
+  .tmt-media::after{bottom:-10px;right:-10px;border-left:0;border-top:0}
+  .tmt-card:hover .tmt-media::before{top:-16px;left:-16px;width:60px;height:60px}
+  .tmt-card:hover .tmt-media::after{bottom:-16px;right:-16px;width:60px;height:60px}
+}
+/* mobile: portrait photo, edge to edge (same as the home page cards) */
+@media(max-width:860px){
+  .tmt-card{grid-template-columns:1fr;padding:0 0 34px;gap:0}
+  .tmt-media{margin:0 0 1.6rem;aspect-ratio:4/5;position:relative}
+  .tmt-body{padding:0 5vw}
+  .tmt-card>.tmt-price-block{margin:0 5vw}
+}
 
 /* BABOR: compact text cards (hand treatments, no device photos) */
 .babor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gb);border:1px solid var(--gb);counter-reset:bb}
