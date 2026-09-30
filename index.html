@@ -268,9 +268,57 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:5rem 5vw 3re
 @media(max-width:1399px){.equipment-grid{grid-template-columns:repeat(3,1fr)}.equip-card-cta{grid-column:auto}}
 @media(max-width:899px){.equipment-grid{grid-template-columns:repeat(2,1fr)}.equip-card-cta{grid-column:1/-1}}
 @media(max-width:599px){.equipment-grid{grid-template-columns:1fr}.equip-card-cta{grid-column:auto}}
-/* videos: two visible clips */
-.video-grid{grid-template-columns:repeat(2,1fr);max-width:760px;margin-left:auto;margin-right:auto}
-@media(max-width:640px){.video-grid{grid-template-columns:1fr}}
+/* ---- mobile hero: photo on top, copy below (face stays clear) ---- */
+@media(max-width:768px){
+  #hero{display:block;min-height:0;padding:0}
+  .hero-bg{position:relative;inset:auto;height:60vh;height:60svh;min-height:400px}
+  .hero-photo{opacity:.95;object-position:center 15%}
+  .hero-grad{background:linear-gradient(to top,#080808 0%,rgba(8,8,8,.7) 12%,rgba(8,8,8,0) 40%),linear-gradient(to bottom,rgba(8,8,8,.65) 0%,rgba(8,8,8,0) 16%)}
+  .hero-grad-side{display:none}
+  .hero-content{padding:0 6vw 6vh;margin-top:-1.8rem}
+  .hero-eyebrow{margin-bottom:1.1rem}
+  .hero-title{font-size:clamp(3.2rem,15vw,4.2rem);margin-bottom:1.1rem}
+  .hero-sub{margin-bottom:1.6rem;font-size:.95rem;line-height:1.7}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:.8rem}
+  .btn-primary,.btn-ghost{padding:13px 24px}
+  .btn-primary,.btn-ghost{text-align:center}
+  .hero-scroll{display:none}
+}
+
+/* ---- videos: 3 columns on desktop, swipe carousel on mobile ---- */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:1200px;margin:3.5rem auto 0}
+.video-frame{position:relative;aspect-ratio:9/16;background:var(--blk3);overflow:hidden}
+.video-frame iframe,.booking-visual iframe.vf-iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-lbl{z-index:2}
+.vf-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:78px;height:78px;border-radius:50%;border:1px solid var(--g);background:rgba(8,8,8,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--g);cursor:pointer;display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
+.vf-play:hover{background:var(--g);color:var(--blk)}
+.vf-play[hidden]{display:none}
+.vf-play svg{width:26px;height:26px;margin-left:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.video-frame.is-soon{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 80% at 50% 0%,rgba(184,154,106,.10),transparent 60%),var(--blk3);border:1px dashed var(--gb)}
+.vf-soon{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;padding:0 1.5rem}
+.vf-soon svg{width:34px;height:34px;opacity:.5}
+.vf-soon span{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g)}
+.video-dots{display:none}
+@media(max-width:768px){
+  .video-grid{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-padding-left:5vw;margin:2.5rem -5vw 0;padding:0 5vw;max-width:none;scrollbar-width:none}
+  .video-grid::-webkit-scrollbar{display:none}
+  .video-frame{flex:0 0 74vw;aspect-ratio:9/16;scroll-snap-align:start}
+  .video-dots{display:flex;justify-content:center;gap:8px;margin-top:1.5rem}
+  .video-dots span{width:6px;height:6px;border-radius:3px;background:var(--gb);transition:all .35s}
+  .video-dots span.on{width:22px;background:var(--g)}
+}
+
+/* ---- contact video ---- */
+.booking-visual .vf-play{z-index:4}
+@media(max-width:768px){
+  #booking{padding-top:0;scroll-margin-top:70px}
+  .booking-visual{aspect-ratio:4/5!important;max-height:none!important;margin:0 -5vw 1.6rem!important}
+  .booking-visual iframe{top:0!important;left:0!important;width:100%!important;height:100%!important;transform:none!important}
+  .booking-visual::after{content:'';position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(to top,var(--blk3),transparent);pointer-events:none;z-index:1}
+  .booking-accent{display:none}
+}
+
 /* language switch is now plain links */
 a.lang-btn{text-decoration:none;display:inline-block}
 </style>
@@ -518,11 +566,7 @@ a.lang-btn{text-decoration:none;display:inline-block}
 <span class="section-label" style="justify-content:center">Behandlungen live</span>
 <h2 class="section-title"><span>Sehen Sie </span><em>unsere Behandlungen</em></h2>
 </div>
-<div class="video-grid">
-
-<div class="video-frame"><iframe allow="autoplay; fullscreen" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/1193974387?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe><div class="video-lbl">Endospheres</div></div>
-<div class="video-frame"><iframe allow="autoplay; fullscreen" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/1187762498?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe><div class="video-lbl">Diodenlaser</div></div>
-</div>
+<div class="video-grid"><div class="video-frame" data-vimeo="1193974387"><iframe allow="autoplay; fullscreen; picture-in-picture" class="vf-iframe" frameborder="0" loading="lazy" src="https://player.vimeo.com/video/1193974387?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" title="Solvata Beauty Club Berlin"></iframe><div class="video-lbl">Endospheres</div><button class="vf-play" hidden="" type="button"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg><span class="sr">Video abspielen</span></button></div><div class="video-frame" data-vimeo="1187762498"><iframe allow="autoplay; fullscreen; picture-in-picture" class="vf-iframe" frameborder="0" loading="lazy" src="https://player.vimeo.com/video/1187762498?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" title="Solvata Beauty Club Berlin"></iframe><div class="video-lbl">Diodenlaser</div><button class="vf-play" hidden="" type="button"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg><span class="sr">Video abspielen</span></button></div><div class="video-frame is-soon" data-vimeo=""><div class="vf-soon"><svg aria-hidden="true" fill="none" stroke="#b89a6a" stroke-width="1" viewbox="0 0 24 24"><path d="M12 4c2 2.5 2.5 5 0 8-2.500-3-2-5.500 0-8zM4 9c3 .2 5.500 1.800 6.500 5.500C7 15 4.500 13 4 9zM20 9c-3 .2-5.500 1.800-6.500 5.500C17 15 19.500 13 20 9zM12 20c-3.500 0-6.500-1.500-8-4.500 3.500-.5 6.500.5 8 4.500zM12 20c3.500 0 6.500-1.500 8-4.500-3.500-.5-6.500.5-8 4.500z"></path></svg><span>Video folgt</span></div></div></div><div aria-hidden="true" class="video-dots"><span class="on"></span><span></span><span></span></div>
 </section>
 <section id="prices">
 <div class="prices-top reveal">
@@ -623,10 +667,10 @@ a.lang-btn{text-decoration:none;display:inline-block}
 </section>
 <section id="booking">
 <div class="booking-inner">
-<div class="booking-visual reveal" style="aspect-ratio:9/16;overflow:hidden;position:relative;background:var(--blk3);">
-<iframe allow="autoplay; fullscreen; picture-in-picture" frameborder="0" src="https://player.vimeo.com/video/1193978591?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" style="position:absolute;top:50%;left:50%;width:100%;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;" title="Solvata Beauty Club Berlin"></iframe>
+<div class="booking-visual reveal" data-vimeo="1193978591" style="aspect-ratio:9/16;overflow:hidden;position:relative;background:var(--blk3);">
+<iframe allow="autoplay; fullscreen; picture-in-picture" frameborder="0" loading="lazy" src="https://player.vimeo.com/video/1193978591?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" style="position:absolute;top:50%;left:50%;width:100%;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;" title="Solvata Beauty Club Berlin"></iframe>
 <div class="booking-accent"></div>
-</div>
+<button class="vf-play" hidden="" type="button"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg><span class="sr">Video abspielen</span></button></div>
 <div class="reveal reveal-d2">
 <span class="section-label">Termin buchen</span>
 <h2 class="booking-cta"><span>Bereit für</span><em>Ihre Verwandlung?</em></h2>
@@ -703,6 +747,59 @@ function renderCookie(lang){var ck=document.getElementById('cookie-banner');if(!
 function cookieAccept(){ls('sb_de_cookies','accepted');hideCookie();}
 function cookieDecline(){ls('sb_de_cookies','declined');hideCookie();}
 function hideCookie(){var b=document.getElementById('cookie-banner');b.classList.add('hide');setTimeout(function(){b.style.display='none';},350);}
+</script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+(function(){
+  var nodes=[].slice.call(document.querySelectorAll('[data-vimeo]')).filter(function(n){return n.getAttribute('data-vimeo');});
+  if(!nodes.length||!('IntersectionObserver' in window))return;
+  function btn(n){return n.querySelector('.vf-play');}
+  function show(n){var b=btn(n);if(b)b.hidden=false;}
+  function hide(n){var b=btn(n);if(b)b.hidden=true;}
+  function ensureFrame(n){
+    var f=n.querySelector('iframe');
+    if(!f){
+      f=document.createElement('iframe');f.className='vf-iframe';f.loading='lazy';
+      f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');f.setAttribute('frameborder','0');f.title='Solvata Beauty Club Berlin';
+      f.src='https://player.vimeo.com/video/'+n.getAttribute('data-vimeo')+'?autoplay=1&muted=1&loop=1&background=1&autopause=0';
+      n.insertBefore(f,n.firstChild);
+    }
+    return f;
+  }
+  function init(n){
+    if(n._p||!window.Vimeo)return;
+    n._p=new Vimeo.Player(ensureFrame(n));
+    n._p.on('play',function(){n._started=true;hide(n);});
+    var b=btn(n);
+    if(b)b.addEventListener('click',function(){
+      n._p.setMuted(true).catch(function(){});
+      n._p.play().then(function(){hide(n);}).catch(function(){});
+    });
+  }
+  function start(n){
+    init(n);
+    if(!n._p)return;
+    n._p.play().catch(function(){show(n);});
+    setTimeout(function(){
+      n._p.getPaused().then(function(paused){if(paused)show(n);else hide(n);}).catch(function(){});
+    },2500);
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var n=e.target;
+      if(e.isIntersecting)start(n);
+      else if(n._p)n._p.pause().catch(function(){});
+    });
+  },{threshold:.35});
+  nodes.forEach(function(n){ensureFrame(n);io.observe(n);});
+  var g=document.querySelector('.video-grid'),dots=document.querySelectorAll('.video-dots span');
+  if(g&&dots.length){
+    g.addEventListener('scroll',function(){
+      var fr=g.querySelector('.video-frame'),i=Math.round(g.scrollLeft/(fr.offsetWidth+12));
+      dots.forEach(function(d,k){d.classList.toggle('on',k===i);});
+    },{passive:true});
+  }
+})();
 </script>
 </body>
 </html>
