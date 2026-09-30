@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solvata Beauty Club Berlin — Premium Kosmetik & Nägel</title>
-<meta name="description" content="Solvata Beauty Club Berlin. Apparative Kosmetik, Gesichtspflege, Körperformung & Nageldesign. Berliner Straße 54, 10713 Berlin.">
-<meta property="og:title" content="Solvata Beauty Club Berlin">
-<meta property="og:type" content="website">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/32%20x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solvata Beauty Club Berlin — Premium Kosmetik &amp; Nägel</title>
+
+
+
+<link href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/32%20x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --blk:#080808;--blk2:#0f0f0f;--blk3:#161616;--blk4:#1e1e1e;
@@ -259,499 +259,435 @@ footer{background:var(--blk);border-top:1px solid var(--gb);padding:5rem 5vw 3re
 .ck-decline:hover{border-color:var(--wd);color:var(--w);}
 @media(max-width:520px){.cookie-banner{flex-direction:column;align-items:flex-start;}.cookie-actions{width:100%;}.ck-accept,.ck-decline{flex:1;text-align:center;}}
 
+
+/* ---- fixes ---- */
+[hidden]{display:none!important}
+/* equipment grid: 8 cards + 1 CTA tile = 9 -> never a ragged last row */
+.equipment-grid{grid-template-columns:repeat(4,1fr)}
+.equip-card-cta{grid-column:1/-1}
+@media(max-width:1399px){.equipment-grid{grid-template-columns:repeat(3,1fr)}.equip-card-cta{grid-column:auto}}
+@media(max-width:899px){.equipment-grid{grid-template-columns:repeat(2,1fr)}.equip-card-cta{grid-column:1/-1}}
+@media(max-width:599px){.equipment-grid{grid-template-columns:1fr}.equip-card-cta{grid-column:auto}}
+/* videos: two visible clips */
+.video-grid{grid-template-columns:repeat(2,1fr);max-width:760px;margin-left:auto;margin-right:auto}
+@media(max-width:640px){.video-grid{grid-template-columns:1fr}}
+/* language switch is now plain links */
+a.lang-btn{text-decoration:none;display:inline-block}
 </style>
-</head>
+<meta content="Solvata Beauty Club Berlin. Apparative Kosmetik, Gesichtspflege, Körperformung &amp; Nageldesign. Berliner Straße 54, 10713 Berlin." name="description"/><meta content="Solvata Beauty Club Berlin — Premium Kosmetik &amp; Nägel" property="og:title"/><meta content="Solvata Beauty Club Berlin. Apparative Kosmetik, Gesichtspflege, Körperformung &amp; Nageldesign. Berliner Straße 54, 10713 Berlin." property="og:description"/><meta content="website" property="og:type"/><meta content="de_DE" property="og:locale"/><meta content="https://YOUR-DOMAIN.de/index.html" property="og:url"/><meta content="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" property="og:image"/><link href="https://YOUR-DOMAIN.de/index.html" rel="canonical"/><link href="https://YOUR-DOMAIN.de/index.html" hreflang="de" rel="alternate"/><link href="https://YOUR-DOMAIN.de/en/index.html" hreflang="en" rel="alternate"/><link href="https://YOUR-DOMAIN.de/index.html" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "name": "Solvata Beauty Club Berlin", "url": "https://YOUR-DOMAIN.de/index.html", "image": "https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png", "telephone": "+49 176 80880879", "address": {"@type": "PostalAddress", "streetAddress": "Berliner Straße 54", "postalCode": "10713", "addressLocality": "Berlin", "addressCountry": "DE"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "20:00"}], "sameAs": ["https://www.instagram.com/solvatabeautyclub"]}</script></head>
 <body>
-
-
 <nav>
-  <a href="#" class="nav-brand">
-    <img src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" alt="Solvata" class="nav-logo-img">
-    <span class="nav-name" data-i18n="nav_name">Solvata Beauty Club</span>
-  </a>
-  <div class="nav-links">
-    <a href="#mission"   data-i18n="nav_about">Über uns</a>
-    <a href="#equipment" data-i18n="nav_equip">Treatments</a>
-    <a href="leistungen.html" data-i18n="nav_all">Alle Behandlungen</a>
-    <a href="#nails"     data-i18n="nav_nails">Nägel</a>
-    <a href="#prices"    data-i18n="nav_prices">Preise</a>
-    <a href="#booking"   data-i18n="nav_contact">Kontakt</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-switcher">
-      <button class="lang-btn active" onclick="setLang('de')">DE</button>
-      <button class="lang-btn"        onclick="setLang('en')">EN</button>
-    </div>
-    <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="nav-cta" data-i18n="nav_book">Termin buchen</a>
-  </div>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+<a class="nav-brand" href="#">
+<img alt="Solvata" class="nav-logo-img" src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png"/>
+<span class="nav-name">Solvata Beauty Club</span>
+</a>
+<div class="nav-links">
+<a href="#mission">Über uns</a>
+<a href="#equipment">Treatments</a>
+<a href="leistungen.html">Alle Behandlungen</a>
+<a href="#nails">Nägel</a>
+<a href="#prices">Preise</a>
+<a href="#booking">Kontakt</a>
+</div>
+<div class="nav-right">
+<div class="lang-switcher"><a class="lang-btn active" href="index.html" hreflang="de" lang="de">DE</a><a class="lang-btn" href="en/index.html" hreflang="en" lang="en">EN</a></div>
+<a class="nav-cta" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Termin buchen</a>
+</div>
+<button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="mob-menu" id="mob-menu">
-  <button class="mob-close" onclick="toggleMenu()">×</button>
-  <a href="#mission"   onclick="toggleMenu()" data-i18n="nav_about">Über uns</a>
-  <a href="#equipment" onclick="toggleMenu()" data-i18n="nav_equip">Treatments</a>
-  <a href="leistungen.html" data-i18n="nav_all">Alle Behandlungen</a>
-  <a href="#nails"     onclick="toggleMenu()" data-i18n="nav_nails">Nägel</a>
-  <a href="#prices"    onclick="toggleMenu()" data-i18n="nav_prices">Preise</a>
-  <a href="#booking"   onclick="toggleMenu()" data-i18n="nav_contact">Kontakt</a>
-  <div class="mob-bottom"><a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="nav_book">Termin buchen</a></div>
+<button class="mob-close" onclick="toggleMenu()">×</button>
+<a href="#mission" onclick="toggleMenu()">Über uns</a>
+<a href="#equipment" onclick="toggleMenu()">Treatments</a>
+<a href="leistungen.html">Alle Behandlungen</a>
+<a href="#nails" onclick="toggleMenu()">Nägel</a>
+<a href="#prices" onclick="toggleMenu()">Preise</a>
+<a href="#booking" onclick="toggleMenu()">Kontakt</a>
+<div class="mob-bottom"><a class="btn-primary" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Termin buchen</a></div>
 </div>
-
 <section id="hero">
-  <div class="hero-bg">
-    <img class="hero-photo" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main" alt="Solvata Beauty Club Berlin" fetchpriority="high">
-    <div class="hero-grad"></div><div class="hero-grad-side"></div><div class="hero-noise"></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Berlin · Premium Beauty</div>
-    <h1 class="hero-title"><span data-i18n="hero_title_1">Schönheit</span><em data-i18n="hero_title_2">neu definiert.</em></h1>
-    <p class="hero-sub" data-i18n="hero_sub">Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.</p>
-    <div class="hero-actions">
-      <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="btn_book">Termin buchen</a>
-      <a href="#equipment" class="btn-ghost" data-i18n="btn_services">Unsere Treatments</a>
-    </div>
-  </div>
-  <div class="hero-scroll"><div class="hero-scroll-line"></div><span class="hero-scroll-label" data-i18n="scroll_label">Scroll</span></div>
+<div class="hero-bg">
+<img alt="Solvata Beauty Club Berlin" class="hero-photo" fetchpriority="high" onerror="this.style.display='none'" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main"/>
+<div class="hero-grad"></div><div class="hero-grad-side"></div><div class="hero-noise"></div>
+</div>
+<div class="hero-content">
+<div class="hero-eyebrow">Berlin · Premium Beauty</div>
+<h1 class="hero-title"><span>Schönheit</span><em>neu definiert.</em></h1>
+<p class="hero-sub">Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Termin buchen</a>
+<a class="btn-ghost" href="#equipment">Unsere Treatments</a>
+</div>
+</div>
+<div class="hero-scroll"><div class="hero-scroll-line"></div><span class="hero-scroll-label">Scroll</span></div>
 </section>
-
 <div id="statement">
-  <div class="statement-inner">
-    <div>
-      <p class="statement-quote" data-i18n="statement_quote">„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note."</p>
-      <p class="statement-sub" data-i18n="statement_sub">— Solvata Beauty Club, Berlin</p>
-    </div>
-    <div class="statement-div"></div>
-    <div class="statement-stats">
-      <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label" data-i18n="stat_devices">Jahre Erfahrung</div></div>
-      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label" data-i18n="stat_individual">Premium-Ausstattung</div></div>
-    </div>
-  </div>
+<div class="statement-inner">
+<div>
+<p class="statement-quote">„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note.“</p>
+<p class="statement-sub">— Solvata Beauty Club, Berlin</p>
+</div>
+<div class="statement-div"></div>
+<div class="statement-stats">
+<div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Jahre Erfahrung</div></div>
+<div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Bereiche unter einem Dach</div></div>
+</div>
+</div>
+</div>
+<section id="mission">
+<div class="mission-inner">
+<div class="reveal">
+<span class="section-label">Über uns</span>
+<h2 class="section-title"><span>Unser</span> <em>Salon</em></h2>
+<p class="section-sub">Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.</p>
+<blockquote class="mission-quote-block">Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.</blockquote>
+<div class="mission-badges">
+<span class="badge">Zertifiziert</span>
+<span class="badge">Premium-Geräte</span>
+<span class="badge">Individuelle Beratung</span>
+<span class="badge">Berlin Charlottenburg</span>
+</div>
+</div>
+<div class="mission-visual reveal reveal-d2" style="background:var(--blk3);overflow:hidden;position:relative;min-height:400px;aspect-ratio:unset;align-self:stretch;">
+<iframe allow="autoplay; fullscreen; picture-in-picture" frameborder="0" src="https://player.vimeo.com/video/1193971429?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;" title="Solvata Beauty Club Berlin"></iframe>
+<div class="mission-accent"></div>
+</div>
+</div>
+</section>
+<section id="equipment">
+<div class="equipment-header reveal">
+<span class="section-label">Treatments</span>
+<h2 class="section-title"><span>Unsere</span> <em>Technologien</em></h2>
+<p class="section-sub">Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.</p>
+</div>
+<div class="equipment-grid">
+
+<div class="equip-card reveal">
+<div class="equip-img"><img alt="Dermapen Microneedling" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/dermapen.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">Microneedling</div>
+<div class="equip-name">Dermapen</div>
+<p class="equip-desc">Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut. Wirkstoffseren dringen dabei tief in die Dermis ein.</p>
+<div class="equip-tags"><span class="effect-tag">Faltenreduktion</span><span class="effect-tag">Pigmentierung</span><span class="effect-tag">Porenverfeinerung</span><span class="effect-tag">Narben &amp; Aknenarben</span></div>
+<p class="equip-extra">Kurs: 4–6 Behandlungen · Intervall: 2–4 Wochen</p>
+</div>
 </div>
 
-<section id="mission">
-  <div class="mission-inner">
-    <div class="reveal">
-      <span class="section-label" data-i18n="mission_label">Über uns</span>
-      <h2 class="section-title"><span data-i18n="mission_title_1">Unser</span> <em data-i18n="mission_title_2">Salon</em></h2>
-      <p class="section-sub" data-i18n="mission_sub">Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.</p>
-      <blockquote class="mission-quote-block" data-i18n="mission_quote">Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.</blockquote>
-      <div class="mission-badges">
-        <span class="badge" data-i18n="badge_1">Zertifiziert</span>
-        <span class="badge" data-i18n="badge_2">Premium-Geräte</span>
-        <span class="badge" data-i18n="badge_3">Individuelle Beratung</span>
-        <span class="badge" data-i18n="badge_4">Berlin Charlottenburg</span>
-      </div>
-    </div>
-    <div class="mission-visual reveal reveal-d2" style="background:var(--blk3);overflow:hidden;position:relative;min-height:400px;aspect-ratio:unset;align-self:stretch;">
-      <iframe
-        src="https://player.vimeo.com/video/1193971429?autoplay=1&muted=1&loop=1&background=1&autopause=0"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;"
-        title="Solvata Beauty Club Berlin"></iframe>
-      <div class="mission-accent"></div>
-    </div>
-  </div>
+<div class="equip-card reveal reveal-d1">
+<div class="equip-img"><img alt="Dermapen BB Glow / V-Tech" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/bb%20glow.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">BB Glow &amp; Exosomen</div>
+<div class="equip-name">Dermapen BB Glow / V-Tech</div>
+<p class="equip-desc">Zwei spezialisierte Mikroneedling-Protokolle mit unterschiedlichen Wirkstoffen: BB Glow gleicht den Hautton mit einem pigmentierten Tönungsserum aus, V-Tech bringt Exosomen, Polynukleotide und Peptide tief in die Dermis für intensive Zellregeneration.</p>
+<div class="equip-tags"><span class="effect-tag">Hautton-Ausgleich</span><span class="effect-tag">Exosomen-Therapie</span><span class="effect-tag">Zellregeneration</span><span class="effect-tag">Kollagenaufbau</span></div>
+<p class="equip-extra">Zwei eigenständige Protokolle — je nach Hautziel kombinierbar</p>
+</div>
+</div>
+
+<div class="equip-card reveal">
+<div class="equip-img"><img alt="Endospheres Gesicht" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/1.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">Gesicht</div>
+<div class="equip-name">Endosphères — Gesicht</div>
+<p class="equip-desc">Kompressions-Mikrovibration speziell für das Gesichtsoval: verbessert Durchblutung und Lymphfluss, strafft die Konturen und sorgt für einen frischeren, klareren Teint.</p>
+<div class="equip-tags"><span class="effect-tag">Gesichtsoval</span><span class="effect-tag">Lymphdrainage</span><span class="effect-tag">Hautton</span></div>
+<p class="equip-extra">Ohne Ausfallzeit · Ergebnis ab der 1. Behandlung</p>
+</div>
+</div>
+
+<div class="equip-card reveal reveal-d1">
+<div class="equip-img"><img alt="Endosphères Körper" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/2.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">Körper</div>
+<div class="equip-name">Endosphères — Körper</div>
+<p class="equip-desc">Mit einem Phlebologen entwickelte Kompressions-Mikrovibration. Verbessert die Durchblutung, reduziert Ödeme und Cellulite, strafft die Hautstruktur am Körper.</p>
+<div class="equip-tags"><span class="effect-tag">Cellulite</span><span class="effect-tag">Ödem-Reduktion</span><span class="effect-tag">Hautstraffung</span></div>
+<p class="equip-extra">Ohne Ausfallzeit · Kurs: 6–12 Sitzungen</p>
+</div>
+</div>
+
+<div class="equip-card reveal">
+<div class="equip-img"><img alt="Hydrafacial Skinfusor" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/Hydrafacial%20_%20Skinfusor.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">Hydrafacial · Sauerstoff</div>
+<div class="equip-name">Hydrafacial — Skinfusor</div>
+<p class="equip-desc">Tiefe Hautreinigung und intensive Wirkstoffinfusion in einem. Reinigt die Poren, exfoliiert sanft und versorgt die Haut gleichzeitig mit maßgeschneiderten Seren. Sichtbarer Glow direkt nach der ersten Anwendung.</p>
+<div class="equip-tags"><span class="effect-tag">Tiefenreinigung</span><span class="effect-tag">Sauerstoff</span><span class="effect-tag">Glow-Effekt</span><span class="effect-tag">Feuchtigkeitspflege</span></div>
+<p class="equip-extra">Gesicht ab 129 € · Gesicht &amp; Hals 139 € · Gesicht, Hals &amp; Dekolleté 159 €</p>
+</div>
+</div>
+
+<div class="equip-card reveal reveal-d1">
+<div class="equip-img"><img alt="RF Lifting" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/tripolar%20rf.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">RF Lifting</div>
+<div class="equip-name">Radiofrequenz-Lifting</div>
+<p class="equip-desc">Klassisches RF-Lifting — sanft, ohne Hautschäden. Erwärmt das Gewebe, stimuliert Kollagen und sorgt für sichtbare Straffung bereits nach der ersten Behandlung. Ideal für regelmäßige Pflege.</p>
+<div class="equip-tags"><span class="effect-tag">Hautstraffung</span><span class="effect-tag">Falten</span><span class="effect-tag">Gesichtsoval</span></div>
+<p class="equip-extra">Effekt nach der 1. Behandlung · Für regelmäßige Pflege geeignet</p>
+</div>
+</div>
+
+<div class="equip-card reveal">
+<div class="equip-img"><img alt="Primelaser Diodenlaser" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/diode%20laser.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">Dauerhafte Haarentfernung</div>
+<div class="equip-name">Primelaser</div>
+<p class="equip-desc">Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ganzjährig einsetzbar. Bereits nach der ersten Sitzung sind 15–20% der Haare weg. Mit einem Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erzielt.</p>
+<div class="equip-tags"><span class="effect-tag">Dauerhafte Epilation</span><span class="effect-tag">Alle Hauttypen</span><span class="effect-tag">Ganzjährig</span><span class="effect-tag">Schmerzlos</span></div>
+<p class="equip-extra">Kurs: 6–8 Sitzungen · Für Gesicht und Körper</p>
+</div>
+</div>
+
+<div class="equip-card reveal reveal-d1">
+<div class="equip-img"><img alt="BABOR Hautanalyse" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/analysis.jpg"/></div>
+<div class="equip-body">
+<div class="equip-tag">BABOR Derma Visualizer</div>
+<div class="equip-name">Hautanalyse</div>
+<p class="equip-desc">Ein hochpräzises Dermatoskop mit 80-facher Vergrößerung analysiert Falten, Talgproduktion, Porengröße und Pigmentierung im Detail. Auf dieser Basis stellen wir Ihr individuelles Behandlungs- und Pflegeprotokoll zusammen.</p>
+<div class="equip-tags"><span class="effect-tag">Individuelle Diagnose</span><span class="effect-tag">Maßgeschneidertes Protokoll</span></div>
+<p class="equip-extra">Grundlage für jede individuelle Behandlungsempfehlung</p>
+</div>
+</div>
+
+<div class="equip-card reveal equip-card-cta" style="background:var(--gf);border:1px solid var(--gb);">
+<div class="equip-body" style="justify-content:center;align-items:flex-start;padding:36px 30px;">
+<div class="equip-tag">BABOR Gesichtsbehandlungen</div>
+<div class="equip-name">SKINOVAGE · HSR LIFTING · DOCTOR BABOR · AHA Peeling · Cleanformance &amp; mehr</div>
+<p class="equip-desc">Unsere Gesichtsbehandlungen basieren auf den professionellen BABOR-Linien — von Anti-Age über Lifting bis zur sanften Tiefenreinigung. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.</p>
+<a class="btn-ghost" href="leistungen.html#gesicht-babor" style="margin-top:1rem;">Alle BABOR-Behandlungen ansehen →</a>
+</div>
+</div>
+</div>
 </section>
-
-<section id="equipment">
-  <div class="equipment-header reveal">
-    <span class="section-label" data-i18n="equip_label">Treatments</span>
-    <h2 class="section-title"><span data-i18n="equip_title_1">Unsere</span> <em data-i18n="equip_title_2">Technologien</em></h2>
-    <p class="section-sub" data-i18n="equip_sub">Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.</p>
-  </div>
-  <div class="equipment-grid">
-
-    <!-- Dermapen Microneedling -->
-    <div class="equip-card reveal">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/dermapen.jpg" alt="Dermapen Microneedling"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_dp_tag">Microneedling</div>
-        <div class="equip-name" data-i18n="eq_dp_name">Dermapen</div>
-        <p class="equip-desc" data-i18n="eq_dp_desc">Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut. Aktivseren dringen dabei tief in die Dermis ein.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_dp_e1">Faltenreduktion</span><span class="effect-tag" data-i18n="eq_dp_e2">Pigmentierung</span><span class="effect-tag" data-i18n="eq_dp_e3">Porenverfeinerung</span><span class="effect-tag" data-i18n="eq_dp_e4">Narben &amp; Aknenarben</span></div>
-        <p class="equip-extra" data-i18n="eq_dp_extra">Kurs: 4–6 Behandlungen · Intervall: 2–4 Wochen</p>
-      </div>
-    </div>
-
-    <!-- Dermapen BB Glow + V-Tech Exosome -->
-    <div class="equip-card reveal reveal-d1">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/bb%20glow.jpg" alt="Dermapen BB Glow / V-Tech"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_bbv_tag">BB Glow &amp; Exosomen</div>
-        <div class="equip-name" data-i18n="eq_bbv_name">Dermapen BB Glow / V-Tech</div>
-        <p class="equip-desc" data-i18n="eq_bbv_desc">Zwei spezialisierte Mikroneedling-Protokolle mit unterschiedlichen Wirkstoffen: BB Glow gleicht den Hautton mit einer pigmentierten Tönungsserum aus, V-Tech bringt Exosomen, Polynukleotide und Peptide tief in die Dermis für intensive Zellregeneration.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_bbv_e1">Hautton-Ausgleich</span><span class="effect-tag" data-i18n="eq_bbv_e2">Exosomen-Therapie</span><span class="effect-tag" data-i18n="eq_bbv_e3">Zellregeneration</span><span class="effect-tag" data-i18n="eq_bbv_e4">Kollagenaufbau</span></div>
-        <p class="equip-extra" data-i18n="eq_bbv_extra">Zwei eigenständige Protokolle — je nach Hautziel kombinierbar</p>
-      </div>
-    </div>
-
-    <!-- Endospheres GESICHT -->
-    <div class="equip-card reveal">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/1.jpg" alt="Endospheres Gesicht"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="p_hy_face" data-i18n="eq_esf_tag">Gesicht</div>
-        <div class="equip-name" data-i18n="eq_esf_name">Endosphères — Gesicht</div>
-        <p class="equip-desc" data-i18n="eq_esf_desc">Kompressions-Mikrovibration speziell für das Gesichtsoval: verbessert Durchblutung und Lymphfluss, strafft die Konturen und sorgt für einen frischeren, klareren Teint.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_esf_e1" data-i18n="eq_rf_e3">Gesichtsoval</span><span class="effect-tag" data-i18n="eq_esf_e2">Lymphdrainage</span><span class="effect-tag" data-i18n="eq_esf_e3">Hautton</span></div>
-        <p class="equip-extra" data-i18n="eq_esf_extra">Ohne Ausfallzeit · Ergebnis ab der 1. Behandlung</p>
-      </div>
-    </div>
-
-    <!-- Endospheres KÖRPER -->
-    <div class="equip-card reveal reveal-d1">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/2.jpg" alt="Endosphères Körper"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_esb_tag">Körper</div>
-        <div class="equip-name" data-i18n="eq_esb_name">Endosphères — Körper</div>
-        <p class="equip-desc" data-i18n="eq_esb_desc">Mit einem Phlebologen entwickelte Kompressions-Mikrovibration. Verbessert die Durchblutung, reduziert Ödeme und Cellulite, strafft die Hautstruktur am Körper.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_esb_e1">Cellulite</span><span class="effect-tag" data-i18n="eq_esb_e2">Ödem-Reduktion</span><span class="effect-tag" data-i18n="eq_esb_e3" data-i18n="eq_rf_e1">Hautstraffung</span></div>
-        <p class="equip-extra" data-i18n="eq_esb_extra">Ohne Ausfallzeit · Kurs: 6–12 Sitzungen</p>
-      </div>
-    </div>
-
-    <!-- Hydrafacial - Skinfusor -->
-    <div class="equip-card reveal">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/Hydrafacial%20_%20Skinfusor.jpg" alt="Hydrafacial Skinfusor"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_hf_tag">Hydrafacial · Sauerstoff</div>
-        <div class="equip-name" data-i18n="p_h_hydra" data-i18n="eq_hf_name">Hydrafacial — Skinfusor</div>
-        <p class="equip-desc" data-i18n="eq_hf_desc">Tiefe Hautreinigung und intensive Wirkstoffinfusion in einem. Reinigt die Poren, exfoliiert sanft und versorgt die Haut gleichzeitig mit maßgeschneiderten Seren. Sichtbarer Glow direkt nach der ersten Anwendung.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_hf_e1">Tiefenreinigung</span><span class="effect-tag" data-i18n="eq_hf_e2">Sauerstoff</span><span class="effect-tag" data-i18n="eq_hf_e3">Glow-Effekt</span><span class="effect-tag" data-i18n="eq_hf_e4">Feuchtigkeitspflege</span></div>
-        <p class="equip-extra" data-i18n="eq_hf_extra">Gesicht ab 129 € · Gesicht &amp; Hals 139 € · Gesicht, Hals &amp; Dekolleté 159 €</p>
-      </div>
-    </div>
-
-    <!-- RF Lifting (Gerät TBD) -->
-    <div class="equip-card reveal reveal-d1">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/tripolar%20rf.jpg" alt="RF Lifting"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_rf_tag">RF Lifting</div>
-        <div class="equip-name" data-i18n="eq_rf_name">Radiofrequenz-Lifting</div>
-        <p class="equip-desc" data-i18n="eq_rf_desc">Klassisches RF-Lifting — sanft, ohne Hautschäden. Erwärmt das Gewebe, stimuliert Kollagen und sorgt für sichtbare Straffung bereits nach der ersten Behandlung. Ideal für regelmäßige Pflege.</p>
-        <div class="equip-tags"><span class="effect-tag">Hautstraffung</span><span class="effect-tag" data-i18n="eq_rf_e2">Falten</span><span class="effect-tag">Gesichtsoval</span></div>
-        <p class="equip-extra" data-i18n="eq_rf_extra">Effekt nach der 1. Behandlung · Für regelmäßige Pflege geeignet</p>
-      </div>
-    </div>
-
-    <!-- Primelaser -->
-    <div class="equip-card reveal">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/diode%20laser.jpg" alt="Primelaser Diodenlaser"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_pl_tag">Dauerhafte Haarentfernung</div>
-        <div class="equip-name" data-i18n="eq_pl_name">Primelaser</div>
-        <p class="equip-desc" data-i18n="eq_pl_desc">Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ganzjährig einsetzbar. Bereits nach der ersten Sitzung sind 15–20% der Haare weg. Mit einem Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erzielt.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_pl_e1">Dauerhafte Epilation</span><span class="effect-tag" data-i18n="eq_pl_e2">Alle Hauttypen</span><span class="effect-tag" data-i18n="eq_pl_e3">Ganzjährig</span><span class="effect-tag" data-i18n="eq_pl_e4">Schmerzlos</span></div>
-        <p class="equip-extra" data-i18n="eq_pl_extra">Kurs: 6–8 Sitzungen · Für Gesicht und Körper</p>
-      </div>
-    </div>
-
-    <!-- Hautanalyse Derma Visualizer -->
-    <div class="equip-card reveal reveal-d1">
-      <div class="equip-img"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/main%20services/analysis.jpg" alt="BABOR Hautanalyse"></div>
-      <div class="equip-body">
-        <div class="equip-tag" data-i18n="eq_ha_tag">BABOR Derma Visualizer</div>
-        <div class="equip-name" data-i18n="p_hautanalyse" data-i18n="eq_ha_name">Hautanalyse</div>
-        <p class="equip-desc" data-i18n="eq_ha_desc">Ein hochpräziser Dermatoskop mit 80-facher Vergrößerung analysiert Falten, Talgproduktion, Porengröße und Pigmentierung im Detail. Auf dieser Basis stellen wir Ihr individuelles Behandlungs- und Pflegeprotokoll zusammen.</p>
-        <div class="equip-tags"><span class="effect-tag" data-i18n="eq_ha_e1">Individuelle Diagnose</span><span class="effect-tag" data-i18n="eq_ha_e2">Maßgeschneidertes Protokoll</span></div>
-        <p class="equip-extra" data-i18n="eq_ha_extra">Grundlage für jede individuelle Behandlungsempfehlung</p>
-      </div>
-    </div>
-
-    <!-- BABOR Gesichtsbehandlungen - tile linking to subpage -->
-    <div class="equip-card reveal equip-card-cta" style="background:var(--gf);border:1px solid var(--gb);">
-      <div class="equip-body" style="justify-content:center;align-items:flex-start;padding:36px 30px;">
-        <div class="equip-tag" data-i18n="eq_cta_tag">BABOR Gesichtsbehandlungen</div>
-        <div class="equip-name" data-i18n="eq_cta_name">SKINOVAGE · HSR LIFTING · DOCTOR BABOR · AHA Peeling · Cleanformance &amp; mehr</div>
-        <p class="equip-desc" data-i18n="eq_cta_desc">Unsere Gesichtsbehandlungen basieren auf den professionellen BABOR-Linien — von Anti-Age über Lifting bis zur sanften Tiefenreinigung. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.</p>
-        <a href="leistungen.html#gesicht-babor" class="btn-ghost" style="margin-top:1rem;" data-i18n="eq_cta_btn">Alle BABOR-Behandlungen ansehen →</a>
-      </div>
-    </div>
-
-  </div>
-  </div>
-</section>
-
 <section id="nails">
-  <div class="nails-inner">
-    <div class="nails-gallery reveal">
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/3f9305d2-c5a2-4414-885b-72f64a241fc5.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/643db5e1-5471-446b-9d10-bdbcf7292d36.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/ff846e73-b1f5-46e4-baa0-d8304b4a9a26.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/af178302-a6ce-4c08-93a5-e15079542433.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/9ae59607-70b1-4195-aa36-53a8743fc7a3.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/0a9225e2-97f4-4c95-8657-49c98e7e5789.JPG" alt="Nageldesign" loading="lazy"></div>
-      <div class="nail-photo"><img src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/00ea5f36-7115-4a66-98ac-332133137158.JPG" alt="Nageldesign" loading="lazy"></div>
-    </div>
-    <div class="reveal reveal-d2">
-      <span class="section-label" data-i18n="nails_label">Nageldesign</span>
-      <h2 class="section-title"><em data-i18n="nails_title_1">Nägel</em> <span data-i18n="nails_title_2">&amp; Pflege</span></h2>
-      <p class="section-sub" data-i18n="nails_sub">Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.</p>
-      <div class="price-list">
-        <div class="price-cat">
-          <div class="price-cat-name" data-i18n="nails_cat_mani">Maniküre</div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_classic">Klassische Maniküre</span><span class="price-val">ab 25 €</span></div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_gel">Gel-Lack Maniküre</span><span class="price-val">ab 35 €</span></div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_gel_ext">Gelverlängerung</span><span class="price-val">ab 55 €</span></div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_removal">Gel-Abnahme</span><span class="price-val">ab 15 €</span></div>
-        </div>
-        <div class="price-cat">
-          <div class="price-cat-name" data-i18n="nails_cat_pedi">Pediküre</div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_pedi">Klassische Pediküre</span><span class="price-val">ab 35 €</span></div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_pedi_gel">Pediküre + Gel-Lack</span><span class="price-val">ab 50 €</span></div>
-        </div>
-        <div class="price-cat">
-          <div class="price-cat-name" data-i18n="nails_cat_art">Nail Art</div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_art_simple">Einfaches Design (je Nagel)</span><span class="price-val">ab 2 €</span></div>
-          <div class="price-row"><span class="price-name" data-i18n="nail_art_complex">Komplexes Design</span><span class="price-val" data-i18n="on_request" data-i18n="p_on_request">auf Anfrage</span></div>
-        </div>
-      </div>
-      <div style="margin-top:2rem;"><a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="nails_btn">Nageltermin buchen</a></div>
-    </div>
-  </div>
+<div class="nails-inner">
+<div class="nails-gallery reveal">
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/3f9305d2-c5a2-4414-885b-72f64a241fc5.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/643db5e1-5471-446b-9d10-bdbcf7292d36.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/ff846e73-b1f5-46e4-baa0-d8304b4a9a26.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/af178302-a6ce-4c08-93a5-e15079542433.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/9ae59607-70b1-4195-aa36-53a8743fc7a3.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/0a9225e2-97f4-4c95-8657-49c98e7e5789.JPG"/></div>
+<div class="nail-photo"><img alt="Nageldesign" loading="lazy" src="https://ik.imagekit.io/xshkpkf2i/Solvata%20DE/Nails/00ea5f36-7115-4a66-98ac-332133137158.JPG"/></div>
+</div>
+<div class="reveal reveal-d2">
+<span class="section-label">Nageldesign</span>
+<h2 class="section-title"><em>Nägel</em> <span>&amp; Pflege</span></h2>
+<p class="section-sub">Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.</p>
+<div class="price-list">
+<div class="price-cat">
+<div class="price-cat-name">Maniküre</div>
+<div class="price-row"><span class="price-name">Klassische Maniküre</span><span class="price-val"><span>ab</span> 25 €</span></div>
+<div class="price-row"><span class="price-name">Gel-Lack Maniküre</span><span class="price-val"><span>ab</span> 35 €</span></div>
+<div class="price-row"><span class="price-name">Gelverlängerung</span><span class="price-val"><span>ab</span> 55 €</span></div>
+<div class="price-row"><span class="price-name">Gel-Abnahme</span><span class="price-val"><span>ab</span> 15 €</span></div>
+</div>
+<div class="price-cat">
+<div class="price-cat-name">Pediküre</div>
+<div class="price-row"><span class="price-name">Klassische Pediküre</span><span class="price-val"><span>ab</span> 35 €</span></div>
+<div class="price-row"><span class="price-name">Pediküre + Gel-Lack</span><span class="price-val"><span>ab</span> 50 €</span></div>
+</div>
+<div class="price-cat">
+<div class="price-cat-name">Nail Art</div>
+<div class="price-row"><span class="price-name">Einfaches Design (je Nagel)</span><span class="price-val"><span>ab</span> 2 €</span></div>
+<div class="price-row"><span class="price-name">Komplexes Design</span><span class="price-val">auf Anfrage</span></div>
+</div>
+</div>
+<div style="margin-top:2rem;"><a class="btn-primary" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Nageltermin buchen</a></div>
+</div>
+</div>
 </section>
-
 <section id="why">
-  <div class="reveal">
-    <span class="section-label" data-i18n="why_label">Warum wir</span>
-    <h2 class="section-title"><span data-i18n="why_title_1">Kein</span> <em data-i18n="why_title_2">Kompromiss.</em></h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-card reveal"><span class="why-icon">✦</span><div class="why-title" data-i18n="why1_title">Individuelle Analyse</div><p class="why-desc" data-i18n="why1_desc">Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.</p></div>
-    <div class="why-card reveal reveal-d1"><span class="why-icon">◈</span><div class="why-title" data-i18n="why2_title">Moderne Geräte</div><p class="why-desc" data-i18n="why2_desc">Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.</p></div>
-    <div class="why-card reveal reveal-d2"><span class="why-icon">⬡</span><div class="why-title" data-i18n="why3_title">Komplexe Lösungen</div><p class="why-desc" data-i18n="why3_desc">Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.</p></div>
-    <div class="why-card reveal"><span class="why-icon">✿</span><div class="why-title" data-i18n="why4_title">Erfahrung &amp; Qualifikation</div><p class="why-desc" data-i18n="why4_desc">Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.</p></div>
-    <div class="why-card reveal reveal-d1"><span class="why-icon">◎</span><div class="why-title" data-i18n="why5_title">Ehrlicher Ansatz</div><p class="why-desc" data-i18n="why5_desc">Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.</p></div>
-    <div class="why-card reveal reveal-d2"><span class="why-icon">❋</span><div class="why-title" data-i18n="why6_title">Comfort &amp; Service</div><p class="why-desc" data-i18n="why6_desc">Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.</p></div>
-  </div>
-</section>
-
-<section id="beforeafter">
-  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
-    <span class="section-label" style="justify-content:center" data-i18n="ba_label">Ergebnisse</span>
-    <h2 class="section-title"><span data-i18n="ba_title">Vorher &amp; </span><em data-i18n="ba_title_em">Nachher</em></h2>
-    <p class="section-sub" style="margin:0 auto" data-i18n="ba_sub">Echte Ergebnisse unserer Kundinnen.</p>
-  </div>
-  <div class="ba-wrap">
-    <div class="ba-track">
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Gesicht <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">RF Lifting <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Körper <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Primelaser <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Hydrafacial — Skinfusor <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Dermapen Microneedling <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Gesicht <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <!-- loop duplicate -->
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Gesicht <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">RF Lifting <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Körper <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Primelaser <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Hydrafacial — Skinfusor <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Dermapen Microneedling <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-      <div class="ba-pair"><div class="ba-proc-label">Endosphères — Gesicht <span style="opacity:.4">(Platzhalter)</span></div><div class="ba-pair-images"><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt=""><span class="ba-lbl" data-i18n="ba_before">Vorher</span></div><div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt=""><span class="ba-lbl" data-i18n="ba_after">Nachher</span></div></div></div>
-    </div>
-  </div>
+<div class="reveal">
+<span class="section-label">Warum wir</span>
+<h2 class="section-title"><span>Kein</span> <em>Kompromiss.</em></h2>
+</div>
+<div class="why-grid">
+<div class="why-card reveal"><span class="why-icon">✦</span><div class="why-title">Individuelle Analyse</div><p class="why-desc">Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.</p></div>
+<div class="why-card reveal reveal-d1"><span class="why-icon">◈</span><div class="why-title">Moderne Geräte</div><p class="why-desc">Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.</p></div>
+<div class="why-card reveal reveal-d2"><span class="why-icon">⬡</span><div class="why-title">Komplexe Lösungen</div><p class="why-desc">Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.</p></div>
+<div class="why-card reveal"><span class="why-icon">✿</span><div class="why-title">Erfahrung &amp; Qualifikation</div><p class="why-desc">Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.</p></div>
+<div class="why-card reveal reveal-d1"><span class="why-icon">◎</span><div class="why-title">Ehrlicher Ansatz</div><p class="why-desc">Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.</p></div>
+<div class="why-card reveal reveal-d2"><span class="why-icon">❋</span><div class="why-title">Comfort &amp; Service</div><p class="why-desc">Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.</p></div>
+</div>
 </section>
 
 <section id="video-section">
-  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
-    <span class="section-label" style="justify-content:center" data-i18n="video_label">Behandlungen live</span>
-    <h2 class="section-title"><span data-i18n="video_title">Sehen Sie </span><em data-i18n="video_title_em">unsere Behandlungen</em></h2>
-  </div>
-  <div class="video-grid">
-    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1187762526?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Zionic EMS</div></div>
-    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1193974387?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Endospheres</div></div>
-    <div class="video-frame"><iframe src="https://player.vimeo.com/video/1187762498?autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe><div class="video-lbl">Diodenlaser</div></div>
-  </div>
-</section>
+<div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+<span class="section-label" style="justify-content:center">Behandlungen live</span>
+<h2 class="section-title"><span>Sehen Sie </span><em>unsere Behandlungen</em></h2>
+</div>
+<div class="video-grid">
 
+<div class="video-frame"><iframe allow="autoplay; fullscreen" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/1193974387?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe><div class="video-lbl">Endospheres</div></div>
+<div class="video-frame"><iframe allow="autoplay; fullscreen" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/1187762498?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe><div class="video-lbl">Diodenlaser</div></div>
+</div>
+</section>
 <section id="prices">
-  <div class="prices-top reveal">
-    <div>
-      <span class="section-label" data-i18n="prices_label">Preisliste</span>
-      <h2 class="section-title"><em data-i18n="prices_title_1">Unsere</em> <span data-i18n="prices_title_2">Preise</span></h2>
-    </div>
-    <div class="price-tabs">
-      <button class="price-tab active" onclick="showTab('gesicht',this)" data-i18n="tab_face">Gesicht</button>
-      <button class="price-tab" onclick="showTab('koerper',this)" data-i18n="tab_body">Körper</button>
-      <button class="price-tab" onclick="showTab('laser',this)" data-i18n="tab_laser">Laser</button>
-    </div>
-  </div>
-  <div class="price-panel active" id="tab-gesicht">
-    <table class="price-table">
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_barbor">Barbo-Gesichtsbehandlung</td></tr>
-      <tr><td data-i18n="p_welcome">Willkommentreatment</td><td>140 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_exclusive">Exklusive Gesichtsbehandlungen</td></tr>
-      <tr><td data-i18n="p_classic">Klassische Gesichtsbehandlung</td><td>80 €</td></tr>
-      <tr><td data-i18n="p_deep_clean">Intensive Gesichtsreinigung (Tiefenreinigung)</td><td>90 €</td></tr>
-      <tr><td data-i18n="p_vitc">Vitamin C Treatment</td><td>70 €</td></tr>
-      <tr><td data-i18n="p_antiage">Anti Aging Treatment</td><td>130 €</td></tr>
-      <tr><td data-i18n="p_revital">Revitalisierend</td><td>150 €</td></tr>
-      <tr><td data-i18n="p_intensiv">Intensiv Treatment</td><td>75 €</td></tr>
-      <tr><td data-i18n="p_akne">Aknebehandlung</td><td>100 €</td></tr>
-      <tr><td data-i18n="p_bbglow">BB Glow</td><td>120 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head">Hydrafacial — Skinfusor</td></tr>
-      <tr><td>Gesicht</td><td>129 €</td></tr>
-      <tr><td data-i18n="p_hy_face_neck">Gesicht &amp; Hals</td><td>139 €</td></tr>
-      <tr><td data-i18n="p_hy_face_neck_dec">Gesicht, Hals &amp; Dekolleté</td><td>159 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_mikro">Mikroneedling</td></tr>
-      <tr><td data-i18n="p_mk_face">Gesicht — 60 min</td><td>99 €</td></tr>
-      <tr><td data-i18n="p_mk_face_neck">Gesicht &amp; Hals — 70 min</td><td>130 €</td></tr>
-      <tr><td data-i18n="p_mk_face_neck_dec">Gesicht, Hals &amp; Dekolleté — 90 min</td><td>140 €</td></tr>
-      <tr><td data-i18n="p_mk_bbglow">BB Glow Needling — 90 min</td><td>120 €</td></tr>
-      <tr><td data-i18n="p_combo_hydra_mikro"><strong>Combo: Hydrafacial + Mikroneedling</strong></td><td><strong>190 €</strong></td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_endo_face">Endosphärotherapie — Gesicht</td></tr>
-      <tr><td data-i18n="p_endo_lift">Lifting, Massage &amp; Durchblutung (mit Maske)</td><td>65 €</td></tr>
-      <tr><td data-i18n="p_endo_30">Abo 6× 30 Minuten</td><td>270 €</td></tr>
-      <tr><td data-i18n="p_endo_45">Abo 6× 45 Minuten</td><td>360 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_weitere">Weitere</td></tr>
-      <tr><td data-i18n="p_led">LED-Therapie (auch als Zusatz)</td><td>20 €</td></tr>
-      <tr><td>Hautanalyse</td><td>auf Anfrage</td></tr>
-    </table>
-  </div>
-  <div class="price-panel" id="tab-koerper">
-    <table class="price-table">
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_endo_body_single">Endosphärotherapie — Körper (Einzelsitzungen)</td></tr>
-      <tr><td data-i18n="p_b45">45 Minuten</td><td>75 €</td></tr>
-      <tr><td data-i18n="p_b60">60 Minuten</td><td>85 €</td></tr>
-      <tr><td data-i18n="p_b90">90 Minuten</td><td>95 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_endo_body_pack">Endosphärotherapie — Körper (Pakete 6×)</td></tr>
-      <tr><td data-i18n="p_b45x6">6× 45 Minuten</td><td>420 €</td></tr>
-      <tr><td data-i18n="p_b60x6">6× 60 Minuten</td><td>480 €</td></tr>
-      <tr><td data-i18n="p_b90x6">6× 90 Minuten</td><td>540 €</td></tr>
-    </table>
-  </div>
-  <div class="price-panel" id="tab-laser">
-    <table class="price-table">
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_primelaser">Primelaser — Dauerhafte Haarentfernung</td></tr>
-      <tr><td data-i18n="p_l_lip">Oberlippe</td><td>35 €</td></tr>
-      <tr><td data-i18n="p_l_chin">Kinn</td><td>40 €</td></tr>
-      <tr><td data-i18n="p_l_cheeks">Wangen</td><td>55 €</td></tr>
-      <tr><td data-i18n="p_l_face_full">Gesicht komplett</td><td>110 €</td></tr>
-      <tr><td data-i18n="p_l_armpits">Achseln</td><td>60 €</td></tr>
-      <tr><td data-i18n="p_l_arms_full">Arme komplett</td><td>99 €</td></tr>
-      <tr><td data-i18n="p_l_belly">Bauch</td><td>90 €</td></tr>
-      <tr><td data-i18n="p_l_back">Rücken</td><td>120 €</td></tr>
-      <tr><td data-i18n="p_l_lowerleg">Unterschenkel</td><td>160 €</td></tr>
-      <tr><td data-i18n="p_l_legs_full">Beine komplett</td><td>260 €</td></tr>
-      <tr><td data-i18n="p_l_bikini">Bikini</td><td>60 €</td></tr>
-      <tr><td data-i18n="p_l_bikini_intim">Bikini + Intim</td><td>110 €</td></tr>
-      <tr><td data-i18n="p_l_bikini_intim_gluteus">Bikini + Intim + Gesäß</td><td>130 €</td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_combo">Combo</td></tr>
-      <tr><td data-i18n="p_combo_fullbody"><strong>Ganzkörper</strong></td><td><strong>430 €</strong></td></tr>
-      <tr><td colspan="2" class="price-sec-head" data-i18n="p_h_basic">Basic-Pakete</td></tr>
-      <tr><td data-i18n="p_basic1">Achsel + Bikini + Intim + Unterschenkel</td><td>190 €</td></tr>
-      <tr><td data-i18n="p_basic2">Achsel + Bikini + Intim + Beine komplett</td><td>230 €</td></tr>
-    </table>
-  </div>
-  <div style="margin-top:2.5rem;" class="reveal">
-    <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="prices_btn">Termin &amp; Preise anfragen</a>
-    <span style="margin-left:1.5rem;font-size:.76rem;color:rgba(244,240,234,.32);" data-i18n="prices_note">Aktuelle Preise auf Anfrage</span>
-  </div>
+<div class="prices-top reveal">
+<div>
+<span class="section-label">Preisliste</span>
+<h2 class="section-title"><em>Unsere</em> <span>Preise</span></h2>
+</div>
+<div class="price-tabs">
+<button class="price-tab active" onclick="showTab('gesicht',this)">Gesicht</button>
+<button class="price-tab" onclick="showTab('koerper',this)">Körper</button>
+<button class="price-tab" onclick="showTab('laser',this)">Laser</button>
+</div>
+</div>
+<div class="price-panel active" id="tab-gesicht">
+<table class="price-table">
+<tr><td class="price-sec-head" colspan="2">BABOR-Gesichtsbehandlung</td></tr>
+<tr><td>Willkommens-Treatment</td><td>140 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Exklusive Gesichtsbehandlungen</td></tr>
+<tr><td>Klassische Gesichtsbehandlung</td><td>80 €</td></tr>
+<tr><td>Intensive Gesichtsreinigung (Tiefenreinigung)</td><td>90 €</td></tr>
+<tr><td>Vitamin C Treatment</td><td>70 €</td></tr>
+<tr><td>Anti Aging Treatment</td><td>130 €</td></tr>
+<tr><td>Revitalisierend</td><td>150 €</td></tr>
+<tr><td>Intensiv Treatment</td><td>75 €</td></tr>
+<tr><td>Aknebehandlung</td><td>100 €</td></tr>
+<tr><td>BB Glow</td><td>120 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Hydrafacial — Skinfusor</td></tr>
+<tr><td>Gesicht</td><td>129 €</td></tr>
+<tr><td>Gesicht &amp; Hals</td><td>139 €</td></tr>
+<tr><td>Gesicht, Hals &amp; Dekolleté</td><td>159 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Mikroneedling</td></tr>
+<tr><td>Gesicht — 60 min</td><td>99 €</td></tr>
+<tr><td>Gesicht &amp; Hals — 70 min</td><td>130 €</td></tr>
+<tr><td>Gesicht, Hals &amp; Dekolleté — 90 min</td><td>140 €</td></tr>
+<tr><td>BB Glow Needling — 90 min</td><td>120 €</td></tr>
+<tr><td><strong>Combo: Hydrafacial + Mikroneedling</strong></td><td><strong>190 €</strong></td></tr>
+<tr><td class="price-sec-head" colspan="2">Endosphärotherapie — Gesicht</td></tr>
+<tr><td>Lifting, Massage &amp; Durchblutung (mit Maske)</td><td>65 €</td></tr>
+<tr><td>Abo 6× 30 Minuten</td><td>270 €</td></tr>
+<tr><td>Abo 6× 45 Minuten</td><td>360 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Weitere</td></tr>
+<tr><td>LED-Therapie (auch als Zusatz)</td><td>20 €</td></tr>
+<tr><td>Hautanalyse</td><td>auf Anfrage</td></tr>
+</table>
+</div>
+<div class="price-panel" id="tab-koerper">
+<table class="price-table">
+<tr><td class="price-sec-head" colspan="2">Endosphärotherapie — Körper (Einzelsitzungen)</td></tr>
+<tr><td>45 Minuten</td><td>75 €</td></tr>
+<tr><td>60 Minuten</td><td>85 €</td></tr>
+<tr><td>90 Minuten</td><td>95 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Endosphärotherapie — Körper (Pakete 6×)</td></tr>
+<tr><td>6× 45 Minuten</td><td>420 €</td></tr>
+<tr><td>6× 60 Minuten</td><td>480 €</td></tr>
+<tr><td>6× 90 Minuten</td><td>540 €</td></tr>
+</table>
+</div>
+<div class="price-panel" id="tab-laser">
+<table class="price-table">
+<tr><td class="price-sec-head" colspan="2">Primelaser — Dauerhafte Haarentfernung</td></tr>
+<tr><td>Oberlippe</td><td>35 €</td></tr>
+<tr><td>Kinn</td><td>40 €</td></tr>
+<tr><td>Wangen</td><td>55 €</td></tr>
+<tr><td>Gesicht komplett</td><td>110 €</td></tr>
+<tr><td>Achseln</td><td>60 €</td></tr>
+<tr><td>Arme komplett</td><td>99 €</td></tr>
+<tr><td>Bauch</td><td>90 €</td></tr>
+<tr><td>Rücken</td><td>120 €</td></tr>
+<tr><td>Unterschenkel</td><td>160 €</td></tr>
+<tr><td>Beine komplett</td><td>260 €</td></tr>
+<tr><td>Bikini</td><td>60 €</td></tr>
+<tr><td>Bikini + Intim</td><td>110 €</td></tr>
+<tr><td>Bikini + Intim + Gesäß</td><td>130 €</td></tr>
+<tr><td class="price-sec-head" colspan="2">Combo</td></tr>
+<tr><td><strong>Ganzkörper</strong></td><td><strong>430 €</strong></td></tr>
+<tr><td class="price-sec-head" colspan="2">Basic-Pakete</td></tr>
+<tr><td>Achsel + Bikini + Intim + Unterschenkel</td><td>190 €</td></tr>
+<tr><td>Achsel + Bikini + Intim + Beine komplett</td><td>230 €</td></tr>
+</table>
+</div>
+<div class="reveal" style="margin-top:2.5rem;">
+<a class="btn-primary" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Termin &amp; Preise anfragen</a>
+<span style="margin-left:1.5rem;font-size:.76rem;color:rgba(244,240,234,.32);">Aktuelle Preise auf Anfrage</span>
+</div>
 </section>
-
 <section id="reviews">
-  <div class="reveal">
-    <span class="section-label" data-i18n="reviews_label">Bewertungen</span>
-    <h2 class="section-title"><em data-i18n="reviews_title_1">Was unsere</em> <span data-i18n="reviews_title_2">Kundinnen sagen</span></h2>
-  </div>
-  <div class="reviews-track">
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_1">„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu."</p><div class="reviewer-name">Julia M.</div><div class="reviewer-proc">Endospheres Körper</div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_2">„Das RF-Lifting bei EndyMed hat meine Augenpartie sichtbar angehoben. Keine Nadeln, keine Ausfallzeit."</p><div class="reviewer-name">Sophie K.</div><div class="reviewer-proc">EndyMed RF Lifting</div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_3">„Die GeneO-Behandlung ist magisch. Direkt nach der Session leuchtete mein Teint wie noch nie."</p><div class="reviewer-name">Lena B.</div><div class="reviewer-proc">GeneO+ Gesicht</div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_4">„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend."</p><div class="reviewer-name">Anna W.</div><div class="reviewer-proc">Diodenlaser</div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="review_5">„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich."</p><div class="reviewer-name">Maria F.</div><div class="reviewer-proc">Nail Art</div></div>
-  </div>
-</section>
+<div class="reveal">
+<span class="section-label">Bewertungen</span>
+<h2 class="section-title"><em>Was unsere</em> <span>Kundinnen sagen</span></h2>
+</div>
+<div class="reviews-track">
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu.“</p><div class="reviewer-name">Julia M.</div><div class="reviewer-proc">Endospheres Körper</div></div>
 
+
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend.“</p><div class="reviewer-name">Anna W.</div><div class="reviewer-proc">Diodenlaser</div></div>
+<div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich.“</p><div class="reviewer-name">Maria F.</div><div class="reviewer-proc">Nail Art</div></div>
+</div>
+</section>
 <section id="booking">
-  <div class="booking-inner">
-    <div class="booking-visual reveal" style="aspect-ratio:9/16;overflow:hidden;position:relative;background:var(--blk3);">
-      <iframe
-        src="https://player.vimeo.com/video/1193978591?autoplay=1&muted=1&loop=1&background=1&autopause=0"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        style="position:absolute;top:50%;left:50%;width:100%;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;"
-        title="Solvata Beauty Club Berlin"></iframe>
-      <div class="booking-accent"></div>
-    </div>
-    <div class="reveal reveal-d2">
-      <span class="section-label" data-i18n="booking_label">Termin buchen</span>
-      <h2 class="booking-cta"><span data-i18n="booking_title_1">Bereit für</span><em data-i18n="booking_title_2">Ihre Verwandlung?</em></h2>
-      <p class="booking-sub" data-i18n="booking_sub">Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.</p>
-      <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" class="btn-primary" data-i18n="booking_btn">Jetzt online buchen</a>
-      <a href="https://wa.me/4917680880879" target="_blank" class="btn-ghost" style="margin-top:.8rem;display:inline-flex;align-items:center;gap:.5rem;">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="opacity:.8"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.5 5.785L0 24l6.388-1.673A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.727.977.995-3.645-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+<div class="booking-inner">
+<div class="booking-visual reveal" style="aspect-ratio:9/16;overflow:hidden;position:relative;background:var(--blk3);">
+<iframe allow="autoplay; fullscreen; picture-in-picture" frameborder="0" src="https://player.vimeo.com/video/1193978591?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;autopause=0" style="position:absolute;top:50%;left:50%;width:100%;height:177.78%;transform:translate(-50%,-50%);pointer-events:none;" title="Solvata Beauty Club Berlin"></iframe>
+<div class="booking-accent"></div>
+</div>
+<div class="reveal reveal-d2">
+<span class="section-label">Termin buchen</span>
+<h2 class="booking-cta"><span>Bereit für</span><em>Ihre Verwandlung?</em></h2>
+<p class="booking-sub">Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.</p>
+<a class="btn-primary" href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Jetzt online buchen</a>
+<a class="btn-ghost" href="https://wa.me/4917680880879" style="margin-top:.8rem;display:inline-flex;align-items:center;gap:.5rem;" target="_blank">
+<svg fill="currentColor" height="15" style="opacity:.8" viewbox="0 0 24 24" width="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.5 5.785L0 24l6.388-1.673A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.727.977.995-3.645-.235-.374A9.818 9.818 0 1 1 12 21.818z"></path></svg>
         WhatsApp
       </a>
-      <div class="booking-info">
-        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><span class="bi-label" data-i18n="bi_address">Adresse</span><span class="bi-val">Berliner Straße 54, 10713 Berlin</span></div></div>
-        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><span class="bi-label" data-i18n="bi_phone">Telefon / WhatsApp</span><a href="https://wa.me/4917680880879" target="_blank" style="color:var(--w);text-decoration:none;font-size:.86rem;display:block;">+49 176 80880879</a></div></div>
-        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><span class="bi-label" data-i18n="bi_hours">Öffnungszeiten</span><span class="bi-val" data-i18n="bi_hours_val">Mo–Sa: 10:00–20:00</span></div></div>
-        <div class="bi-row"><svg class="bi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><div><span class="bi-label">Instagram</span><a href="https://www.instagram.com/solvatabeautyclub" target="_blank" style="color:var(--g);text-decoration:none;font-size:.86rem;display:block;">@solvatabeautyclub</a></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-logo"><img src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png" alt="Solvata"><span class="footer-logo-name">Solvata Beauty Club</span></div>
-      <p class="footer-desc" data-i18n="footer_desc">Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.</p>
-    </div>
-    <div>
-      <div class="footer-col-title" data-i18n="footer_col_treatments">Treatments</div>
-      <div class="footer-links">
-        <a href="#equipment" data-i18n="footer_face">Gesichtspflege</a>
-        <a href="#equipment" data-i18n="footer_body">Körperformung</a>
-        <a href="#equipment" data-i18n="footer_laser">Laser</a>
-        <a href="#nails"     data-i18n="footer_nails">Nageldesign</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title" data-i18n="footer_col_contact">Kontakt</div>
-      <div class="footer-links">
-        <a href="#">Berliner Straße 54, 10713 Berlin</a>
-        <a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank" data-i18n="footer_book">Online buchen</a>
-        <a href="https://www.instagram.com/solvatabeautyclub" target="_blank">@solvatabeautyclub</a>
-        <a href="privacy-policy.html" data-i18n="footer_privacy">Datenschutz</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy" data-i18n="footer_rights">© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span>
-    <div class="lang-switcher" style="border-color:rgba(184,154,106,.18);">
-      <button class="lang-btn active" onclick="setLang('de')">DE</button>
-      <button class="lang-btn"        onclick="setLang('en')">EN</button>
-    </div>
-  </div>
-</footer>
-
-<div class="cookie-banner" id="cookie-banner">
-  <div class="cookie-text" id="cookie-text"></div>
-  <div class="cookie-actions">
-    <button class="ck-decline" id="ck-decline" onclick="cookieDecline()">—</button>
-    <button class="ck-accept"  id="ck-accept"  onclick="cookieAccept()">—</button>
-  </div>
+<div class="booking-info">
+<div class="bi-row"><svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><div><span class="bi-label">Adresse</span><span class="bi-val">Berliner Straße 54, 10713 Berlin</span></div></div>
+<div class="bi-row"><svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><span class="bi-label">Telefon / WhatsApp</span><a href="https://wa.me/4917680880879" style="color:var(--w);text-decoration:none;font-size:.86rem;display:block;" target="_blank">+49 176 80880879</a></div></div>
+<div class="bi-row"><svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg><div><span class="bi-label">Öffnungszeiten</span><span class="bi-val">Mo–Sa: 10:00–20:00</span></div></div>
+<div class="bi-row"><svg class="bi-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg><div><span class="bi-label">Instagram</span><a href="https://www.instagram.com/solvatabeautyclub" style="color:var(--g);text-decoration:none;font-size:.86rem;display:block;" target="_blank">@solvatabeautyclub</a></div></div>
 </div>
-
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="Solvata" src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png"/><span class="footer-logo-name">Solvata Beauty Club</span></div>
+<p class="footer-desc">Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.</p>
+</div>
+<div>
+<div class="footer-col-title">Treatments</div>
+<div class="footer-links">
+<a href="#equipment">Gesichtspflege</a>
+<a href="#equipment">Körperformung</a>
+<a href="#equipment">Laser</a>
+<a href="#nails">Nageldesign</a>
+</div>
+</div>
+<div>
+<div class="footer-col-title">Kontakt</div>
+<div class="footer-links">
+<a href="#">Berliner Straße 54, 10713 Berlin</a>
+<a href="https://buchung.treatwell.de/ort/solvata-beauty/" target="_blank">Online buchen</a>
+<a href="https://www.instagram.com/solvatabeautyclub" target="_blank">@solvatabeautyclub</a>
+<a href="privacy-policy.html">Datenschutz</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span class="footer-copy">© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span>
+<div class="lang-switcher" style="border-color:rgba(184,154,106,.18);"><a class="lang-btn active" href="index.html" hreflang="de" lang="de">DE</a><a class="lang-btn" href="en/index.html" hreflang="en" lang="en">EN</a></div>
+</div>
+</footer>
+<div class="cookie-banner" id="cookie-banner">
+<div class="cookie-text" id="cookie-text"></div>
+<div class="cookie-actions">
+<button class="ck-decline" id="ck-decline" onclick="cookieDecline()">—</button>
+<button class="ck-accept" id="ck-accept" onclick="cookieAccept()">—</button>
+</div>
+</div>
 <script>
+var currentLang='de';var privHref='privacy-policy.html';
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
 
 
-var T=JSON.parse('{"de": {"nav_name": "Solvata Beauty Club", "nav_about": "Über uns", "nav_equip": "Treatments", "nav_nails": "Nägel", "nav_prices": "Preise", "nav_contact": "Kontakt", "nav_all": "Alle Behandlungen", "nav_book": "Termin buchen", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Schönheit", "hero_title_2": "neu definiert.", "hero_sub": "Apparative Kosmetik, Gesichtspflege, Körperformung und Nageldesign auf höchstem Niveau. Ihre Verwandlung beginnt hier.", "hero_photo_ph": "Hero-Foto — wird eingefügt", "btn_book": "Termin buchen", "btn_services": "Unsere Treatments", "scroll_label": "Scroll", "statement_quote": "„Echte Schönheit erfordert Präzision, Technologie und eine persönliche Note.“", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Jahre Erfahrung", "stat_individual": "Premium-Ausstattung", "mission_label": "Über uns", "mission_title_1": "Unser", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club steht für kompromisslose Qualität. Wir kombinieren modernste medizinische Geräte mit einem tiefen Verständnis für individuelle Schönheitsbedürfnisse.", "mission_quote": "Jede Behandlung ist eine Komposition aus Wissenschaft, Ästhetik und persönlicher Fürsorge.", "badge_1": "Zertifiziert", "badge_2": "Premium-Geräte", "badge_3": "Individuelle Beratung", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon-Foto", "equip_label": "Treatments", "equip_title_1": "Unsere", "equip_title_2": "Technologien", "equip_sub": "Ausschließlich zertifizierte Medizingeräte der Spitzenklasse — für sichtbare, nachhaltige Ergebnisse.", "endymed_mn_desc": "Erneuert die Haut von innen — aktiviert die Bildung von neuem Kollagen und Elastin. Die Haut wird dichter, glatter und jünger, ohne Operation. Der Effekt wächst über 2–3 Monate.", "endymed_e1": "Lifting &amp; Straffung", "endymed_e2": "Narben", "endymed_e3": "Post-Akne", "endymed_e4": "Pigmentierung", "endymed_mn_extra": "Rehabilitation: 3–7 Tage · 2–3 Behandlungen · Effekt bis zu 2 Jahre", "endymed_fsr_desc": "Sanftes Hautresurfacing und RF-Lifting gleichzeitig — die Haut wird strahlender, ebenmäßiger und dichter.", "fsr_e1": "Pigmentierung", "fsr_e2": "Poren", "fsr_e3": "Akne-Narben", "fsr_e6": "Glow", "fsr_extra": "Sofortiges Ergebnis · Kurze Rehabilitationszeit · Keine Nebenwirkungen", "endyeye_desc": "Nicht-operative Alternative zur Blepharoplastik. Drei Endymed-Technologien in einem Protokoll straffen die Lidhaut, reduzieren Schwellungen und glätten Krähenfüße.", "endyeye_e1": "Lid-Lifting", "endyeye_e2": "Augenringe", "endyeye_e3": "Krähenfüße", "endyeye_e4": "Hautdichte", "endyeye_extra": "RF-Lifting · RF-Microneedling · Fraktionale Erneuerung", "endo_desc": "Kompressionsmikrovibrations-Technologie, entwickelt mit einem Phlebologen. Verbessert Durchblutung, reduziert Ödeme und Cellulite, stärkt die Hautstruktur.", "endo_e1": "Ödem-Reduktion", "endo_e2": "Lymphdrainage", "endo_e4": "Cellulite", "endo_f4": "Gesichtsoval", "endo_course": "Ohne Ausfallzeit · Ergebnis nach 1. Behandlung · Kurs: 6–12 Sitzungen", "geneo_desc": "3-in-1 Behandlung: reinigt, versorgt die Haut mit Sauerstoff und stimuliert die Kollagenbildung. Sichtbares Ergebnis bereits nach der ersten Anwendung.", "geneo_e1": "OxyGeneo Sauerstoff", "geneo_e2": "RF-Lifting", "geneo_e4": "Glow-Effekt", "geneo_e5": "Pigmentierung", "geneo_extra": "Kapseln: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Klassisches RF-Lifting — sanft, ohne Hautschäden. Stimuliert Kollagen, sichtbare Straffung ab der ersten Behandlung.", "tripollar_e1": "Hautstraffung", "tripollar_e2": "Falten", "tripollar_e3": "Gesichtsoval", "tripollar_e5": "Hauttonus", "tripollar_extra": "Effekt nach 1. Behandlung · Langanhaltend · Für regelmäßige Pflege", "laser_tag": "Dauerhafte Haarentfernung", "laser_desc": "Moderner Diodenlaser für dauerhafte Haarentfernung. Mit Kühlsystem — angenehm und sicher für alle Hauttypen.", "laser_e1": "Dauerhafte Epilation", "laser_e3": "Alle Hauttypen", "laser_e4": "Minimaler Schmerz", "laser_extra": "Kurs: 6–12 Sitzungen · Für Gesicht und Körper", "nails_label": "Nageldesign", "nails_title_1": "Nägel", "nails_title_2": "&amp; Pflege", "nails_sub": "Von klassischer Maniküre bis zu aufwendigem Nail Art — unsere Expertinnen setzen Ihre Vorstellung in die Realität um.", "nails_cat_mani": "Maniküre", "nails_cat_pedi": "Pediküre", "nails_cat_art": "Nail Art", "nail_classic": "Klassische Maniküre", "nail_gel": "Gel-Lack Maniküre", "nail_gel_ext": "Gelverlängerung", "nail_removal": "Gel-Abnahme", "nail_pedi": "Klassische Pediküre", "nail_pedi_gel": "Pediküre + Gel-Lack", "nail_art_simple": "Einfaches Design (je Nagel)", "nail_art_complex": "Komplexes Design", "on_request": "auf Anfrage", "nails_btn": "Nageltermin buchen", "why_label": "Warum wir", "why_title_1": "Kein", "why_title_2": "Kompromiss.", "why1_title": "Individuelle Analyse", "why1_desc": "Jede Kundin erhält eine individuelle Hautanalyse und einen maßgeschneiderten Behandlungsplan.", "why2_title": "Moderne Geräte", "why2_desc": "Technologien der neuesten Generation mit klinisch nachgewiesener Wirksamkeit.", "why3_title": "Komplexe Lösungen", "why3_desc": "Gesicht, Körper und Nägel unter einem Dach — kombiniert für das beste Ergebnis.", "why4_title": "Erfahrung &amp; Qualifikation", "why4_desc": "Spezialistinnen mit medizinischer Ausbildung und über 5 Jahren Erfahrung.", "why5_title": "Ehrlicher Ansatz", "why5_desc": "Keine unnötigen Behandlungen. Wir empfehlen nur, was wirklich hilft.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exklusive, diskrete Atmosphäre im Herzen von Berlin Charlottenburg.", "ba_label": "Ergebnisse", "ba_title": "Vorher &amp; ", "ba_title_em": "Nachher", "ba_sub": "Echte Ergebnisse unserer Kundinnen.", "ba_before": "Vorher", "ba_after": "Nachher", "video_label": "Behandlungen live", "video_title": "Sehen Sie ", "video_title_em": "unsere Behandlungen", "prices_label": "Preisliste", "prices_title_1": "Unsere", "prices_title_2": "Preise", "tab_face": "Gesicht", "tab_body": "Körper", "tab_laser": "Laser", "geo_face": "Gesicht", "geo_face_dec": "Gesicht &amp; Dekolleté", "mn_face": "RF Microneedling — Gesicht", "mn_face_neck": "RF Microneedling — Gesicht &amp; Hals", "fsr_face": "Fraktionales Resurfacing — Gesicht", "tp_eye": "Augenzone Lifting", "tp_face": "Gesicht Lifting", "es_face": "Gesicht", "es_face_dec": "Gesicht &amp; Dekolleté", "es_body_intro1": "Einführungssitzung (1 Zone)", "es_body_zone": "Problemzone", "es_body_full": "Ganzkörper", "es_body_zone6": "Abo x6 (Problemzone)", "z_belly": "Bauch &amp; Seiten", "z_arms": "Arme", "z_legs_full": "Volle Beine", "z_c1": "Beine + Gesäß", "z_c3": "Beine + Gesäß + Bauch", "laser_removal_head": "Diodenlaser Haarentfernung", "las_lip": "Oberlippe", "las_bikini_deep": "Tiefer Bikini", "las_armpits": "Achseln", "las_legs_half": "Beine bis Knie", "las_legs_full": "Volle Beine", "las_c5": "Volle Beine + tiefer Bikini + Achseln", "las_back": "Rücken", "las_face_": "Gesicht", "prices_btn": "Termin &amp; Preise anfragen", "prices_note": "Aktuelle Preise auf Anfrage", "reviews_label": "Bewertungen", "reviews_title_1": "Was unsere", "reviews_title_2": "Kundinnen sagen", "review_1": "„Unglaubliche Ergebnisse nach nur drei Endospheres-Sitzungen. Meine Haut ist straffer und ich fühle mich wie neu.“", "review_2": "„Das RF-Lifting bei EndyMed hat meine Augenpartie sichtbar angehoben. Keine Nadeln, keine Ausfallzeit.“", "review_3": "„Die GeneO-Behandlung ist magisch. Direkt nach der Session leuchtete mein Teint wie noch nie.“", "review_4": "„Laser-Haarentfernung war völlig schmerzfrei und die Ergebnisse nach nur zwei Sitzungen sind beeindruckend.“", "review_5": "„Das Nageldesign hier ist auf einem anderen Level. Detailverliebt, langlebig und so persönlich.“", "booking_label": "Termin buchen", "booking_title_1": "Bereit für", "booking_title_2": "Ihre Verwandlung?", "booking_sub": "Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Sie.", "booking_btn": "Jetzt online buchen", "bi_address": "Adresse", "bi_phone": "Telefon / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Öffnungszeiten", "bi_hours_val": "Mo–Sa: 10:00–20:00", "footer_desc": "Premium-Ästhetik in Berlin. Modernste Geräte, individuelle Behandlungen, nachhaltige Ergebnisse.", "footer_col_treatments": "Treatments", "footer_col_contact": "Kontakt", "footer_face": "Gesichtspflege", "footer_body": "Körperformung", "footer_laser": "Laser", "footer_nails": "Nageldesign", "footer_book": "Online buchen", "footer_privacy": "Datenschutz", "footer_rights": "© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.", "p_h_barbor": "Barbo-Gesichtsbehandlung", "p_welcome": "Willkommentreatment", "p_h_exclusive": "Exklusive Gesichtsbehandlungen", "p_classic": "Klassische Gesichtsbehandlung", "p_deep_clean": "Intensive Gesichtsreinigung (Tiefenreinigung)", "p_vitc": "Vitamin C Treatment", "p_antiage": "Anti Aging Treatment", "p_revital": "Revitalisierend", "p_intensiv": "Intensiv Treatment", "p_akne": "Aknebehandlung", "p_bbglow": "BB Glow", "p_h_hydra": "Hydrafacial — Skinfusor", "p_hy_face": "Gesicht", "p_hy_face_neck": "Gesicht &amp; Hals", "p_hy_face_neck_dec": "Gesicht, Hals &amp; Dekolleté", "p_h_mikro": "Mikroneedling", "p_mk_face": "Gesicht — 60 min", "p_mk_face_neck": "Gesicht &amp; Hals — 70 min", "p_mk_face_neck_dec": "Gesicht, Hals &amp; Dekolleté — 90 min", "p_mk_bbglow": "BB Glow Needling — 90 min", "p_combo_hydra_mikro": "<strong>Combo: Hydrafacial + Mikroneedling</strong>", "p_h_endo_face": "Endosphärotherapie — Gesicht", "p_endo_lift": "Lifting, Massage &amp; Durchblutung (mit Maske)", "p_endo_30": "Abo 6× 30 Minuten", "p_endo_45": "Abo 6× 45 Minuten", "p_h_weitere": "Weitere", "p_led": "LED-Therapie (auch als Zusatz)", "p_hautanalyse": "Hautanalyse", "p_on_request": "auf Anfrage", "p_h_endo_body_single": "Endosphärotherapie — Körper (Einzelsitzungen)", "p_b45": "45 Minuten", "p_b60": "60 Minuten", "p_b90": "90 Minuten", "p_h_endo_body_pack": "Endosphärotherapie — Körper (Pakete 6×)", "p_b45x6": "6× 45 Minuten", "p_b60x6": "6× 60 Minuten", "p_b90x6": "6× 90 Minuten", "p_h_primelaser": "Primelaser — Dauerhafte Haarentfernung", "p_l_lip": "Oberlippe", "p_l_chin": "Kinn", "p_l_cheeks": "Wangen", "p_l_face_full": "Gesicht komplett", "p_l_armpits": "Achseln", "p_l_arms_full": "Arme komplett", "p_l_belly": "Bauch", "p_l_back": "Rücken", "p_l_lowerleg": "Unterschenkel", "p_l_legs_full": "Beine komplett", "p_l_bikini": "Bikini", "p_l_bikini_intim": "Bikini + Intim", "p_l_bikini_intim_gluteus": "Bikini + Intim + Gesäß", "p_h_combo": "Combo", "p_combo_fullbody": "<strong>Ganzkörper</strong>", "p_h_basic": "Basic-Pakete", "p_basic1": "Achsel + Bikini + Intim + Unterschenkel", "p_basic2": "Achsel + Bikini + Intim + Beine komplett", "eq_dp_tag": "Microneedling", "eq_dp_name": "Dermapen", "eq_dp_desc": "Mikrofeine Nadeln erzeugen tausende kontrollierte Mikrokanäle pro Minute und aktivieren die natürliche Kollagen- und Elastinproduktion der Haut. Aktivseren dringen dabei tief in die Dermis ein.", "eq_dp_e1": "Faltenreduktion", "eq_dp_e2": "Pigmentierung", "eq_dp_e3": "Porenverfeinerung", "eq_dp_e4": "Narben &amp; Aknenarben", "eq_dp_extra": "Kurs: 4–6 Behandlungen · Intervall: 2–4 Wochen", "eq_bbv_tag": "BB Glow &amp; Exosomen", "eq_bbv_name": "Dermapen BB Glow / V-Tech", "eq_bbv_desc": "Zwei spezialisierte Mikroneedling-Protokolle mit unterschiedlichen Wirkstoffen: BB Glow gleicht den Hautton mit einer pigmentierten Tönungsserum aus, V-Tech bringt Exosomen, Polynukleotide und Peptide tief in die Dermis für intensive Zellregeneration.", "eq_bbv_e1": "Hautton-Ausgleich", "eq_bbv_e2": "Exosomen-Therapie", "eq_bbv_e3": "Zellregeneration", "eq_bbv_e4": "Kollagenaufbau", "eq_bbv_extra": "Zwei eigenständige Protokolle — je nach Hautziel kombinierbar", "eq_esf_tag": "Gesicht", "eq_esf_name": "Endosphères — Gesicht", "eq_esf_desc": "Kompressions-Mikrovibration speziell für das Gesichtsoval: verbessert Durchblutung und Lymphfluss, strafft die Konturen und sorgt für einen frischeren, klareren Teint.", "eq_esf_e1": "Gesichtsoval", "eq_esf_e2": "Lymphdrainage", "eq_esf_e3": "Hautton", "eq_esf_extra": "Ohne Ausfallzeit · Ergebnis ab der 1. Behandlung", "eq_esb_tag": "Körper", "eq_esb_name": "Endosphères — Körper", "eq_esb_desc": "Mit einem Phlebologen entwickelte Kompressions-Mikrovibration. Verbessert die Durchblutung, reduziert Ödeme und Cellulite, strafft die Hautstruktur am Körper.", "eq_esb_e1": "Cellulite", "eq_esb_e2": "Ödem-Reduktion", "eq_esb_e3": "Hautstraffung", "eq_esb_extra": "Ohne Ausfallzeit · Kurs: 6–12 Sitzungen", "eq_hf_tag": "Hydrafacial · Sauerstoff", "eq_hf_name": "Hydrafacial — Skinfusor", "eq_hf_desc": "Tiefe Hautreinigung und intensive Wirkstoffinfusion in einem. Reinigt die Poren, exfoliiert sanft und versorgt die Haut gleichzeitig mit maßgeschneiderten Seren. Sichtbarer Glow direkt nach der ersten Anwendung.", "eq_hf_e1": "Tiefenreinigung", "eq_hf_e2": "Sauerstoff", "eq_hf_e3": "Glow-Effekt", "eq_hf_e4": "Feuchtigkeitspflege", "eq_hf_extra": "Gesicht ab 129 € · Gesicht &amp; Hals 139 € · Gesicht, Hals &amp; Dekolleté 159 €", "eq_rf_tag": "RF Lifting", "eq_rf_name": "Radiofrequenz-Lifting", "eq_rf_desc": "Klassisches RF-Lifting — sanft, ohne Hautschäden. Erwärmt das Gewebe, stimuliert Kollagen und sorgt für sichtbare Straffung bereits nach der ersten Behandlung. Ideal für regelmäßige Pflege.", "eq_rf_e1": "Hautstraffung", "eq_rf_e2": "Falten", "eq_rf_e3": "Gesichtsoval", "eq_rf_extra": "Effekt nach der 1. Behandlung · Für regelmäßige Pflege geeignet", "eq_pl_tag": "Dauerhafte Haarentfernung", "eq_pl_name": "Primelaser", "eq_pl_desc": "Einer der leistungsstärksten Diodenlaser — mit aktivem Kühlsystem, schmerzlos und wirksam auf allen Hauttypen, ganzjährig einsetzbar. Bereits nach der ersten Sitzung sind 15–20% der Haare weg. Mit einem Kurs von 6–8 Behandlungen wird ein dauerhaftes Ergebnis von bis zu 90% erzielt.", "eq_pl_e1": "Dauerhafte Epilation", "eq_pl_e2": "Alle Hauttypen", "eq_pl_e3": "Ganzjährig", "eq_pl_e4": "Schmerzlos", "eq_pl_extra": "Kurs: 6–8 Sitzungen · Für Gesicht und Körper", "eq_ha_tag": "BABOR Derma Visualizer", "eq_ha_name": "Hautanalyse", "eq_ha_desc": "Ein hochpräziser Dermatoskop mit 80-facher Vergrößerung analysiert Falten, Talgproduktion, Porengröße und Pigmentierung im Detail. Auf dieser Basis stellen wir Ihr individuelles Behandlungs- und Pflegeprotokoll zusammen.", "eq_ha_e1": "Individuelle Diagnose", "eq_ha_e2": "Maßgeschneidertes Protokoll", "eq_ha_extra": "Grundlage für jede individuelle Behandlungsempfehlung", "eq_cta_tag": "BABOR Gesichtsbehandlungen", "eq_cta_name": "SKINOVAGE · HSR LIFTING · DOCTOR BABOR · AHA Peeling · Cleanformance &amp; mehr", "eq_cta_desc": "Unsere Gesichtsbehandlungen basieren auf den professionellen BABOR-Linien — von Anti-Age über Lifting bis zur sanften Tiefenreinigung. Jede Behandlung wird individuell auf Ihren Hautzustand abgestimmt.", "eq_cta_btn": "Alle BABOR-Behandlungen ansehen →", "eq_foto_folgt": "Foto/Video folgt", "eq_foto_folgt2": "Foto folgt"}, "en": {"nav_name": "Solvata Beauty Club", "nav_about": "About", "nav_equip": "Treatments", "nav_nails": "Nails", "nav_prices": "Pricing", "nav_contact": "Contact", "nav_all": "All Treatments", "nav_book": "Book Now", "hero_eyebrow": "Berlin · Premium Beauty", "hero_title_1": "Beauty", "hero_title_2": "redefined.", "hero_sub": "Advanced aesthetic treatments, facial care, body contouring and nail design at the highest level. Your transformation starts here.", "hero_photo_ph": "Hero Photo — to be inserted", "btn_book": "Book Appointment", "btn_services": "Our Treatments", "scroll_label": "Scroll", "statement_quote": "Real beauty demands precision, technology, and a personal touch.", "statement_sub": "— Solvata Beauty Club, Berlin", "stat_devices": "Years of Experience", "stat_individual": "Premium Equipment", "mission_label": "About Us", "mission_title_1": "Our", "mission_title_2": "Salon", "mission_sub": "Solvata Beauty Club stands for uncompromising quality. We combine the latest medical devices with a deep understanding of individual beauty needs.", "mission_quote": "Every treatment is a composition of science, aesthetics, and personal care.", "badge_1": "Certified", "badge_2": "Premium Devices", "badge_3": "Individual Consultation", "badge_4": "Berlin Charlottenburg", "salon_ph": "Salon Photo", "equip_label": "Treatments", "equip_title_1": "Our", "equip_title_2": "Technologies", "equip_sub": "Only certified top-tier medical devices — for visible, lasting results.", "endymed_mn_desc": "Renews skin from within — activates new collagen and elastin formation. Skin becomes denser, smoother and younger, without surgery. Effect grows over 2–3 months.", "endymed_e1": "Lifting &amp; Tightening", "endymed_e2": "Scars", "endymed_e3": "Post-Acne", "endymed_e4": "Pigmentation", "endymed_mn_extra": "Rehabilitation: 3–7 days · 2–3 treatments · Effect up to 2 years", "endymed_fsr_desc": "Gentle skin resurfacing and RF lifting simultaneously — skin becomes more radiant, even and dense.", "fsr_e1": "Pigmentation", "fsr_e2": "Pores", "fsr_e3": "Acne Scars", "fsr_e6": "Glow", "fsr_extra": "Immediate result · Short rehabilitation · No side effects", "endyeye_desc": "Non-operative alternative to blepharoplasty. Three Endymed technologies in one protocol tighten eyelid skin, reduce puffiness and smooth crow\'s feet.", "endyeye_e1": "Eyelid Lifting", "endyeye_e2": "Eye Circles", "endyeye_e3": "Crow\'s Feet", "endyeye_e4": "Skin Density", "endyeye_extra": "RF Lifting · RF Microneedling · Fractional Renewal", "endo_desc": "Compression micro-vibration technology developed with a phlebologist. Improves circulation, reduces edema and cellulite, strengthens skin structure.", "endo_e1": "Edema Reduction", "endo_e2": "Lymph Drainage", "endo_e4": "Cellulite", "endo_f4": "Face Oval", "endo_course": "No downtime · Result visible from 1st session · Course: 6–12 sessions", "geneo_desc": "3-in-1 treatment: cleanses, oxygenates skin and stimulates collagen production. Visible result from the very first session.", "geneo_e1": "OxyGeneo Oxygen", "geneo_e2": "RF Lifting", "geneo_e4": "Glow Effect", "geneo_e5": "Pigmentation", "geneo_extra": "Capsules: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome", "tripollar_desc": "Classic RF lifting — gentle, without skin damage. Stimulates collagen, visible tightening from the first session.", "tripollar_e1": "Skin Tightening", "tripollar_e2": "Wrinkles", "tripollar_e3": "Face Oval", "tripollar_e5": "Skin Tone", "tripollar_extra": "Effect after 1st session · Long-lasting · For regular maintenance", "laser_tag": "Permanent Hair Removal", "laser_desc": "Modern diode laser for permanent hair removal. With cooling system — comfortable and safe for all skin types.", "laser_e1": "Permanent Epilation", "laser_e3": "All Skin Types", "laser_e4": "Minimal Discomfort", "laser_extra": "Course: 6–12 sessions · For face and body", "nails_label": "Nail Design", "nails_title_1": "Nails", "nails_title_2": "&amp; Care", "nails_sub": "From classic manicure to elaborate nail art — our experts turn your vision into reality.", "nails_cat_mani": "Manicure", "nails_cat_pedi": "Pedicure", "nails_cat_art": "Nail Art", "nail_classic": "Classic Manicure", "nail_gel": "Gel Polish Manicure", "nail_gel_ext": "Gel Extension", "nail_removal": "Gel Removal", "nail_pedi": "Classic Pedicure", "nail_pedi_gel": "Pedicure + Gel Polish", "nail_art_simple": "Simple Design (per nail)", "nail_art_complex": "Complex Design", "on_request": "on request", "nails_btn": "Book Nail Appointment", "why_label": "Why Us", "why_title_1": "No", "why_title_2": "compromise.", "why1_title": "Individual Analysis", "why1_desc": "Every client receives an individual skin analysis and a tailored treatment plan.", "why2_title": "Modern Devices", "why2_desc": "Latest-generation technologies with clinically proven effectiveness.", "why3_title": "Combined Solutions", "why3_desc": "Face, body and nails under one roof — combined for the best result.", "why4_title": "Experience &amp; Expertise", "why4_desc": "Specialists with medical education and over 5 years of experience.", "why5_title": "Honest Approach", "why5_desc": "No unnecessary treatments. We recommend only what truly helps.", "why6_title": "Comfort &amp; Service", "why6_desc": "Exclusive, discreet atmosphere in the heart of Berlin Charlottenburg.", "ba_label": "Results", "ba_title": "Before &amp; ", "ba_title_em": "After", "ba_sub": "Real results of our clients.", "ba_before": "Before", "ba_after": "After", "video_label": "Treatments live", "video_title": "Watch ", "video_title_em": "our treatments", "prices_label": "Price List", "prices_title_1": "Our", "prices_title_2": "Prices", "tab_face": "Face", "tab_body": "Body", "tab_laser": "Laser", "geo_face": "Face", "geo_face_dec": "Face &amp; Décolleté", "mn_face": "RF Microneedling — Face", "mn_face_neck": "RF Microneedling — Face &amp; Neck", "fsr_face": "Fractional Resurfacing — Face", "tp_eye": "Eye Zone Lifting", "tp_face": "Face Lifting", "es_face": "Face", "es_face_dec": "Face &amp; Décolleté", "es_body_intro1": "Introductory Session (1 Zone)", "es_body_zone": "Problem Zone", "es_body_full": "Full Body", "es_body_zone6": "Subscription x6 (Problem Zone)", "z_belly": "Abdomen &amp; Sides", "z_arms": "Arms", "z_legs_full": "Full Legs", "z_c1": "Legs + Glutes", "z_c3": "Legs + Glutes + Abdomen", "laser_removal_head": "Diode Laser Hair Removal", "las_lip": "Upper Lip", "las_bikini_deep": "Deep Bikini", "las_armpits": "Armpits", "las_legs_half": "Legs to Knee", "las_legs_full": "Full Legs", "las_c5": "Full Legs + Deep Bikini + Armpits", "las_back": "Back", "las_face_": "Face", "prices_btn": "Request Appointment &amp; Prices", "prices_note": "Current prices on request", "reviews_label": "Reviews", "reviews_title_1": "What our", "reviews_title_2": "clients say", "review_1": "Incredible results after just three Endospheres sessions. My skin is firmer and I feel completely renewed.", "review_2": "The RF lifting at EndyMed visibly lifted my eye area. No needles, no downtime.", "review_3": "The GeneO treatment is magical. Right after the session my complexion glowed like never before.", "review_4": "Laser hair removal was completely painless and the results after just two sessions are impressive.", "review_5": "The nail design here is on another level. Detail-obsessed, long-lasting and so personal.", "booking_label": "Book Appointment", "booking_title_1": "Ready for", "booking_title_2": "your transformation?", "booking_sub": "Book your appointment online or contact us directly. We look forward to welcoming you.", "booking_btn": "Book Online Now", "bi_address": "Address", "bi_phone": "Phone / WhatsApp", "bi_phone_val": "+49 176 80880879", "bi_hours": "Opening Hours", "bi_hours_val": "Mon–Sat: 10:00–20:00", "footer_desc": "Premium aesthetics in Berlin. Cutting-edge devices, individual treatments, lasting results.", "footer_col_treatments": "Treatments", "footer_col_contact": "Contact", "footer_face": "Facial Care", "footer_body": "Body Contouring", "footer_laser": "Laser", "footer_nails": "Nail Design", "footer_book": "Book Online", "footer_privacy": "Privacy Policy", "footer_rights": "© 2026 Solvata Beauty Club Berlin. All rights reserved.", "p_h_barbor": "Babor Welcome Treatment", "p_welcome": "Welcome Treatment", "p_h_exclusive": "Exclusive Facial Treatments", "p_classic": "Classic Facial Treatment", "p_deep_clean": "Intensive Facial Cleansing (Deep Cleanse)", "p_vitc": "Vitamin C Treatment", "p_antiage": "Anti-Aging Treatment", "p_revital": "Revitalizing", "p_intensiv": "Intensive Treatment", "p_akne": "Acne Treatment", "p_bbglow": "BB Glow", "p_h_hydra": "Hydrafacial — Skinfusor", "p_hy_face": "Face", "p_hy_face_neck": "Face &amp; Neck", "p_hy_face_neck_dec": "Face, Neck &amp; Décolleté", "p_h_mikro": "Microneedling", "p_mk_face": "Face — 60 min", "p_mk_face_neck": "Face &amp; Neck — 70 min", "p_mk_face_neck_dec": "Face, Neck &amp; Décolleté — 90 min", "p_mk_bbglow": "BB Glow Needling — 90 min", "p_combo_hydra_mikro": "<strong>Combo: Hydrafacial + Microneedling</strong>", "p_h_endo_face": "Endosphère Therapy — Face", "p_endo_lift": "Lifting, Massage &amp; Circulation (with Mask)", "p_endo_30": "Subscription 6× 30 Minutes", "p_endo_45": "Subscription 6× 45 Minutes", "p_h_weitere": "Additional", "p_led": "LED Therapy (also as add-on)", "p_hautanalyse": "Skin Analysis", "p_on_request": "on request", "p_h_endo_body_single": "Endosphère Therapy — Body (Single Sessions)", "p_b45": "45 Minutes", "p_b60": "60 Minutes", "p_b90": "90 Minutes", "p_h_endo_body_pack": "Endosphère Therapy — Body (Packages 6×)", "p_b45x6": "6× 45 Minutes", "p_b60x6": "6× 60 Minutes", "p_b90x6": "6× 90 Minutes", "p_h_primelaser": "Primelaser — Permanent Hair Removal", "p_l_lip": "Upper Lip", "p_l_chin": "Chin", "p_l_cheeks": "Cheeks", "p_l_face_full": "Full Face", "p_l_armpits": "Armpits", "p_l_arms_full": "Full Arms", "p_l_belly": "Belly", "p_l_back": "Back", "p_l_lowerleg": "Lower Legs", "p_l_legs_full": "Full Legs", "p_l_bikini": "Bikini", "p_l_bikini_intim": "Bikini + Intimate", "p_l_bikini_intim_gluteus": "Bikini + Intimate + Glutes", "p_h_combo": "Combo", "p_combo_fullbody": "<strong>Full Body</strong>", "p_h_basic": "Basic Packages", "p_basic1": "Armpit + Bikini + Intimate + Lower Legs", "p_basic2": "Armpit + Bikini + Intimate + Full Legs", "eq_dp_tag": "Microneedling", "eq_dp_name": "Dermapen", "eq_dp_desc": "Micro-fine needles create thousands of controlled micro-channels per minute, activating the skin\'s natural collagen and elastin production. Active ingredients penetrate deep into the dermis.", "eq_dp_e1": "Wrinkle Reduction", "eq_dp_e2": "Pigmentation", "eq_dp_e3": "Pore Refinement", "eq_dp_e4": "Scars &amp; Acne Scars", "eq_dp_extra": "Course: 4–6 treatments · Interval: 2–4 weeks", "eq_bbv_tag": "BB Glow &amp; Exosomes", "eq_bbv_name": "Dermapen BB Glow / V-Tech", "eq_bbv_desc": "Two specialized microneedling protocols with different active ingredients: BB Glow evens skin tone with a pigmented tinting serum, while V-Tech delivers exosomes, polynucleotides and peptides deep into the dermis for intensive cell regeneration.", "eq_bbv_e1": "Skin Tone Evening", "eq_bbv_e2": "Exosome Therapy", "eq_bbv_e3": "Cell Regeneration", "eq_bbv_e4": "Collagen Building", "eq_bbv_extra": "Two independent protocols — combinable depending on skin goals", "eq_esf_tag": "Face", "eq_esf_name": "Endosphères — Face", "eq_esf_desc": "Compression micro-vibration specifically for the facial oval: improves circulation and lymphatic flow, tightens contours and creates a fresher, clearer complexion.", "eq_esf_e1": "Facial Oval", "eq_esf_e2": "Lymphatic Drainage", "eq_esf_e3": "Skin Tone", "eq_esf_extra": "No downtime · Results from the 1st treatment", "eq_esb_tag": "Body", "eq_esb_name": "Endosphères — Body", "eq_esb_desc": "Compression micro-vibration technology developed with a phlebologist. Improves circulation, reduces edema and cellulite, and firms body skin structure.", "eq_esb_e1": "Cellulite", "eq_esb_e2": "Edema Reduction", "eq_esb_e3": "Skin Tightening", "eq_esb_extra": "No downtime · Course: 6–12 sessions", "eq_hf_tag": "Hydrafacial · Oxygen", "eq_hf_name": "Hydrafacial — Skinfusor", "eq_hf_desc": "Deep skin cleansing and intensive active ingredient infusion in one. Cleanses pores, gently exfoliates and simultaneously nourishes the skin with tailored serums. Visible glow right after the first treatment.", "eq_hf_e1": "Deep Cleansing", "eq_hf_e2": "Oxygen", "eq_hf_e3": "Glow Effect", "eq_hf_e4": "Hydration", "eq_hf_extra": "Face from €129 · Face &amp; Neck €139 · Face, Neck &amp; Décolleté €159", "eq_rf_tag": "RF Lifting", "eq_rf_name": "Radiofrequency Lifting", "eq_rf_desc": "Classic RF lifting — gentle, without skin damage. Warms the tissue, stimulates collagen and provides visible tightening from the first treatment. Ideal for regular maintenance.", "eq_rf_e1": "Skin Tightening", "eq_rf_e2": "Wrinkles", "eq_rf_e3": "Facial Oval", "eq_rf_extra": "Effect after the 1st treatment · Suitable for regular maintenance", "eq_pl_tag": "Permanent Hair Removal", "eq_pl_name": "Primelaser", "eq_pl_desc": "One of the most powerful diode lasers — with active cooling system, painless and effective on all skin types, usable year-round. Already after the first session, 15–20% of hair is gone. A course of 6–8 treatments achieves a permanent result of up to 90%.", "eq_pl_e1": "Permanent Epilation", "eq_pl_e2": "All Skin Types", "eq_pl_e3": "Year-Round", "eq_pl_e4": "Painless", "eq_pl_extra": "Course: 6–8 sessions · For face and body", "eq_ha_tag": "BABOR Derma Visualizer", "eq_ha_name": "Skin Analysis", "eq_ha_desc": "A high-precision dermatoscope with 80x magnification analyzes wrinkles, sebum production, pore size and pigmentation in detail. Based on this, we create your individual treatment and skincare protocol.", "eq_ha_e1": "Individual Diagnosis", "eq_ha_e2": "Tailored Protocol", "eq_ha_extra": "Basis for every individual treatment recommendation", "eq_cta_tag": "BABOR Facial Treatments", "eq_cta_name": "SKINOVAGE · HSR LIFTING · DOCTOR BABOR · AHA Peeling · Cleanformance &amp; more", "eq_cta_desc": "Our facial treatments are based on the professional BABOR lines — from anti-aging to lifting to gentle deep cleansing. Every treatment is individually tailored to your skin condition.", "eq_cta_btn": "View all BABOR treatments →", "eq_foto_folgt": "Photo/video coming soon", "eq_foto_folgt2": "Photo coming soon"}}');
 
-var currentLang='de';
-function setLang(lang){
-  currentLang=lang;
-  try{localStorage.setItem('solvata_lang',lang);}catch(e){}
-  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.toLowerCase()===lang);});
-  var tr=T[lang];if(!tr)return;
-  document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(tr[k]!==undefined)el.innerHTML=tr[k];});
-  document.documentElement.lang=lang;
-  renderCookie(lang);
-}
 function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open');}
 function showTab(id,btn){
   document.querySelectorAll('.price-panel').forEach(function(p){p.classList.remove('active');});
@@ -762,12 +698,11 @@ function showTab(id,btn){
 var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
 var cookieTexts={de:{msg:'Diese Website verwendet funktionale Cookies. Weitere Informationen in unserer ',link:'Datenschutzerklärung',accept:'Verstanden',decline:'Schließen'},en:{msg:'This site uses functional cookies. See our ',link:'Privacy Policy',accept:'Got it',decline:'Close'}};
-function renderCookie(lang){var ck=document.getElementById('cookie-banner');if(!ck||ck.style.display==='none')return;var tx=cookieTexts[lang]||cookieTexts.de;document.getElementById('cookie-text').innerHTML=tx.msg+'<a href="privacy-policy.html">'+tx.link+'</a>.';document.getElementById('ck-decline').textContent=tx.decline;document.getElementById('ck-accept').textContent=tx.accept;}
-(function(){if(localStorage.getItem('sb_de_cookies')){document.getElementById('cookie-banner').style.display='none';return;}renderCookie('de');})();
-function cookieAccept(){localStorage.setItem('sb_de_cookies','accepted');hideCookie();}
-function cookieDecline(){localStorage.setItem('sb_de_cookies','declined');hideCookie();}
+function renderCookie(lang){var ck=document.getElementById('cookie-banner');if(!ck||ck.style.display==='none')return;var tx=cookieTexts[lang]||cookieTexts.de;document.getElementById('cookie-text').innerHTML=tx.msg+'<a href="'+privHref+'">'+tx.link+'</a>.';document.getElementById('ck-decline').textContent=tx.decline;document.getElementById('ck-accept').textContent=tx.accept;}
+(function(){if(ls('sb_de_cookies')){document.getElementById('cookie-banner').style.display='none';return;}renderCookie(currentLang);})();
+function cookieAccept(){ls('sb_de_cookies','accepted');hideCookie();}
+function cookieDecline(){ls('sb_de_cookies','declined');hideCookie();}
 function hideCookie(){var b=document.getElementById('cookie-banner');b.classList.add('hide');setTimeout(function(){b.style.display='none';},350);}
-(function(){var saved=localStorage.getItem('solvata_lang');setLang(saved&&T[saved]?saved:'de');})();
 </script>
 </body>
 </html>
