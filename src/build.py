@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.dirname(HERE)
 
 # TODO: replace with the real domain (used in canonical / hreflang / sitemap / JSON-LD)
-BASE = 'https://YOUR-DOMAIN.de'
+BASE = 'https://colibrarian.github.io/solvata-de/'
 # TODO: replace with a real 1200x630 share image once it exists
 OG_IMAGE = 'https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png'
 
