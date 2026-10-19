@@ -46,7 +46,9 @@ PAGES = {
 LINK_MAP = {  # DE file name -> EN file name (EN pages live in /en/)
     'leistungen.html': 'treatments.html',
     'index.html': 'index.html',
-    'privacy-policy.html': '../privacy-policy.html',   # TODO: EN privacy page
+    'privacy-policy.html': 'privacy-policy.html',
+    'agb.html': 'terms.html',
+    'impressum.html': 'imprint.html',
 }
 
 def rel(from_lang, page, to_lang):

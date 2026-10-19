@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AGB — Solvata Beauty Club Berlin</title>
+<meta content="noindex,follow" name="robots"/>
+<link href="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/32%20x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blk:#080808;--blk2:#0f0f0f;--blk3:#161616;
+  --w:#f4f0ea;--wd:rgba(244,240,234,.6);--wf:rgba(244,240,234,.10);
+  --g:#b89a6a;--gl:#d4b88a;--gb:rgba(184,154,106,.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blk);color:var(--w);overflow-x:hidden;line-height:1.8;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(8,8,8,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--gb);}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo{width:32px;height:32px;object-fit:contain;opacity:.9;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;letter-spacing:.06em;color:var(--w);}
+.nav-right{display:flex;align-items:center;gap:.8rem;}
+.lang-switcher{display:flex;border:1px solid var(--gb);}
+.lang-btn{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;padding:5px 12px;color:var(--wd);font-family:'Jost',sans-serif;cursor:pointer;transition:all .3s;}
+.lang-btn.active{background:var(--g);color:var(--blk);}
+.lang-btn:hover:not(.active){color:var(--g);}
+.nav-back{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wd);text-decoration:none;transition:color .3s;}
+.nav-back:hover{color:var(--g);}
+
+.pp-hero{padding:130px 5vw 50px;border-bottom:1px solid var(--gb);background:linear-gradient(180deg,var(--blk2),var(--blk));}
+.pp-eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--g);margin-bottom:1rem;}
+.pp-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:500;line-height:1.05;margin-bottom:.8rem;}
+.pp-title em{font-style:italic;font-weight:300;color:var(--g);}
+.pp-date{font-size:.76rem;color:var(--wd);letter-spacing:.06em;}
+
+.pp-body{max-width:780px;margin:0 auto;padding:70px 5vw 80px;}
+.pp-section{margin-bottom:3rem;}
+.pp-h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--w);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--gb);}
+.pp-h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin:1.3rem 0 .5rem;font-family:'Jost',sans-serif;font-weight:400;}
+.pp-p{font-size:.9rem;color:var(--wd);line-height:1.85;margin-bottom:.9rem;}
+.pp-p a{color:var(--g);text-decoration:none;}
+.pp-p a:hover{text-decoration:underline;}
+.pp-ul{list-style:none;margin:.5rem 0 .9rem;}
+.pp-ul li{font-size:.9rem;color:var(--wd);padding-left:1.2rem;position:relative;line-height:1.75;}
+.pp-ul li::before{content:'—';position:absolute;left:0;color:var(--g);}
+.pp-table{width:100%;border-collapse:collapse;margin:.8rem 0 1rem;font-size:.86rem;}
+.pp-table th{text-align:left;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--g);font-family:'Jost',sans-serif;font-weight:400;padding:.6rem 0;border-bottom:1px solid var(--gb);}
+.pp-table td{padding:.55rem 0;color:var(--wd);border-bottom:1px solid var(--wf);vertical-align:top;}
+.pp-table td:first-child{width:38%;padding-right:1rem;color:var(--w);}
+.pp-highlight{background:rgba(184,154,106,.06);border:1px solid var(--gb);padding:1.2rem 1.5rem;margin:.8rem 0 1rem;font-size:.88rem;color:var(--wd);line-height:1.8;}
+.pp-highlight strong{color:var(--w);}
+.pp-highlight a{color:var(--g);text-decoration:none;}
+.pp-highlight a:hover{text-decoration:underline;}
+
+footer{background:var(--blk);border-top:1px solid var(--gb);padding:2.5rem 5vw;text-align:center;}
+.footer-copy{font-size:.74rem;color:rgba(244,240,234,.3);}
+.footer-back{display:inline-block;margin-top:.8rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;}
+a.lang-btn{text-decoration:none;display:inline-block}
+.todo{background:rgba(184,154,106,.18);color:var(--gl);padding:0 .25em;}
+</style>
+<meta content="Allgemeine Geschäftsbedingungen von Solvata Beauty Club Berlin: Terminvereinbarung, Absagen, Preise, Gutscheine und Haftung." name="description"/><meta content="AGB — Solvata Beauty Club Berlin" property="og:title"/></head>
+<body>
+<nav>
+<a class="nav-brand" href="index.html">
+<img alt="Solvata" class="nav-logo" src="https://ik.imagekit.io/erewhile/Solvata/logo%20and%20og/180%20x%20180.png"/>
+<span class="nav-name">Solvata Beauty Club</span>
+</a>
+<div class="nav-right">
+<div class="lang-switcher"><a class="lang-btn active" href="agb.html" hreflang="de" lang="de">DE</a><a class="lang-btn" href="en/terms.html" hreflang="en" lang="en">EN</a></div>
+<a class="nav-back" href="index.html">← Zur Startseite</a>
+</div>
+</nav>
+<div class="pp-hero">
+<div class="pp-eyebrow">Rechtliches</div>
+<h1 class="pp-title"><span>Allgemeine </span><em>Geschäftsbedingungen</em></h1>
+<p class="pp-date">Stand: Oktober 2026</p>
+</div>
+<div class="pp-body">
+
+<div class="pp-section">
+<h2 class="pp-h2">1. Geltungsbereich</h2>
+<p class="pp-p">Diese Allgemeinen Geschäftsbedingungen gelten für alle Dienstleistungen und Terminvereinbarungen zwischen Solvata Beauty Club Berlin – nachfolgend „Salon“ genannt – und den Kunden.</p>
+<p class="pp-p">Mit der Vereinbarung eines Termins bzw. der Inanspruchnahme einer Dienstleistung erklärt sich der Kunde mit diesen AGB einverstanden.</p>
+<p class="pp-p">Gesetzliche Rechte des Kunden bleiben unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">2. Terminvereinbarung</h2>
+<p class="pp-p">Termine können persönlich, telefonisch, über WhatsApp, Social Media, online oder über andere vom Salon angebotene Kommunikationswege vereinbart werden.</p>
+<p class="pp-p">Ein Termin gilt als verbindlich vereinbart, sobald er vom Salon bestätigt wurde.</p>
+<p class="pp-p">Der Kunde ist dafür verantwortlich, zum vereinbarten Termin pünktlich zu erscheinen.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">3. Terminabsagen und Terminverschiebungen</h2>
+<p class="pp-p">Kann ein Kunde einen vereinbarten Termin nicht wahrnehmen, wird darum gebeten, den Termin so früh wie möglich abzusagen oder zu verschieben.</p>
+<p class="pp-p">Bei einer Absage oder Verschiebung sollte der Kunde den Salon möglichst mindestens 24 Stunden vor dem vereinbarten Termin informieren.</p>
+<p class="pp-p">Bei kurzfristigen Absagen oder Nichterscheinen kann der Salon – soweit gesetzlich zulässig – einen angemessenen Ausgleich für den tatsächlich entstandenen Schaden verlangen.</p>
+<p class="pp-p">Dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein wesentlich geringerer Schaden entstanden ist.</p>
+<p class="pp-p">Der Salon behält sich vor, bei wiederholten kurzfristigen Absagen oder Nichterscheinen zukünftige Termine nur noch gegen eine Vorauszahlung oder Anzahlung zu vergeben.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">4. Nichterscheinen (No-Show)</h2>
+<p class="pp-p">Erscheint der Kunde ohne vorherige Absage nicht zu einem vereinbarten Termin, behält sich der Salon vor, einen angemessenen Ersatz für den tatsächlich entstandenen Schaden zu verlangen, soweit dies gesetzlich zulässig ist.</p>
+<p class="pp-p">Dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein wesentlich geringerer Schaden entstanden ist.</p>
+<p class="pp-p">Bei wiederholtem Nichterscheinen kann der Salon zukünftige Terminvereinbarungen von einer Vorauszahlung abhängig machen.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">5. Verspätungen</h2>
+<p class="pp-p">Bei einer Verspätung des Kunden kann sich die Behandlungszeit entsprechend verkürzen, damit nachfolgende Termine eingehalten werden können.</p>
+<p class="pp-p">Der volle vereinbarte Preis kann auch bei einer verkürzten Behandlungszeit anfallen, wenn die Verkürzung durch die Verspätung des Kunden verursacht wurde.</p>
+<p class="pp-p">Bei einer erheblichen Verspätung behält sich der Salon vor, den Termin abzusagen bzw. neu zu terminieren.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">6. Preise und Zahlung</h2>
+<p class="pp-p">Es gelten die zum Zeitpunkt der Terminvereinbarung bzw. Leistungserbringung vereinbarten Preise.</p>
+<p class="pp-p">Die Preise können im Salon, auf der Website, in der Online-Buchung oder auf anderen offiziellen Kanälen des Salons veröffentlicht werden.</p>
+<p class="pp-p">Die Zahlung ist unmittelbar nach Erbringung der Dienstleistung fällig, sofern nichts anderes vereinbart wurde.</p>
+<p class="pp-p">Die Zahlung kann – je nach Angebot des Salons – in bar, per EC-/Debitkarte, Kreditkarte oder über andere angebotene Zahlungsmethoden erfolgen.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">7. Gutscheine</h2>
+<p class="pp-p">Gutscheine können für die jeweils auf dem Gutschein angegebenen Leistungen bzw. für Leistungen des Salons eingelöst werden.</p>
+<p class="pp-p">Sofern auf dem Gutschein eine Gültigkeitsdauer angegeben ist, gilt diese innerhalb der gesetzlichen Grenzen.</p>
+<p class="pp-p">Eine Barauszahlung des Gutscheinwertes ist grundsätzlich ausgeschlossen, soweit keine gesetzlichen Ansprüche des Kunden entgegenstehen.</p>
+<p class="pp-p">Eine Auszahlung eines Restbetrages in bar erfolgt grundsätzlich nicht, soweit gesetzlich zulässig.</p>
+<p class="pp-p">Gutscheine sind nicht automatisch auf andere Personen übertragbar, sofern auf dem Gutschein nichts anderes angegeben ist.</p>
+<p class="pp-p">Bei Verlust eines Gutscheins kann der Salon eine Ersatzleistung nur erbringen, wenn der Gutschein eindeutig nachgewiesen werden kann.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">8. Gutschein bei freiwilliger Erstattung</h2>
+<p class="pp-p">Soweit der Salon freiwillig eine Erstattung anbietet, kann anstelle einer Auszahlung ein Gutschein in Höhe des entsprechenden Betrages ausgestellt werden.</p>
+<p class="pp-p">Der Gutschein ist ab Ausstellungsdatum 6 Monate gültig, soweit diese Befristung gesetzlich zulässig ist.</p>
+<p class="pp-p">Nach Ablauf der Gültigkeitsdauer kann der Gutschein grundsätzlich nicht mehr für eine neue Leistung verwendet werden, soweit gesetzlich zulässig.</p>
+<p class="pp-p">Gesetzliche Ansprüche des Kunden bleiben unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">9. Leistungen und individuelle Ergebnisse</h2>
+<p class="pp-p">Kosmetische und ästhetische Dienstleistungen können je nach Ausgangssituation, Hautbeschaffenheit, Pflegezustand und individuellen Voraussetzungen unterschiedlich ausfallen.</p>
+<p class="pp-p">Der Salon kann daher keine Garantie dafür übernehmen, dass ein bestimmtes Ergebnis exakt wie auf einem Referenzfoto oder nach einer mündlichen Beschreibung erzielt wird.</p>
+<p class="pp-p">Der Salon verpflichtet sich jedoch, die vereinbarte Dienstleistung fachgerecht und mit der erforderlichen Sorgfalt auszuführen.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">10. Beratung und Angaben des Kunden</h2>
+<p class="pp-p">Der Kunde verpflichtet sich, den Salon vor der Behandlung über relevante Umstände zu informieren, die für die Durchführung der Dienstleistung von Bedeutung sein können.</p>
+<p class="pp-p">Dazu können insbesondere gehören:</p>
+<ul class="pp-ul">
+<li>bekannte Allergien oder Unverträglichkeiten,</li>
+<li>bestehende Hautprobleme,</li>
+<li>frühere allergische Reaktionen,</li>
+<li>kürzlich durchgeführte kosmetische oder chemische Behandlungen,</li>
+<li>bekannte Unverträglichkeiten gegenüber verwendeten Produkten,</li>
+<li>besondere gesundheitliche oder körperliche Umstände, soweit diese für die konkrete Behandlung relevant sind.</li>
+</ul>
+<p class="pp-p">Der Kunde ist verpflichtet, Fragen des Salons wahrheitsgemäß zu beantworten.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">11. Allergien und Unverträglichkeiten</h2>
+<p class="pp-p">Bei bekannten Allergien oder Unverträglichkeiten muss der Kunde den Salon vor Beginn der Behandlung informieren.</p>
+<p class="pp-p">Der Salon kann eine Behandlung ablehnen oder abbrechen, wenn aus fachlicher Sicht ein erhöhtes Risiko einer unerwünschten Reaktion besteht.</p>
+<p class="pp-p">Ein Haftungsausschluss für gesetzlich nicht ausschließbare Ansprüche wird durch diese Regelung nicht begründet.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">12. Reklamationen und Beanstandungen</h2>
+<p class="pp-p">Sollte der Kunde mit einer erbrachten Dienstleistung nicht zufrieden sein, wird darum gebeten, den Salon möglichst zeitnah zu kontaktieren und die Beanstandung konkret mitzuteilen.</p>
+<p class="pp-p">Der Salon erhält dadurch die Möglichkeit, die Beanstandung zu prüfen und – soweit ein berechtigter Mangel vorliegt – eine angemessene Nachbesserung anzubieten.</p>
+<p class="pp-p">Gesetzliche Rechte des Kunden bleiben unberührt.</p>
+<p class="pp-p">Eine Nachbesserung kann insbesondere dann angeboten werden, wenn das Ergebnis von der vereinbarten Leistung erheblich abweicht und der Salon dies zu vertreten hat.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">13. Keine Garantie für subjektive Vorstellungen</h2>
+<p class="pp-p">Eine subjektive Unzufriedenheit allein begründet nicht automatisch einen Anspruch auf eine vollständige Rückerstattung.</p>
+<p class="pp-p">Insbesondere kann bei individuell gewünschten Ergebnissen nicht garantiert werden, dass persönliche Vorstellungen oder Referenzbilder exakt umgesetzt werden können.</p>
+<p class="pp-p">Gesetzliche Gewährleistungs- und Schadensersatzansprüche bleiben unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">14. Ausschluss bzw. Abbruch einer Behandlung</h2>
+<p class="pp-p">Der Salon kann eine Behandlung ablehnen oder abbrechen, wenn:</p>
+<ul class="pp-ul">
+<li>die Durchführung aus fachlichen oder sicherheitsrelevanten Gründen nicht vertretbar ist;</li>
+<li>der Kunde wichtige Informationen verschweigt;</li>
+<li>eine erhebliche Gefahr für den Kunden, Mitarbeiter oder andere Personen besteht;</li>
+<li>der Kunde sich gegenüber Mitarbeitern oder anderen Kunden beleidigend, bedrohend oder anderweitig unangemessen verhält;</li>
+<li>die Behandlung aufgrund der aktuellen Situation nicht fachgerecht durchgeführt werden kann.</li>
+</ul>
+<p class="pp-p">Bereits erbrachte Leistungen sind in diesem Fall entsprechend zu vergüten.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">15. Verhalten im Salon</h2>
+<p class="pp-p">Wir bitten alle Kunden um einen respektvollen und höflichen Umgang mit unseren Mitarbeitern und anderen Kunden.</p>
+<p class="pp-p">Beleidigungen, Drohungen, Diskriminierung, aggressive Handlungen oder vorsätzliche Beschädigungen von Eigentum des Salons werden nicht akzeptiert.</p>
+<p class="pp-p">Der Salon behält sich in solchen Fällen vor, die Behandlung abzubrechen und zukünftige Termine abzulehnen.</p>
+<p class="pp-p">Gesetzliche Ansprüche bleiben unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">16. Haftung</h2>
+<p class="pp-p">Der Salon haftet nach den gesetzlichen Vorschriften.</p>
+<p class="pp-p">Die Haftung für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden wird nicht ausgeschlossen oder beschränkt.</p>
+<p class="pp-p">Für leicht fahrlässige Pflichtverletzungen haftet der Salon nur, soweit dies gesetzlich zulässig ist.</p>
+<p class="pp-p">Eine Haftung für Schäden, die durch unzutreffende oder unvollständige Angaben des Kunden verursacht wurden, bleibt unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">17. Persönliche Gegenstände</h2>
+<p class="pp-p">Für mitgebrachte persönliche Gegenstände des Kunden übernimmt der Salon keine Haftung, soweit kein vorsätzliches oder grob fahrlässiges Verhalten des Salons oder seiner Mitarbeiter vorliegt.</p>
+<p class="pp-p">Wertgegenstände sollten nicht unbeaufsichtigt im Salon zurückgelassen werden.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">18. Fotos und Vorher-Nachher-Bilder</h2>
+<p class="pp-p">Fotos von Kunden dürfen nur mit deren ausdrücklicher Zustimmung für Werbe- oder Veröffentlichungszwecke verwendet werden.</p>
+<p class="pp-p">Die Zustimmung zur Behandlung bedeutet nicht automatisch eine Zustimmung zur Veröffentlichung von Fotos.</p>
+<p class="pp-p">Eine erteilte Einwilligung kann im Rahmen der gesetzlichen Vorschriften widerrufen werden.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">19. Datenschutz</h2>
+<p class="pp-p">Personenbezogene Daten des Kunden werden ausschließlich im Rahmen der geltenden Datenschutzbestimmungen verarbeitet.</p>
+<p class="pp-p">Weitere Informationen zur Verarbeitung personenbezogener Daten sind in der <a href="privacy-policy.html">Datenschutzerklärung</a> des Salons enthalten.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">20. Terminvereinbarungen über Social Media und Messenger</h2>
+<p class="pp-p">Terminvereinbarungen über Instagram, WhatsApp oder andere Messenger können verbindlich sein, sofern der Termin vom Salon bestätigt wurde.</p>
+<p class="pp-p">Der Kunde ist dafür verantwortlich, Nachrichten des Salons bezüglich Terminänderungen oder Terminbestätigungen rechtzeitig zu beachten.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">21. Änderungen der Dienstleistungen und Preise</h2>
+<p class="pp-p">Der Salon behält sich vor, sein Leistungsangebot und seine Preise für zukünftige Buchungen zu ändern.</p>
+<p class="pp-p">Für bereits verbindlich vereinbarte Termine gilt grundsätzlich der bei der Vereinbarung bestätigte Preis, sofern nicht ausdrücklich etwas anderes vereinbart wurde.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">22. Salvatorische Klausel</h2>
+<p class="pp-p">Sollte eine Bestimmung dieser AGB ganz oder teilweise unwirksam sein oder werden, bleiben die übrigen Bestimmungen davon unberührt.</p>
+<p class="pp-p">Anstelle der unwirksamen Bestimmung gelten die gesetzlichen Vorschriften.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">23. Gesetzliche Rechte</h2>
+<p class="pp-p">Diese AGB schränken keine zwingenden gesetzlichen Rechte des Kunden ein.</p>
+<p class="pp-p">Insbesondere bleiben gesetzliche Ansprüche auf Gewährleistung, Schadensersatz, Rücktritt oder Widerruf – soweit im jeweiligen Fall gesetzlich vorgesehen – unberührt.</p>
+</div>
+<div class="pp-section">
+<h2 class="pp-h2">24. Geltung der AGB</h2>
+<p class="pp-p">Diese AGB gelten für alle zukünftigen Dienstleistungen und Terminvereinbarungen zwischen dem Salon und dem Kunden, soweit keine individuell abweichende Vereinbarung getroffen wurde.</p>
+<p class="pp-p">Individuelle Vereinbarungen haben Vorrang vor diesen AGB.</p>
+</div>
+<div class="pp-section">
+<div class="pp-highlight">
+<strong>Solvata Beauty Club Berlin</strong><br/>
+      Berliner Straße 54, 10713 Berlin<br/>
+      Telefon / WhatsApp: <a href="https://wa.me/4917680880879">+49 176 80880879</a>
+</div>
+<p class="pp-p">Stand: Oktober 2026</p>
+</div>
+</div>
+<footer>
+<span class="footer-copy">© 2026 Solvata Beauty Club Berlin. Alle Rechte vorbehalten.</span><br/>
+<a href="https://www.instagram.com/solvatabeautyclub" style="display:inline-block;margin:.6rem 0 .4rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;" target="_blank">@solvatabeautyclub</a><br/>
+<a class="footer-back" href="index.html">← Zur Startseite</a>
+<div class="footer-legal" style="margin-top:.9rem;"><a href="impressum.html" style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wd);text-decoration:none;">Impressum</a> <span style="color:var(--gb)">·</span> <a href="agb.html" style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wd);text-decoration:none;">AGB</a> <span style="color:var(--gb)">·</span> <a href="privacy-policy.html" style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wd);text-decoration:none;">Datenschutz</a></div>
+</footer>
+</body>
+</html>

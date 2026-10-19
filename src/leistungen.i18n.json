@@ -2,6 +2,9 @@
  "de": {
   "nav_back": "← Zur Startseite",
   "nav_book": "Termin buchen",
+  "footer_agb": "AGB",
+  "footer_imprint": "Impressum",
+  "footer_privacy_l": "Datenschutz",
   "hero_eyebrow": "Vollständige Übersicht",
   "hero_title_1": "Alle",
   "hero_title_2": "Behandlungen",
@@ -263,6 +266,9 @@
  "en": {
   "nav_back": "← Back to Home",
   "nav_book": "Book Appointment",
+  "footer_agb": "Terms &amp; Conditions",
+  "footer_imprint": "Imprint",
+  "footer_privacy_l": "Privacy Policy",
   "hero_eyebrow": "Complete Overview",
   "hero_title_1": "All",
   "hero_title_2": "Treatments",
