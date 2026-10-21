@@ -46,7 +46,9 @@ PAGES = {
 LINK_MAP = {  # DE file name -> EN file name (EN pages live in /en/)
     'leistungen.html': 'treatments.html',
     'index.html': 'index.html',
-    'privacy-policy.html': '../privacy-policy.html',   # TODO: EN privacy page
+    'privacy-policy.html': 'privacy-policy.html',
+    'agb.html': 'terms.html',
+    'impressum.html': 'imprint.html',
 }
 
 def rel(from_lang, page, to_lang):
@@ -103,7 +105,7 @@ def build(page, lang):
         ld = {
             '@context': 'https://schema.org', '@type': 'BeautySalon',
             'name': 'Solvata Beauty Club Berlin', 'url': f"{BASE}/{PAGES[page]['path'][lang]}",
-            'image': OG_IMAGE, 'telephone': '+49 176 80880879',
+            'image': OG_IMAGE, 'telephone': '+49 179 7048337',
             'address': {'@type': 'PostalAddress', 'streetAddress': 'Berliner Straße 54', 'postalCode': '10713',
                         'addressLocality': 'Berlin', 'addressCountry': 'DE'},
             'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification',
