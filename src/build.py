@@ -105,7 +105,7 @@ def build(page, lang):
         ld = {
             '@context': 'https://schema.org', '@type': 'BeautySalon',
             'name': 'Solvata Beauty Club Berlin', 'url': f"{BASE}/{PAGES[page]['path'][lang]}",
-            'image': OG_IMAGE, 'telephone': '+49 176 80880879',
+            'image': OG_IMAGE, 'telephone': '+49 179 7048337',
             'address': {'@type': 'PostalAddress', 'streetAddress': 'Berliner Straße 54', 'postalCode': '10713',
                         'addressLocality': 'Berlin', 'addressCountry': 'DE'},
             'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification',
